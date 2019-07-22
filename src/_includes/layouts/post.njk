@@ -1,0 +1,36 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+
+{% sectionHeader 'Journal','blog-header' %}
+	<nav class="blog-nav">
+		<ul class="horizontal-list">
+			<li>
+				<a href="/journal">Latest Posts</a>
+			</li>
+			<li>
+				<a href="#rss">
+					{% icon 'icon-rss','icon-size-1 icon-inline' %}
+					RSS Feed
+				</a>
+			</li>
+		</ul>
+	</nav>
+{% endsectionHeader %}
+
+
+
+
+<main class="row padding-x-3 blog-post">
+	<header class="col-s-12 blog-post-meta margin-bottom-3">
+        <h2>{{ title }}</h2>
+        <time>{{ date }}</time>
+    </header>
+
+    <article class="col-s-12 blog-post-content">
+        {{ content | safe }}
+    </article>
+</main>
+
+
+{% endblock %}

@@ -7,17 +7,17 @@
 		},
 		{
 			"text": "Portfolio",
-			"url": "#",
+			"url": "/portfolio",
 			"external": false
 		},
 		{
 			"text": "Journal",
-			"url": "#",
+			"url": "/journal",
 			"external": false
 		},
 		{
 			"text": "About",
-			"url": "#",
+			"url": "/about",
 			"external": false
 		}
 	]

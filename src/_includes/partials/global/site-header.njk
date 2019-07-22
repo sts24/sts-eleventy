@@ -1,8 +1,8 @@
 <header class="site-header">
 	<div class="row row-spaced row-vertical-center row-no-wrap padding-x-2 site-masthead">
 
-		<a href="/" class="col-auto site-title" title="<?php bloginfo('name'); ?>" aria-label="<?php bloginfo('name'); ?>">
-			icon goes here
+		<a href="/" class="col-auto site-title" title="Scott" aria-label="<?php bloginfo('name'); ?>">
+			{% icon 'icon-s-mark','icon-size-3' %}
 		</a>
 
 		{% if navigation.items %}
@@ -14,5 +14,10 @@
 			</ul>
 		</nav>
 		{% endif %}
-	</div>	
+	</div>
+
+	{% if pageType == 'home' %}
+		{% include 'partials/_home-header-content.njk' %}
+	{% endif %}
+
 </header>

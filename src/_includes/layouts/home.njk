@@ -1,5 +1,7 @@
 {% extends 'layouts/base.njk' %}
 
+{% set pageType = 'home' %}
+
 {% block content %}
 <main>
 	<section class="row padding-x-3">
@@ -31,6 +33,13 @@
 	<section class="row padding-bottom-5">
 		<div class="col-s-12">
 			<h2>Latest from the Journal</h2>
+			
+			{% for item in collections.posts %}
+				<h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+				<p>{{ item.data.content.substring(0,140) | safe }}</p>
+			{% endfor %}
+
+			<a href="/journal" class="btn margin-top-1">Read the Journal</a>
 
 		</div>
 	</section>
