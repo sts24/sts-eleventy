@@ -1,9 +1,18 @@
 <header class="site-header">
 	<div class="row row-spaced row-vertical-center row-no-wrap padding-x-2 site-masthead">
 
-		<a href="<?php bloginfo('url'); ?>" class="col-auto site-title" title="<?php bloginfo('name'); ?>" aria-label="<?php bloginfo('name'); ?>">
+		<a href="/" class="col-auto site-title" title="<?php bloginfo('name'); ?>" aria-label="<?php bloginfo('name'); ?>">
 			icon goes here
 		</a>
 
+		{% if navigation.items %}
+		<nav id="site-nav">
+			<ul class="site-nav-list" id="site-nav-list">
+				{% for item in navigation.items %}
+					<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+		{% endif %}
 	</div>	
 </header>
