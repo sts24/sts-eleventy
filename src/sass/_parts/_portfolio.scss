@@ -1,0 +1,69 @@
+.listing-item {
+    margin: 2rem auto;
+    padding: 0;
+
+    @media (min-width: 768px){
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+
+        padding: 0;
+        margin: 4rem auto;
+
+    }
+    
+}
+
+.listing-image {
+    padding: $base_size;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    @include blue-waves-bg;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    @media (min-width : 768px){
+        grid-column: 1 / 4;
+    }
+
+}
+
+.listing-content {
+    padding: $base_size;
+    background-color: var(--color1);
+    color: white;
+
+    h2 {
+        margin: 0 0 1rem 0;
+        color: white;
+
+        a { color: white; }
+        a:hover { text-decoration: none; color: var(--color2); }
+    }
+
+    @media (min-width: 768px){
+        grid-column: 4 / 9;
+        padding: 2rem;
+    }
+
+}
+
+.wp-block-media-text {
+    @extend .listing-item;
+}
+
+.wp-block-media-text__media {
+    @extend .listing-image;
+}
+
+.wp-block-media-text__content {
+    @extend .listing-content;
+}
+
+
+

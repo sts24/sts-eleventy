@@ -1,0 +1,16 @@
+.site-header {
+    color: white;
+    border-top: 1rem solid var(--color2);
+    @include chevron-pattern;
+}
+
+
+.site-title {
+    display: block;
+}
+
+
+.page-title {
+    color: var(--color-bg);
+    background-color: var(--color1-dark);
+}

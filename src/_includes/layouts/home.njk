@@ -1,0 +1,40 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+<main>
+	<section class="row padding-x-3">
+		<div class="col-s-12 col-m-8">
+
+			{{ content | safe }}
+
+		</div>
+		<div class="col-s-12 col-m-4">
+				
+			<h3 class="margin-top-0">What I Work On</h3>
+
+			<ul class="icon-grid">
+				
+			</ul>
+
+		</div>
+	</section>
+
+	<section class="row padding-bottom-3">
+
+		<div class="col-s-12">
+			<h2>Featured Work</h2>
+
+		</div>
+
+	</section>
+
+	<section class="row padding-bottom-5">
+		<div class="col-s-12">
+			<h2>Latest from the Journal</h2>
+
+		</div>
+	</section>
+
+
+</main>
+{% endblock %}
