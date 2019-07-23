@@ -35,8 +35,10 @@
 			<h2>Latest from the Journal</h2>
 			
 			{% for item in collections.posts %}
-				<h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-				<p>{{ item.data.content.substring(0,140) | safe }}</p>
+				{% if loop.index == '1' %}
+					{% blogTitle 'h3','',item %}
+					<p>{% cleanString item.data.content.substring(0,280) %}...</p>
+				{% endif %}
 			{% endfor %}
 
 			<a href="/journal" class="btn margin-top-1">Read the Journal</a>

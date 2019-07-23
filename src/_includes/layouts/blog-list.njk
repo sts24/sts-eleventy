@@ -1,5 +1,6 @@
 {% extends 'layouts/base.njk' %}
 
+
 {% block content %}
 
 {% sectionHeader 'Journal','blog-header' %}
@@ -18,19 +19,15 @@
 	</nav>
 {% endsectionHeader %}
 
+<main class="row padding-bottom-3">
 
+	{% for post in collections.posts %}
+		<section class="col-s-12 margin-x-3 padding-bottom-3 blog-post blog-post-listing-item">
+			{% blogTitle 'h2', '', post %}
+			{{ post.data.content | safe }}
+		</section>
+	{% endfor %}
 
-
-<main class="row padding-x-3 blog-post">
-	<header class="col-s-12 blog-post-meta margin-bottom-3">
-        <h1>{{ title }}</h1>
-        <time>{% timestamp page.date.toUTCString() %}</time>
-    </header>
-
-    <article class="col-s-12 blog-post-content">
-        {{ content | safe }}
-    </article>
 </main>
-
 
 {% endblock %}

@@ -1,5 +1,6 @@
 ---
 title: Comparing Vue & React
+date: 2019-07-23
 ---
 My little side project web app, The Pitwall, has been my test bed for better understanding different reactive javascript frameworks and their surrounding ecosystems of plugins. Pitwall started life as a CodePen project a long time ago when I decided it was time to start learning modern JS. I gravitated towards learning Vue first by sticking to the basic functionality of components and props. Once I got that under control, I broke it out of CodePen so it could stand alone and make better use of different toolchain scripts. First came the Vue CLI, Vue Router, and then Vuex for state management. While Pitwall isn’t exactly the most complex web app out there, it has enough complexity where I could understand the benefits of routing and state management. Once I got it hooked up to being hosted on Netlify, I felt like this was also a way to finally get my head around modern JAMstack sites as well.
 
