@@ -73,7 +73,9 @@ module.exports = function(config){
 			"gif",
 			"png",
 			"svg",
-			"woff"
+			"woff",
+			"html",
+			"yml"
 		]
 	};
 };
