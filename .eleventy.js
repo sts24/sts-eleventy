@@ -30,6 +30,7 @@ module.exports = function(config){
 			input: "src",
 			output: "build"
 		},
+		layout: 'layouts/page.njk',
 		templateFormats: [
 			"md",
 			"css",

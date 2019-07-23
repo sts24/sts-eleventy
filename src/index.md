@@ -1,6 +1,7 @@
 ---
 layout: layouts/home.njk
 title: Scott Smith
+pageType: home
 ---
 <h2 class="margin-top-0">Design & Code</h2>
 
