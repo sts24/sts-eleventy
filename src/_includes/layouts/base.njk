@@ -15,6 +15,10 @@
 <body>
   <div class="hide" role="none">
     {% include "assets/icon-sprite-general.svg" %}
+
+    {% if pageType == 'home' %}
+      {% include "assets/icon-sprite-home.svg" %}
+    {% endif %}
   </div>
 
   {% include "partials/global/site-header.njk" %}

@@ -15,7 +15,9 @@
 			<h3 class="margin-top-0">What I Work On</h3>
 
 			<ul class="icon-grid">
-				
+				{% for item in app_tags.items %}
+					<li aria-label="{{ item.title }}">{% icon item.icon, 'icon-size-3' %}</li>
+				{% endfor %}
 			</ul>
 
 		</div>
