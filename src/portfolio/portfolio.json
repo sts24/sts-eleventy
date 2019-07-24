@@ -1,3 +1,6 @@
 {
-	"layout": "layouts/portfolio.njk"
+	"layout": "layouts/portfolio-item.njk",
+	"tags": [
+		"portfolio"
+	]
 }

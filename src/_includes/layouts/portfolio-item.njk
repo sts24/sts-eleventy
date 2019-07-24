@@ -1,0 +1,24 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+
+{% sectionHeader title,'page-header' %}
+{% endsectionHeader %}
+
+
+
+
+<main class="row padding-x-3">
+	<div class="col-s-12">
+		<ul class="list-inline tag-list">
+			{% for tag in tools %}
+				<li>{{ tag }}</li>
+			{% endfor %}
+		</ul>
+
+		{{ content | safe }}
+	</div>
+</main>
+
+
+{% endblock %}

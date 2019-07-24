@@ -2,34 +2,38 @@
 
 {% block content %}
 
-{% sectionHeader 'Journal','blog-header' %}
-	<nav class="blog-nav">
-		<ul class="horizontal-list">
-			<li>
-				<a href="/journal">Latest Posts</a>
-			</li>
-			<li>
-				<a href="#rss">
-					{% icon 'icon-rss','icon-size-1 icon-inline' %}
-					RSS Feed
-				</a>
-			</li>
-		</ul>
-	</nav>
+{% sectionHeader 'Portfolio','page-header' %}
 {% endsectionHeader %}
 
 
+<main class="row padding-x-3">
+	<div class="col-s-12">
 
+		{{ content | safe }}
 
-<main class="row padding-bottom-3">
-	<header class="col-s-12 blog-post-meta margin-bottom-3">
-        {{ title }}
-        <time>{{ date }}</time>
-    </header>
+		{% for item in collections.portfolio %}
+			<section class="listing-item">
+				<div class="listing-image">
+					<a href="{{ item.url }}"><img src="" class="attachment-large size-large" alt="" /></a>
+				</div>
+				<div class="listing-content">
+					<h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
 
-    <article class="col-s-12 blog-post-content">
-        {{ content | safe }}
-    </article>
+					{{ item.data.excerpt }}
+
+					<div class="row row-spaced row-top margin-x-1">
+						<ul class="list-inline tag-list">
+							{% for tag in item.data.tools %}
+								<li>{{ tag }}</li>
+							{% endfor %}
+						</ul>
+						
+						<a href="{{ item.url }}" class="btn">View More</a>
+					</div>
+				</div>
+			</section>
+		{% endfor %}
+	</div>
 </main>
 
 
