@@ -49,7 +49,7 @@
 		<div class="col-s-12">
 			<h2>Latest from the Journal</h2>
 			
-			{% for item in collections.posts %}
+			{% for item in collections.posts | reverse %}
 				{% if loop.index == '1' %}
 					{% blogTitle 'h3','',item %}
 					<p>{% cleanString item.data.content.substring(0,280) %}...</p>

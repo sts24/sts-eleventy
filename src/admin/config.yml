@@ -10,9 +10,8 @@ collections:
     slug: "{{slug}}"
     create: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "date", format: "YYYY-MM-DD"}
       - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
       - {label: "URL", name: "url", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -22,9 +21,8 @@ collections:
     slug: "{{slug}}"
     create: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "portfolio"
@@ -33,9 +31,8 @@ collections:
     slug: "{{slug}}"
     create: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/portfolio-item.njk"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
       - {label: "Tools", name: "tools", widget: "list", allow_add: true, required: false}
       - {label: "Image", name: "image", widget: "image", required: false }

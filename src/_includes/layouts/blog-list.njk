@@ -21,7 +21,7 @@
 
 <main class="row padding-bottom-3">
 
-	{% for post in collections.posts %}
+	{% for post in collections.posts | reverse %}
 		<section class="col-s-12 margin-x-3 padding-bottom-3 blog-post blog-post-listing-item">
 			{% blogTitle 'h2', '', post %}
 			{{ post.data.content | safe }}
