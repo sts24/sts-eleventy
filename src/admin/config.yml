@@ -13,6 +13,30 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Tags", name: "tags", widget: "list", allow_add: true}
-      - {label: "URL", name: "url", widget: "url", allow_add: true}
+      - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
+      - {label: "URL", name: "url", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    folder: "src/"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "src/portfolio"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/portfolio-item.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
+      - {label: "Tools", name: "tools", widget: "list", allow_add: true, required: false}
+      - {label: "Image", name: "image", widget: "image", required: false }
       - {label: "Body", name: "body", widget: "markdown"}
