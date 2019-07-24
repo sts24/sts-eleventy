@@ -2,6 +2,7 @@
 title: Weather Block
 excerpt: Weather Block is a simple Gutenberg block for fetching and displaying the current weather conditions from a users’ browser geolocation.
 tools: ['React', 'WordPress']
+image: /images/uploads/test.jpg
 ---
 Weather Block is a simple Gutenberg block for fetching and displaying the current weather conditions from a users’ browser geolocation.
 
