@@ -3,11 +3,16 @@ var sass = require('gulp-sass');
 var svgSprite = require('gulp-svg-sprite');
 var autoprefixer = require('gulp-autoprefixer');
 
+// files
+let svgFiles = ['./src/svg-icons/general/*.svg', './src/svg-icons/home/*.svg'];
+let sassFiles = './src/sass/*.scss';
+
+
 console.clear();
 
 // SASS
 
-function sassCompile(sassFiles) {
+function sassCompile(cb) {
 
 	return gulp.src(sassFiles)
 		.pipe(sass({
@@ -18,18 +23,17 @@ function sassCompile(sassFiles) {
 			cascade: false
 		}))
 		.pipe(gulp.dest('./build/css/'));
-	
+		
+	cb();
 }
 
 
 // make svg sprite
 
-gulp.task('svg', function () {
+function spriteCompile(cb) {
 
-	let svgSrc = ['./src/svg-icons/general/*.svg', './src/svg-icons/home/*.svg'];
-
-	svgSrc.forEach(function (srcLoc) {
-		let srcName = srcLoc.split('/')[2];
+	svgFiles.forEach(function (srcLoc) {
+		let srcName = srcLoc.split('/')[3];
 
 		let stream = gulp.src(srcLoc)
 			.pipe(svgSprite({
@@ -51,18 +55,21 @@ gulp.task('svg', function () {
 					}
 				}
 			}))
-			.pipe(gulp.dest('./images'));
+			.pipe(gulp.dest('./build/images'));
 
 		return stream
 
 	});
-});
+
+	cb();
+}
+
 
 
 // gulp tasks
 exports.default = function () {
-	gulp.watch('./src/sass/*.scss', { events: 'change' })
-		.on('change', function (file) {
-			sassCompile(file);
-		});
+	gulp.watch(sassFiles, sassCompile);
+	gulp.watch(svgFiles, spriteCompile);
 }
+
+exports.build = gulp.parallel(sassCompile, spriteCompile);
