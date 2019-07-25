@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build & npx @11ty/eleventy",
+    "production": "gulp build && npx @11ty/eleventy",
     "serve": "gulp watch & npx @11ty/eleventy --serve"
   },
   "keywords": [],
@@ -19,5 +19,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-svg-sprite": "^1.5.0"
   },
-  "browserslist": [ "last 2 versions" ]
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
