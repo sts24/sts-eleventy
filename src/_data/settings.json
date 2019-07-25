@@ -1,4 +1,5 @@
 {
-	"siteName": "Scott Smith",
-	"maxPostsPerPage": 10
+  "siteName": "Scott Smith",
+  "maxPostsPerPage": 10,
+  "profileImage": "/src/images/uploads/scott.jpg"
 }
