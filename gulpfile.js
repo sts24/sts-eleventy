@@ -8,8 +8,6 @@ let svgFiles = ['./src/svg-icons/general/*.svg', './src/svg-icons/home/*.svg'];
 let sassFiles = './src/sass/*.scss';
 
 
-console.clear();
-
 // SASS
 
 function sassCompile(cb) {
