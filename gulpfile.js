@@ -11,6 +11,7 @@ let sassFiles = './src/sass/*.scss';
 // SASS
 
 function sassCompile(cb) {
+	cb();
 
 	return gulp.src(sassFiles)
 		.pipe(sass({
@@ -21,13 +22,14 @@ function sassCompile(cb) {
 		}))
 		.pipe(gulp.dest('./build/css/'));
 		
-	cb();
+	
 }
 
 
 // make svg sprite
 
 function spriteCompile(cb) {
+	cb();
 
 	svgFiles.forEach(function (srcLoc) {
 		let srcName = srcLoc.split('/')[3];
@@ -58,15 +60,14 @@ function spriteCompile(cb) {
 
 	});
 
-	cb();
 }
 
 
 
 // gulp tasks
 exports.default = function () {
-	gulp.watch(sassFiles, sassCompile);
-	gulp.watch(svgFiles, spriteCompile);
+	//gulp.watch(sassFiles, sassCompile);
+	//gulp.watch(svgFiles, spriteCompile);
 }
 
-exports.build = gulp.parallel(sassCompile, spriteCompile);
+exports.build = gulp.series(sassCompile, spriteCompile);
