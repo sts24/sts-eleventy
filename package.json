@@ -18,5 +18,6 @@
     "gulp-autoprefixer": "^6.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-svg-sprite": "^1.5.0"
-  }
+  },
+  "browserslist": [ "last 2 versions" ]
 }
