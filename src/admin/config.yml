@@ -3,11 +3,14 @@ backend:
   branch: master
 publish_mode: editorial_workflow
 media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+show_preview_links: false
 collections: 
   - name: "journal"
     label: "Journal"
     folder: "src/journal"
     slug: "{{slug}}"
+    preview_path: "journal/{{slug}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -19,6 +22,7 @@ collections:
     label: "Pages"
     folder: "src/"
     slug: "{{slug}}"
+    preview_path: "/{{slug}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -29,6 +33,7 @@ collections:
     label: "Portfolio"
     folder: "src/portfolio"
     slug: "{{slug}}"
+    preview_path: "portfolio/{{slug}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -38,8 +43,16 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: false }
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "settings"
-    label: "Settings"
+    label: "⚙ Settings"
     files:
+      - label: "Site"
+        name: "site"
+        delete: false
+        file: "src/_data/settings.json"
+        fields:
+          - {label: "Site Name", name: "siteName", widget: "string"}
+          - {label: "Maximum Posts Per Page", name: "maxPostsPerPage", widget: "number" }
+          - {label: "Profile Image", name: "profileImage", widget: "image", allow_multiple: false }
       - label: "Navigation"
         name: "navigation"
         delete: false
@@ -51,10 +64,3 @@ collections:
             fields:
               - { label: "Title", name: "text", widget: "string"}
               - { label: "URL", name: "url", widget: "string"}
-      - label: "Site"
-        name: "site"
-        delete: false
-        file: "src/_data/settings.json"
-        fields:
-          - {label: "Site Name", name: "siteName", widget: "string"}
-          - {label: "Maximum Posts Per Page", name: "maxPostsPerPage", widget: "number", default: 10 }
