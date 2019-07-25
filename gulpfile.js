@@ -13,7 +13,7 @@ let sassFiles = './src/sass/*.scss';
 function sassCompile(cb) {
 	cb();
 
-	return gulp.src(sassFiles)
+	gulp.src(sassFiles)
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}).on('error', sass.logError))
@@ -66,8 +66,12 @@ function spriteCompile(cb) {
 
 // gulp tasks
 exports.default = function () {
-	//gulp.watch(sassFiles, sassCompile);
-	//gulp.watch(svgFiles, spriteCompile);
+	
 }
 
 exports.build = gulp.series(sassCompile, spriteCompile);
+
+exports.watch = function () {
+	gulp.watch(sassFiles, sassCompile);
+	gulp.watch(svgFiles, spriteCompile);
+}
