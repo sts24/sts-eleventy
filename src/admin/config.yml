@@ -37,3 +37,24 @@ collections:
       - {label: "Tools", name: "tools", widget: "list", allow_add: true, required: false}
       - {label: "Image", name: "image", widget: "image", required: false }
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        delete: false
+        file: "src/_data/navigation.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "text", widget: "string"}
+              - { label: "URL", name: "url", widget: "string"}
+      - label: "Site"
+        name: "site"
+        delete: false
+        file: "src/_data/settings.json"
+        fields:
+          - {label: "Site Name", name: "siteName", widget: "string"}
+          - {label: "Maximum Posts Per Page", name: "maxPostsPerPage", widget: "number", default: 10 }
