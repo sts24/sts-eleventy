@@ -58,6 +58,7 @@ module.exports = function(config){
 	});
 
 
+
 	// options
 
 	return {
@@ -65,14 +66,13 @@ module.exports = function(config){
 			input: "src",
 			output: "build"
 		},
+		passthroughFileCopy: true,
 		layout: 'layouts/page.njk',
 		templateFormats: [
 			"md",
-			"css",
 			"jpg",
 			"gif",
 			"png",
-			"svg",
 			"woff",
 			"html",
 			"yml"

@@ -54,7 +54,7 @@ function spriteCompile(cb) {
 					}
 				}
 			}))
-			.pipe(gulp.dest('./build/images'));
+			.pipe(gulp.dest('./src/_includes/assets'));
 
 		return stream
 
@@ -65,9 +65,7 @@ function spriteCompile(cb) {
 
 
 // gulp tasks
-exports.default = function () {
-	
-}
+exports.default = gulp.series(sassCompile, spriteCompile);
 
 exports.build = gulp.series(sassCompile, spriteCompile);
 
