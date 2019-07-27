@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "production": "gulp && npx eleventy",
-    "dev": "gulp watch && npx @11ty/eleventy --serve"
+    "dev": "npx @11ty/eleventy --serve"
   },
   "keywords": [],
   "author": "",
