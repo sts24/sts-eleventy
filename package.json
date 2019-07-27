@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "production": "eleventy && gulp build",
+    "production": "gulp build && eleventy",
     "dev": "gulp watch && npx @11ty/eleventy --serve"
   },
   "keywords": [],
