@@ -57,7 +57,7 @@ module.exports = function(config){
 		return string.replace(/<\/?[^>]+(>|$)/g, "");
 	});
 
-
+	
 
 	// options
 
@@ -75,7 +75,8 @@ module.exports = function(config){
 			"png",
 			"woff",
 			"html",
-			"yml"
+			"yml",
+			"svg"
 		]
 	};
 };
