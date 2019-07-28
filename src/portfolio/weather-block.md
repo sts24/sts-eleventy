@@ -4,7 +4,7 @@ date: 2019-07-24T23:08:45.474Z
 tools:
   - React
   - WordPress
-image: /images/uploads/test.jpg
+image: /images/uploads/weather-block-image.jpg
 ---
 Weather Block is a simple Gutenberg block for fetching and displaying the current weather conditions from a users’ browser geolocation.
 
