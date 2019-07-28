@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  repo: sts24/sts-eleventy
 publish_mode: editorial_workflow
 media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
