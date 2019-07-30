@@ -1,0 +1,32 @@
+{
+	"items": [
+		{
+			"title": "HTML",
+			"icon": "icon-html"
+		},
+		{
+			"title": "Sass",
+			"icon": "icon-sass"
+		},
+		{
+			"title": "WordPress",
+			"icon": "icon-wordpress"
+		},
+		{
+			"title": "PHP",
+			"icon": "icon-php"
+		},
+		{
+			"title": "Vue",
+			"icon": "icon-vue"
+		},
+		{
+			"title": "Gulp",
+			"icon": "icon-gulp"
+		},
+		{
+			"title": "Node",
+			"icon": "icon-node"
+		}
+	]
+}

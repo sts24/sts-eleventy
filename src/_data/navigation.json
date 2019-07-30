@@ -1,0 +1,24 @@
+{
+	"items": [
+		{
+			"text": "Home",
+			"url": "/",
+			"external": false
+		},
+		{
+			"text": "Portfolio",
+			"url": "/portfolio",
+			"external": false
+		},
+		{
+			"text": "Journal",
+			"url": "/journal",
+			"external": false
+		},
+		{
+			"text": "About",
+			"url": "/about",
+			"external": false
+		}
+	]
+}

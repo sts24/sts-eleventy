@@ -1,0 +1,124 @@
+a {
+    color: var(--color2);
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+.btn {
+    font-size: rem(16);
+    font-weight: bold;
+    font-family: var(--secondary-font);
+    text-shadow: 0 1px 1px rgba(black,0.5);
+    background-color: var(--color2);
+    color: white;
+    line-height: normal;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        right: 0.5rem;
+        bottom: -0.25rem;
+        height: 0.25rem;
+        @include blue-waves-bg;
+    }
+
+    &:hover {
+        background-color: var(--highlight);
+        text-decoration: none;
+    }
+}
+
+.wp-block-button {
+    a { @extend .btn; }
+}
+
+
+
+h1 {
+    font-family: var(--primary-font);
+    font-weight: normal;
+    font-size: rem(36);
+    line-height: 1em;
+    margin: 0;
+    color: white;
+
+    @media (min-width: 768px){
+        font-size: rem(48);
+    }
+
+    a { font-weight: normal; }
+}
+
+h2 {
+    font-size: rem(28);
+    font-weight: normal;
+    font-family: var(--primary-font);
+    line-height: 1em;
+    color: var(--color1);
+
+    a { font-weight: normal; }
+
+    @media (min-width: 768px){
+        font-size: rem(36);
+    }
+}
+
+h3 {
+    font-family: var(--primary-font);
+    font-weight: normal;
+    font-size: rem(21);
+    color: var(--color1);
+
+    a { font-weight: normal; }
+}
+
+p {
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.intro {
+    font-size: rem(16);
+
+    @media (min-width: 768px){
+        font-size: rem(21);
+        line-height: 1.6em;
+        margin-bottom: 2rem;
+    }
+}
+
+.special-heading {
+    text-align: center;
+}
+
+.section-heading {
+    @extend h1;
+}
+
+
+.horizontal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    > li {
+        padding: 0;
+        margin: 0 1rem 0 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

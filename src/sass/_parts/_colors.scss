@@ -1,0 +1,12 @@
+.bg-gray {
+    background-color: var(--lightgray);
+    @include light-waves-bg;
+
+    .site-content {
+        background-color: var(--lightgray);
+    }
+}
+
+.blue-waves-bg {
+    @include blue-waves-bg;
+}

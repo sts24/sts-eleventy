@@ -1,0 +1,40 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+
+{% sectionHeader 'Portfolio','page-header' %}
+{% endsectionHeader %}
+
+
+<main class="row padding-x-3">
+	<div class="col-s-12">
+
+		{{ content | safe }}
+
+		{% for item in collections.portfolio %}
+			<section class="listing-item">
+				<div class="listing-image">
+					<a href="{{ item.url }}"><img src="{{ item.data.image }}" class="attachment-large size-large" alt="" /></a>
+				</div>
+				<div class="listing-content">
+					<h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+
+					{{ item.data.excerpt }}
+
+					<div class="row row-spaced row-top margin-x-1">
+						<ul class="list-inline tag-list">
+							{% for tag in item.data.tools %}
+								<li>{{ tag }}</li>
+							{% endfor %}
+						</ul>
+						
+						<a href="{{ item.url }}" class="btn">View More</a>
+					</div>
+				</div>
+			</section>
+		{% endfor %}
+	</div>
+</main>
+
+
+{% endblock %}
