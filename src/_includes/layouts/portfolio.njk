@@ -14,7 +14,7 @@
 		{% for item in collections.portfolio %}
 			<section class="listing-item">
 				<div class="listing-image">
-					<a href="{{ item.url }}"><img src="{{ item.data.image }}" class="attachment-large size-large" alt="" /></a>
+					<a href="{{ item.url }}"><img srcset="{{ item.data.image }}?nf_resize=fit&w=800 2x, {{ item.data.image }}?nf_resize=fit&w=400 1x" class="attachment-large size-large" alt="Thumbnail image for {{ item.data.title }}" /></a>
 				</div>
 				<div class="listing-content">
 					<h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>

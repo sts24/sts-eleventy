@@ -58,12 +58,9 @@
     position: relative;
     z-index: 10;
     
-    >img {
-        display: block;
-        width: 100%;
-        height: auto;
-        filter: grayscale(100%);
-    }
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     >header {
         background-color: var(--color2);
@@ -85,6 +82,10 @@
 
     
    
-
+    &::after {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
     
 }

@@ -32,8 +32,7 @@
 				{% for item in collections.portfolio %}
 					{% if loop.index < 4 %}         
 					<li>
-						<a href="{{ item.url }}" class="featured-grid-item" aria-label="{{ item.data.title }}">
-							<img src="{{ item.data.image }}?nf_resize=smartcrop&w=400&h=400" alt="" width="400" height="400">
+						<a href="{{ item.url }}" class="featured-grid-item" aria-label="{{ item.data.title }}" style="background-image: url('{{ item.data.image }}?nf_resize=fit&h=400');">
 							<header role="presentation" id="{{ item.fileSlug }}">{{ item.data.title }}</header>
 						</a>
 					</li>
