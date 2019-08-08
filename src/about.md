@@ -2,7 +2,7 @@
 title: About Scott
 date: 2019-07-31T16:28:35.335Z
 ---
-![](/images/uploads/scott.jpg?nf_resize=fit&w=200&h=200)
+<img src="/images/uploads/scott.jpg?nf_resize=fit&w=200&h=200" class="alignright" />
 
 <p class="intro">I am a Front-End Web Developer with over a decade of experience building web sites.</p>
 
