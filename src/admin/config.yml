@@ -44,13 +44,14 @@ collections:
       - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
       - {label: "Tools", name: "tools", widget: "list", allow_add: true, required: false}
       - {label: "Featured Image", name: "image", widget: "image", required: false }
+      - {label: "Feature on Homepage", name: "homeFeatured", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Showcase"
         name: "showcase"
         widget: "list"
         fields:
           - { label: "Image", name: "image", widget: "image" }
-          - { label: "Title", name: "description", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "URL", name: "url", widget: "string" }
   - name: "settings"

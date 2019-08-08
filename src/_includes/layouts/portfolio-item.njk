@@ -27,7 +27,7 @@
 					<div class="listing-content">
 						<h2>{{ item.title | safe }}</h2>
 
-						{{ item.description | safe }}
+						<p>{{ item.description | safe }}</p>
 
 						{% if item.url %}
 							<a href="{{ item.url }}" class="btn">View This Site</a>

@@ -30,7 +30,7 @@
 
 			<ul class="featured-grid">
 				{% for item in collections.portfolio %}
-					{% if loop.index < 4 %}         
+					{% if item.homeFeatured %}
 					<li>
 						<a href="{{ item.url }}" class="featured-grid-item" aria-label="{{ item.data.title }}" style="background-image: url('{{ item.data.image }}?nf_resize=fit&h=400');">
 							<header role="presentation" id="{{ item.fileSlug }}">{{ item.data.title }}</header>
