@@ -49,8 +49,10 @@ collections:
         name: "showcase"
         widget: "list"
         fields:
-          - { label: "Showcase Item", name: "showcaseItem", widget: "image" }
-          - { label: "Description", name: "description", widget: "markdown" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Title", name: "description", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "URL", name: "url", widget: "string" }
   - name: "settings"
     label: "⚙ Settings"
     files:
