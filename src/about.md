@@ -4,7 +4,7 @@ date: 2019-07-31T16:28:35.335Z
 ---
 ![](/images/uploads/scott.jpg?nf_resize=fit&w=200&h=200)
 
-I am a Front-End Web Developer with over a decade of experience building web sites.
+<p class="intro">I am a Front-End Web Developer with over a decade of experience building web sites.</p>
 
 I got my start like many others with a curiosity of how things work and a drive to build it myself. While the web has changed a lot over the past few decades and has grown in complexity, the same excitement is there for me. Building a web site and a larger design system is a lot like a small, self-contained world. How we familiarize a user with the site’s brand? How do these components all interact with each other? What happens to the web site under certain conditions? These are all important questions before even grabbing for a specific tool.
 
@@ -14,7 +14,7 @@ Born and raised in Southern California, I am happily married to my lovely wife M
 
 ## Have a Question?
 
-Get in touch at hello@smithscott.net
+Get in touch at <mailto:hello@smithscott.net>
 
 - - -
 
