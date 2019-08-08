@@ -1,6 +1,25 @@
 ---
 title: Design for Cal Lutheran
 date: 2019-08-08T23:07:35.671Z
+image: /images/uploads/clu-home.jpg
+showcase:
+  - description: >-
+      ## CalLutheran.edu
+
+
+      A university website serves many different audiences. The challenge of the
+      homepage is to provide a gateway to the entire site, while still being
+      focused on messaging. As a private university, almost the entire health
+      and growth of the institution is based on attracting prospective students
+      to apply and attend. The homepage has to tell the story of the university.
+      We developed this concept of section rows to focus the user on different
+      topics as they scroll down the page. Different sections are created as
+      needed to promote a major event such as homecoming or to announce a new
+      initiative such as the sciences campaign.
+
+
+      <a href="https://www.callutheran.edu" class="btn">View this site</a>
+    showcaseItem: /images/uploads/clu-home.jpg
 ---
 ## 2010 – Present
 
