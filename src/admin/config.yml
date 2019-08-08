@@ -5,7 +5,8 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
-show_preview_links: false
+site_url: "https://scottsmith.netlify.com"
+show_preview_links: true
 collections: 
   - name: "journal"
     label: "Journal"
@@ -26,6 +27,7 @@ collections:
     preview_path: "/{{slug}}"
     create: true
     fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Tags", name: "tags", widget: "list", required: false}
