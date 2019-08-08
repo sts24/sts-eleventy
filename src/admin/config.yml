@@ -41,8 +41,14 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
       - {label: "Tools", name: "tools", widget: "list", allow_add: true, required: false}
-      - {label: "Image", name: "image", widget: "image", required: false }
+      - {label: "Featured Image", name: "image", widget: "image", required: false }
       - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Showcase"
+        name: "showcase"
+        widget: "list"
+        fields:
+          - { label: "Showcase Item", name: "showcaseItem", widget: "image" }
+          - { label: "Description", name: "description", widget: "markdown" }
   - name: "settings"
     label: "⚙ Settings"
     files:
@@ -54,6 +60,7 @@ collections:
           - {label: "Site Name", name: "siteName", widget: "string"}
           - {label: "Maximum Posts Per Page", name: "maxPostsPerPage", widget: "number" }
           - {label: "Profile Image", name: "profileImage", widget: "image", allow_multiple: false }
+          - {label: "Intro Copy", name: "introCopy", widget: "text"}
       - label: "Navigation"
         name: "navigation"
         delete: false
@@ -65,3 +72,15 @@ collections:
             fields:
               - { label: "Title", name: "text", widget: "string"}
               - { label: "URL", name: "url", widget: "string"}
+      - label: "Social Media Links"
+        name: "social_media"
+        delete: false
+        file: "src/_data/social_media.json"
+        fields:
+          - label: "Links"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string"}
+              - { label: "URL", name: "url", widget: "string"}
+              - { label: "Icon", name: "icon", widget: "string"}
