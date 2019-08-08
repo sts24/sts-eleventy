@@ -24,6 +24,8 @@ showcase:
     image: /images/uploads/clu-home.jpg
     url: 'https://www.callutheran.edu/'
 ---
+## 2010 – Present
+
 We worked with an outside agency to design an entirely new website for the university in 2015. This coincided with a new brand style and logo mark the year prior. This new design language would provide us with a fresh start to rethink how our web presence would represent the university.
 
 Previously, the website had built up many layers of legacy both in terms of content organization and front-end code. The new site would be created from the ground up with primarily prospective students in mind, our most key audience as a private university.
