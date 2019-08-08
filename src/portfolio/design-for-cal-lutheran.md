@@ -9,6 +9,7 @@ tools:
   - UX Design
   - WordPress
 image: /images/uploads/clu-home.jpg
+homeFeatured: true
 showcase:
   - description: >-
       A university website serves many different audiences. The challenge of the
