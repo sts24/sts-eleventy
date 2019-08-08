@@ -1,6 +1,7 @@
 ---
 title: About Scott
 date: 2019-08-08T17:45:04.023Z
+layout: "layouts/page.njk"
 ---
 <img src="/images/uploads/scott.jpg?nf_resize=fit&w=200&h=200" class="alignright profile-image" />
 
