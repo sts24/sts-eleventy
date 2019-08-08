@@ -1,6 +1,13 @@
 ---
 title: Design for Cal Lutheran
 date: 2019-08-08T23:33:37.528Z
+tools:
+  - Javascript
+  - OUCampus
+  - PHP
+  - Sass
+  - UX Design
+  - WordPress
 image: /images/uploads/clu-home.jpg
 showcase:
   - description: >-
