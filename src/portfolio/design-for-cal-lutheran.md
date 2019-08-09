@@ -24,6 +24,33 @@ showcase:
     title: CalLutheran.edu
     image: /images/uploads/clu-home.jpg
     url: 'https://www.callutheran.edu/'
+  - description: >-
+      This page was created to better communicate the complexities of
+      understanding the costs of attending college. As with the homepage, this
+      layout was broken down into topic sections. Designing this page also gave
+      the opportunity to use a variety of visual aids such as the graphs and
+      charts. This was achieved by using the Chartist Javascript library draw
+      SVG charts from data we pass in. These chart elements have since been
+      standardized and moved into our global framework to be used on any other
+      page.
+    title: Financial Aid Affordability
+    image: /images/uploads/financial-aid.jpg
+    url: 'https://www.callutheran.edu/financial-aid/affordability/'
+  - description: >-
+      This was a new site we spun up to help drive the campaign to build a new
+      science facility on the Cal Lutheran campus. Borrowing many ideas from the
+      main site, I built the HTML and CSS for the Science site.
+    title: Science at Cal Lutheran
+    image: /images/uploads/science.jpg
+    url: 'https://science.callutheran.edu'
+  - description: >-
+      Pacific Lutheran Theological Seminary is the theological graduate school
+      of Cal Lutheran. PLTS maintains somewhat of it’s own identity, so this
+      site was an opportunity to retune our templates specifically for their
+      needs.
+    title: Pacific Lutheran Theological Seminary
+    image: /images/uploads/plts.jpg
+    url: 'https://plts.edu'
 ---
 ## 2010 – Present
 
