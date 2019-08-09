@@ -22,4 +22,4 @@ I am a big Formula 1 fan (yes, I am also an American, which nobody knows about F
 - [Vue Version](https://github.com/sts24/pitwall-vue)
 - [React Version](https://github.com/sts24/pitwall-react)
 
-<a href="https://pitwall.netlify.com/" class="btn">Vie Live Version</a>
+<a href="https://pitwall.netlify.com/" class="btn">View Live Version</a>
