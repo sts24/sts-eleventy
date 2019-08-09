@@ -9,7 +9,7 @@ tools:
   - Javascript
   - NPM
 image: /images/uploads/pitwall-graphic.jpg
-homeFeatured: false
+homeFeatured: true
 ---
 ## Explore historical records of past Formula 1 championships.</h2>
 
