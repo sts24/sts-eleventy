@@ -1,5 +1,15 @@
 module.exports = function(config){
 
+	// custom collections
+
+	config.addCollection("featuredPortfolios", function(collection) {
+		return collection.getFilteredByTag('portfolio').sort(function(a,b){
+			//console.log(a.data.homeFeatured,b.data.homeFeatured);
+			return b.data.homeFeatured
+		});
+	});
+
+
 	// shortcodes
 
 	function getIconCode(iconName, cssClass) {

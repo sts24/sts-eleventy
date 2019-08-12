@@ -11,7 +11,7 @@
 
 		{{ content | safe }}
 
-		{% for item in collections.portfolio %}
+		{% for item in collections.featuredPortfolios %}
 			<section class="listing-item">
 				<div class="listing-image">
 					<a href="{{ item.url }}"><img srcset="{{ item.data.image }}?nf_resize=fit&w=800 2x, {{ item.data.image }}?nf_resize=fit&w=400 1x" class="attachment-large size-large" alt="Thumbnail image for {{ item.data.title }}" /></a>
