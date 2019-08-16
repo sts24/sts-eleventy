@@ -5,6 +5,7 @@ tools:
   - Visual Design
 image: /images/uploads/see-america-cropped.jpg
 homeFeatured: true
+excerpt: My contribution to Creative Action Network's See America campaign.
 ---
 The Creative Action Network is a collective of artists designing and illustrating for important causes. In 2014, I contributed to the See American campaign. This campaign was aimed to promote the then upcoming 100th anniversary of the National Park Service and raise money for the National Parks Conservation Association. The name of See America was a callback to the 1930’s New Deal-era advertising campaign to encourage Americans to explore our great public lands.
 

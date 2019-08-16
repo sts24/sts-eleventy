@@ -10,6 +10,7 @@ tools:
   - WordPress
 image: /images/uploads/clu-home.jpg
 homeFeatured: true
+excerpt: My work in Higher Education. Projects ranged from front-end development, UX, marketing design, and client support.
 showcase:
   - description: >-
       A university website serves many different audiences. The challenge of the

@@ -4,7 +4,6 @@ module.exports = function(config){
 
 	config.addCollection("featuredPortfolios", function(collection) {
 		return collection.getFilteredByTag('portfolio').sort(function(a,b){
-			//console.log(a.data.homeFeatured,b.data.homeFeatured);
 			return b.data.homeFeatured
 		});
 	});

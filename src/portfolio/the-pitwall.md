@@ -1,6 +1,6 @@
 ---
 title: The Pitwall
-date: 2019-08-09T23:37:58.430Z
+date: 2019-08-07T23:37:58.430Z
 tools:
   - Netlify
   - Node
@@ -10,6 +10,7 @@ tools:
   - NPM
 image: /images/uploads/pitwall-graphic.jpg
 homeFeatured: true
+excerpt: A project written in Vue to explore the historical records of Formula 1 racing.
 ---
 ## Explore historical records of past Formula 1 championships.</h2>
 
