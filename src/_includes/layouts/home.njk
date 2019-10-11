@@ -28,18 +28,17 @@
 		<div class="col-s-12">
 			<h2>Featured Work</h2>
 
-			<ul class="featured-grid">
+			<div class="featured-grid">
 				{% for item in collections.featuredPortfolios %}
 					{% if loop.index0 < 4 %}
-						<li>
-							<a href="{{ item.url }}" class="featured-grid-item" aria-label="{{ item.data.title }}">
-								<img srcset="{{ item.data.image }}?nf_resize=fit&h=400 1x, {{ item.data.image }}?nf_resize=fit&h=800 2x" />
-								<header role="presentation" id="{{ item.fileSlug }}">{{ item.data.title }}</header>
-							</a>
-						</li>
+						<figure class="featured-grid-item">
+							<header>{{ item.data.title }}</header>
+							<a class="featured-grid-item-btn" href="{{ item.url }}"><span class="sr-only">{{ item.data.title }}</span></a>
+							<img srcset="{{ item.data.image }}?nf_resize=fit&h=400 1x, {{ item.data.image }}?nf_resize=fit&h=800 2x" />
+						</figure>
 					{% endif %}
 				{% endfor %}
-            </ul>
+            </div>
 
 		</div>
 
