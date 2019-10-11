@@ -70,6 +70,6 @@ exports.default = gulp.series(sassCompile, spriteCompile);
 exports.build = gulp.series(sassCompile, spriteCompile);
 
 exports.watch = function () {
-	gulp.watch(sassFiles, sassCompile);
+	gulp.watch('./src/sass/**/*.scss', sassCompile);
 	gulp.watch(svgFiles, spriteCompile);
 }
