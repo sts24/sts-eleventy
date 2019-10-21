@@ -1,9 +1,9 @@
-module.exports = function(config){
+module.exports = function (config) {
 
 	// custom collections
 
-	config.addCollection("featuredPortfolios", function(collection) {
-		return collection.getFilteredByTag('portfolio').sort(function(a,b){
+	config.addCollection("featuredPortfolios", function (collection) {
+		return collection.getFilteredByTag('portfolio').sort(function (a, b) {
 			return b.data.homeFeatured
 		});
 	});
@@ -18,18 +18,27 @@ module.exports = function(config){
     	</svg>`;
 	}
 
-	config.addShortcode("icon", function(iconName, cssClass){
+	config.addShortcode("icon", function (iconName, cssClass) {
 		return getIconCode(iconName, cssClass);
 	});
 
-	config.addPairedShortcode("sectionHeader", function (data,sectionTitle,cssClass) {
+	config.addPairedShortcode("sectionHeader", function (data, sectionTitle = '', cssClass) {
+		let htmlSlot = '';
+
+		if (sectionTitle !== '') {
+			htmlSlot = `
+			<div class="col-s-12">
+				<div class="section-heading">${sectionTitle}</div>
+				${data}
+			</div>`;
+		} else {
+			htmlSlot = `${data}`;
+		}
+
 		return `
 			<header class="page-title padding-x-2 ${cssClass}">
 				<div class="row">
-					<div class="col-s-12">
-						<div class="section-heading">${sectionTitle}</div>
-						${data}
-					</div>
+					${htmlSlot}
 				</div>
 			</header>
 		`;
@@ -37,7 +46,7 @@ module.exports = function(config){
 
 	config.addShortcode("timestamp", function (UTC) {
 		let newDate = new Date(UTC);
-		
+
 		return newDate.toLocaleDateString('en-US', {
 			timeZone: 'UTC',
 			month: 'long',
@@ -46,7 +55,7 @@ module.exports = function(config){
 		});
 	});
 
-	config.addShortcode("blogTitle", function (heading,css='',post) {
+	config.addShortcode("blogTitle", function (heading, css = '', post) {
 		let postURL = post.url;
 		let classes = (css !== '') ? ' class="' + css + '"' : '';
 		let html = '<' + heading + classes + '>';
@@ -66,7 +75,7 @@ module.exports = function(config){
 		return string.replace(/<\/?[^>]+(>|$)/g, "");
 	});
 
-	
+
 
 	// options
 
