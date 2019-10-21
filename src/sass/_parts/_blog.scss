@@ -70,4 +70,8 @@
             width: 1rem;
         }
     }
+
+    @media (prefers-color-scheme: dark){
+        h1 { color: white; }   
+    }
 }

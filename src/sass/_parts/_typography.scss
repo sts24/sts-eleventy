@@ -85,6 +85,10 @@ h3 {
     color: var(--color1);
 
     a { font-weight: normal; }
+
+    @media (prefers-color-scheme: dark){
+        color: white;   
+    }
 }
 
 p {

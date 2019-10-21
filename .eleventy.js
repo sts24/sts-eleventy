@@ -60,10 +60,12 @@ module.exports = function (config) {
 		let classes = (css !== '') ? ' class="' + css + '"' : '';
 		let html = '<' + heading + classes + '>';
 
-		if (post.data.url !== undefined) {
+		if (typeof post.data.url !== 'undefined') {
 			html += getIconCode('icon-link', 'icon-size-1 icon-inline blog-link-icon') + ' ';
-			postURL = post.data.url;
+			postURL = post.data.url[0];
 		}
+		console.log(postURL);
+
 		html += '<a href="' + postURL + '">';
 		html += post.data.title;
 		html += '</a></' + heading + '>';
