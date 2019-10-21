@@ -22,7 +22,7 @@ module.exports = function (config) {
 		return getIconCode(iconName, cssClass);
 	});
 
-	config.addPairedShortcode("sectionHeader", function (data, sectionTitle = '', cssClass) {
+	config.addPairedShortcode("sectionHeader", function (data, sectionTitle = '', cssClass = '') {
 		let htmlSlot = '';
 
 		if (sectionTitle !== '') {
