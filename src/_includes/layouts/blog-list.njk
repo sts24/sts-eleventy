@@ -1,6 +1,5 @@
 {% extends 'layouts/base.njk' %}
 
-
 {% block content %}
 
 {% sectionHeader 'Journal','blog-header' %}
@@ -21,12 +20,16 @@
 
 <main class="row padding-bottom-3">
 
-	{% for post in collections.posts | reverse %}
-		<section class="col-s-12 margin-x-3 padding-bottom-3 blog-post blog-post-listing-item">
+	{% include "partials/global/pagination.njk" %}
+
+	{% for post in posts %}
+		<article class="col-s-12 margin-x-3 padding-bottom-3 blog-post blog-post-listing-item">
 			{% blogTitle 'h2', '', post %}
 			{{ post.data.content | safe }}
-		</section>
+		</article>
 	{% endfor %}
+
+	{% include "partials/global/pagination.njk" %}
 
 </main>
 

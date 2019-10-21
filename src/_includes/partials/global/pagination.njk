@@ -1,0 +1,9 @@
+<nav class="pagination row row-spaced">
+	{% if pagination.nextPageHref %}
+	<a href="{{ pagination.nextPageHref }}">{% icon 'icon-arrow-left','icon-size-1 icon-inline' %} Older Posts</a>
+	{% endif %}
+
+	{% if pagination.previousPageHref %}
+	<a href="{{ pagination.previousPageHref }}">{% icon 'icon-arrow-right','icon-size-1 icon-inline' %} Newer Posts</a>
+	{% endif %}
+</nav>
