@@ -69,6 +69,10 @@ h2 {
 
     a { font-weight: normal; }
 
+    @media (prefers-color-scheme: dark){
+        color: white;   
+    }
+
     @media (min-width: 768px){
         font-size: rem(36);
     }

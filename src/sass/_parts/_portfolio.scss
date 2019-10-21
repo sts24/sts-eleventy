@@ -46,6 +46,11 @@
         a:hover { text-decoration: none; color: var(--color2); }
     }
 
+    @media (prefers-color-scheme: dark){
+        background-color: var(--color1-dark);
+        
+    }
+
     @media (min-width: 768px){
         grid-column: 4 / 9;
         padding: 2rem;
