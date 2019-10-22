@@ -75,3 +75,16 @@
         h1 { color: white; }   
     }
 }
+
+
+
+.pagination {
+    .svg-icon {
+        margin: 0 1ch;
+        fill: var(--color1);
+
+        @media (prefers-color-scheme: dark){
+            fill: white;
+        }
+    }
+}
