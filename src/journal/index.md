@@ -7,5 +7,6 @@ pagination:
   size: 5
   alias: posts
   reverse: true
+  addAllPagesToCollections: false
 ---
 This is some placeholder...

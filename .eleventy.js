@@ -56,6 +56,7 @@ module.exports = function (config) {
 	});
 
 	config.addShortcode("blogTitle", function (heading, css = '', post) {
+
 		let postURL = post.url;
 		let classes = (css !== '') ? ' class="' + css + '"' : '';
 		let html = '<' + heading + classes + '>';

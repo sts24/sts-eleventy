@@ -25,7 +25,7 @@
 	{% for post in posts %}
 		<article class="col-s-12 margin-x-3 padding-bottom-3 blog-post blog-post-listing-item">
 			{% blogTitle 'h2', '', post %}
-			{{ post.data.content | safe }}
+			{{ post.templateContent | safe }}
 		</article>
 	{% endfor %}
 
