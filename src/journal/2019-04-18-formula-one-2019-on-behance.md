@@ -1,7 +1,7 @@
 ---
 id: 165
 title: Formula One 2019 on Behance
-date: 2019-04-18T15:47:10+00:00
+date: 2019-04-18
 guid: https://smithscott.net/?p=165
 url:
   - https://www.behance.net/gallery/77495989/Formula-One-2019

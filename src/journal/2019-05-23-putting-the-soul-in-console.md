@@ -1,7 +1,7 @@
 ---
 id: 235
 title: Putting the Soul in Console
-date: 2019-05-23T18:21:38+00:00
+date: 2019-05-23
 guid: https://smithscott.net/?p=235
 url:
   - https://anildash.com/2019/05/22/putting-the-soul-in-console/

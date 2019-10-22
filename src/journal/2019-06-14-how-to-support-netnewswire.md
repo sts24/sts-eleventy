@@ -1,7 +1,7 @@
 ---
 id: 240
 title: How to Support NetNewsWire
-date: 2019-06-14T23:06:16+00:00
+date: 2019-06-14
 guid: https://smithscott.net/?p=240
 url:
   - https://github.com/brentsimmons/NetNewsWire/blob/master/Technotes/HowToSupportNetNewsWire.markdown

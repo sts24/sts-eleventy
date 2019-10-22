@@ -1,7 +1,7 @@
 ---
 id: 145
 title: 'Adactio: Journal—Split'
-date: 2019-04-11T18:18:56+00:00
+date: 2019-04-11
 guid: https://smithscott.net/?p=145
 url:
   - https://adactio.com/journal/15050

@@ -1,7 +1,7 @@
 ---
 id: 160
 title: The Bones of the Web
-date: 2019-04-12T23:57:43+00:00
+date: 2019-04-12
 guid: https://smithscott.net/?p=160
 ---
 <!-- wp:paragraph -->

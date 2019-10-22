@@ -1,7 +1,7 @@
 ---
 id: 158
 title: Web Components will replace your frontend framework
-date: 2019-04-12T15:47:18+00:00
+date: 2019-04-12
 guid: https://smithscott.net/?p=158
 url:
   - https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework

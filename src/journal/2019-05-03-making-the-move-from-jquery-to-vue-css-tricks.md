@@ -1,7 +1,7 @@
 ---
 id: 178
 title: Making the Move from jQuery to Vue | CSS-Tricks
-date: 2019-05-03T16:59:15+00:00
+date: 2019-05-03
 guid: https://smithscott.net/?p=178
 url:
   - https://css-tricks.com/making-the-move-from-jquery-to-vue/

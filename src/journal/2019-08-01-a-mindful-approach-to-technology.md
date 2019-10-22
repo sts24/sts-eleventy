@@ -1,7 +1,7 @@
 ---
 id: 250
 title: A Mindful Approach to Technology
-date: 2019-08-01T20:59:47+00:00
+date: 2019-08-01
 guid: https://smithscott.net/?p=250
 url:
   - https://thesweetsetup.com/a-mindful-approach-to-technology/

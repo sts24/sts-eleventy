@@ -1,7 +1,7 @@
 ---
 id: 173
 title: Cache Busting in OUCampus
-date: 2019-04-29T23:19:10+00:00
+date: 2019-04-29
 guid: https://smithscott.net/?p=173
 ---
 <!-- wp:paragraph -->

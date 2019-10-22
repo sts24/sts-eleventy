@@ -1,7 +1,7 @@
 ---
 id: 184
 title: 'The Apple Watch Turns Four: Some Thoughts'
-date: 2019-05-06T22:04:01+00:00
+date: 2019-05-06
 guid: https://smithscott.net/?p=184
 url:
   - https://pxlnv.com/blog/apple-watch-turns-four/

@@ -1,7 +1,7 @@
----
+s---
 id: 193
 title: Using WordPress as a Headless CMS
-date: 2019-05-10T17:35:57+00:00
+date: 2019-05-10
 guid: https://smithscott.net/?p=193
 ---
 <!-- wp:paragraph -->

@@ -1,7 +1,7 @@
 ---
 id: 246
 title: 'Comparing Vue &#038; React'
-date: 2019-06-17T18:09:37+00:00
+date: 2019-06-17
 guid: https://smithscott.net/?p=246
 ---
 <!-- wp:paragraph -->
