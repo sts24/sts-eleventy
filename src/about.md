@@ -1,9 +1,9 @@
 ---
+layout: layouts/page.njk
 title: About Scott
 date: '2019-08-08'
-layout: "layouts/page.njk"
 ---
-<img src="/images/uploads/scott.jpg?nf_resize=fit&w=200&h=200" class="alignright profile-image" />
+<img srcset="{{ settings.profileImage }}?nf_resize=fit&w=200&h=200 1x, {{ settings.profileImage }}?nf_resize=fit&w=400&h=400 2x" class="alignright profile-image" />
 
 <p class="intro">I am a Front-End Web Developer with over a decade of experience building web sites.</p>
 
