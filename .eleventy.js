@@ -1,3 +1,5 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function (config) {
 
 	// custom collections
@@ -63,9 +65,8 @@ module.exports = function (config) {
 
 		if (typeof post.data.url !== 'undefined') {
 			html += getIconCode('icon-link', 'icon-size-1 icon-inline blog-link-icon') + ' ';
-			postURL = post.data.url[0];
+			postURL = post.data.url;
 		}
-		console.log(postURL);
 
 		html += '<a href="' + postURL + '">';
 		html += post.data.title;
@@ -78,6 +79,9 @@ module.exports = function (config) {
 		return string.replace(/<\/?[^>]+(>|$)/g, "");
 	});
 
+
+	// add RSS feed
+	config.addPlugin(pluginRss);
 
 
 	// options
