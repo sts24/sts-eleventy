@@ -1,6 +1,6 @@
 ---
 title: Trail Coffee
-date: 2019-08-01T23:46:06.691Z
+date: '2019-08-01'
 tools:
   - WordPress
   - Sass

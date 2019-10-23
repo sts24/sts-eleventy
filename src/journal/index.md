@@ -1,12 +1,13 @@
 ---
 title: Journal
 layout: layouts/blog-list.njk
-tags:
+permalink: /journal/index.html
+tags: 
 pagination:
   data: collections.posts
   size: 5
   alias: posts
-  reverse: true
+  reverse: false
   addAllPagesToCollections: false
 ---
-This is some placeholder...
+This is some placeholder

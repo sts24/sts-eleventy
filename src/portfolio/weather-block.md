@@ -1,6 +1,6 @@
 ---
 title: Weather Block
-date: 2019-07-24T23:08:45.474Z
+date: '2019-07-24'
 tools:
   - React
   - WordPress

@@ -1,10 +1,9 @@
 ---
 id: 178
 title: Making the Move from jQuery to Vue | CSS-Tricks
-date: 2019-05-03
+date: '2019-05-03'
 guid: https://smithscott.net/?p=178
-url:
-  - https://css-tricks.com/making-the-move-from-jquery-to-vue/
+url: https://css-tricks.com/making-the-move-from-jquery-to-vue/
 format: link
 ---
 <blockquote>As someone who has used jQuery for many. years and has recently become a Vue convert, I thought it would be an interesting topic to discuss the migration process of working with one to the other.</blockquote>

@@ -1,10 +1,9 @@
 ---
 id: 155
 title: 'Edge Goes Chromium: What Does it Mean for Front-End Developers? | CSS-Tricks'
-date: 2019-04-11
+date: '2019-04-11'
 guid: https://smithscott.net/?p=155
-url:
-  - https://css-tricks.com/edge-goes-chromium-what-does-it-mean-for-front-end-developers/
+url: https://css-tricks.com/edge-goes-chromium-what-does-it-mean-for-front-end-developers/
 format: link
 ---
 <blockquote>In December 2018, Microsoft announced that Edge would adopt Chromium, the open source project that powers Google Chrome. Many within the industry reacted</blockquote>

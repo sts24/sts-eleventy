@@ -1,10 +1,9 @@
 ---
 id: 184
 title: 'The Apple Watch Turns Four: Some Thoughts'
-date: 2019-05-06
+date: '2019-05-06'
 guid: https://smithscott.net/?p=184
-url:
-  - https://pxlnv.com/blog/apple-watch-turns-four/
+url: https://pxlnv.com/blog/apple-watch-turns-four/
 format: link
 ---
 <blockquote>So, I dug out my old Boccia that I haven’t worn much since I got my first Apple Watch. It doesn’t have the same fit and finish as my Apple Watch; its band is not as easily swapped. It does not display the weather. It does not tell me when I should get some exercise. But it feels nice.</blockquote>

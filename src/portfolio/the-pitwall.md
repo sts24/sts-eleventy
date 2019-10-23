@@ -1,6 +1,6 @@
 ---
 title: The Pitwall
-date: 2019-08-07T23:37:58.430Z
+date: '2019-08-07'
 tools:
   - Netlify
   - Node

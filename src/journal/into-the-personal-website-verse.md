@@ -1,10 +1,9 @@
 ---
 id: 222
 title: Into the Personal-Website-Verse
-date: 2019-05-13
+date: '2019-05-13'
 guid: https://smithscott.net/?p=222
-url:
-  - https://matthiasott.com/articles/into-the-personal-website-verse
+url: https://matthiasott.com/articles/into-the-personal-website-verse
 format: link
 ---
 <blockquote>
@@ -12,6 +11,4 @@ format: link
 </blockquote>
 <p>Source: <em><a href="https://matthiasott.com/articles/into-the-personal-website-verse" data-wplink-edit="true">Into the Personal-Website-Verse · Matthias Ott – User Experience Designer</a></em></p>
 
-<!-- wp:paragraph -->
 <p></p>
-<!-- /wp:paragraph -->

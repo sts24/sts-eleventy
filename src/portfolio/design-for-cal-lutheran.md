@@ -1,6 +1,6 @@
 ---
 title: Design for Cal Lutheran
-date: 2019-08-08T23:33:37.528Z
+date: '2019-08-08'
 tools:
   - Javascript
   - OUCampus

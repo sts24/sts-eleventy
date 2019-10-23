@@ -1,6 +1,6 @@
 ---
 title: Creative Action Network
-date: 2019-08-06T23:49:42.780Z
+date: '2019-08-06'
 tools:
   - Visual Design
 image: /images/uploads/see-america-cropped.jpg

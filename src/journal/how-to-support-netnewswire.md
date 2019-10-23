@@ -1,10 +1,9 @@
 ---
 id: 240
 title: How to Support NetNewsWire
-date: 2019-06-14
+date: '2019-06-14'
 guid: https://smithscott.net/?p=240
-url:
-  - https://github.com/brentsimmons/NetNewsWire/blob/master/Technotes/HowToSupportNetNewsWire.markdown
+url: https://github.com/brentsimmons/NetNewsWire/blob/master/Technotes/HowToSupportNetNewsWire.markdown
 format: link
 ---
 <!-- wp:html -->
@@ -18,6 +17,4 @@ format: link
 <p>Supporting all these things takes work.</p></blockquote>
 <!-- /wp:html -->
 
-<!-- wp:paragraph -->
 <p>I can get on board with all three things. Looking forward to seeing this classic app make it's come back.</p>
-<!-- /wp:paragraph -->

@@ -1,10 +1,9 @@
 ---
 id: 182
 title: Microsoft Provides Sneak Peek of Edge on Mac, 16 Years After Safari Replaced Internet Explorer
-date: 2019-05-06
+date: '2019-05-06'
 guid: https://smithscott.net/?p=182
-url:
-  - https://www.macrumors.com/2019/05/06/microsoft-edge-mac-browser-preview/
+url: https://www.macrumors.com/2019/05/06/microsoft-edge-mac-browser-preview/
 format: link
 ---
 Source: <em><a href="https://www.macrumors.com/2019/05/06/microsoft-edge-mac-browser-preview/">Microsoft Provides Sneak Peek of Edge on Mac, 16 Years After Safari Replaced Internet Explorer - MacRumors</a></em>

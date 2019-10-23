@@ -1,10 +1,9 @@
 ---
 id: 165
 title: Formula One 2019 on Behance
-date: 2019-04-18
+date: '2019-04-18'
 guid: https://smithscott.net/?p=165
-url:
-  - https://www.behance.net/gallery/77495989/Formula-One-2019
+url: https://www.behance.net/gallery/77495989/Formula-One-2019
 format: link
 ---
 <blockquote>In 2019, Formula One called on the team at |drive| to augment the F1 brand and refine the opening title with a more “race day” approach to our original concept. Our team recognized that the most emotive way to inject team-like color into the driver sequen…</blockquote>
