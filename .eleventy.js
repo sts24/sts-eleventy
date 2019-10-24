@@ -1,6 +1,10 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+
 
 module.exports = function (config) {
+
+	config.addPlugin(inclusiveLangPlugin);
 
 	// custom collections
 
