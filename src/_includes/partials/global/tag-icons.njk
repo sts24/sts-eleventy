@@ -1,0 +1,5 @@
+<ul class="icon-grid">
+	{% for item in app_tags.items %}
+		<li aria-label="{{ item.title }}">{% icon item.icon, 'icon-size-3' %}</li>
+	{% endfor %}
+</ul>

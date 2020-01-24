@@ -23,7 +23,7 @@
   {% endblock %}
 
 </head>
-<body>
+<body {% if pageType == 'home' %}class="page-home"{% endif %}>
   <div class="hide" role="none">
     {% include "assets/icon-sprite-general.svg" %}
 

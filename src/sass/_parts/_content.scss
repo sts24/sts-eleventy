@@ -82,3 +82,23 @@ hr {
         height: auto;
     }
 }
+
+
+// tag icons list 
+
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        padding: 0.5rem;
+        margin: 0;
+        flex: 0 0 auto;
+        display: block;
+    }
+
+
+}
