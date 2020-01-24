@@ -1,111 +1,50 @@
-
-
-.icon-grid {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    > li {
-        padding: 0.5rem;
-        margin: 0;
-        flex: 0 0 auto;
-        display: block;
+.page-home {
+    @media (min-width: 768px){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;       
     }
-
-
 }
 
-.featured-grid {
-    display: grid;
-    grid-template-columns: minmax(auto, 400px);
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 3rem 0;
-    grid-gap: 3rem;
+.home-section {
+    @media (min-width: 768px){
+        justify-content: center;
+    }
+}
+
+.home-col-content {
+    order: 2;
+
+    h1 {
+        color: var(--color1);
+        font-size: rem(40);
+        margin: 0 0 0.5rem 0;
+    }
+
+    h2 {
+        color: var(--color1-light);
+        font-size: rem(24);
+        margin: 0 0 2rem 0;
+        padding: 0 0 1rem 0;
+        border-bottom: 1rem solid var(--color2);
+    }
 
     @media (min-width: 768px){
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
+        h1 { font-size: rem(48); }
+        h2 { font-size: rem(36);}
     }
 
-    @media (min-width: 1024px){
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media (prefers-color-scheme: dark){
+        h1 { color: white; }
+        h2 { color: var(--lightblue); }
     }
-    
 }
 
-.featured-grid-item {
-    display: block;
-    position: relative;
-    z-index: 10;
-    padding: 0;
-    margin: 0;
-    
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.home-col-image {
+    order: 1;
 
-    > header {
-        display: block;
-        background-color: var(--color2);
-        display: inline-block;
-        color: white;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        line-height: 1.2em;
-        z-index: 20;
-        padding: 0.5rem 1rem;
-        font-weight: bold;
+    @media (min-width: 768px){
+        width: auto;
     }
-
-    >img {
-        width: 100%;
-        height: 100%;
-
-        max-width: 400px;
-        max-height: 400px;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-
-        filter: grayscale(100%);
-    }
-
-    &:hover {
-        header { background-color: var(--highlight); }
-        img { filter: grayscale(0); }
-    }
-
-    &::before {
-        display: block;
-        content: '';
-        @include blue-waves-bg;
-        position: absolute;
-        bottom: -0.5rem;
-        right: 0.5rem;
-        left: 0.5rem;
-        height: 100%;
-    }
-   
-    &::after {
-        content: '';
-        display: block;
-        padding-top: 100%;
-    }
-    
-}
-
-.featured-grid-item-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
 }
