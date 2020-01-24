@@ -84,6 +84,28 @@ module.exports = function (config) {
 	});
 
 
+
+	config.addShortcode("image", function (imgPath,imgSize,cssClass,alt) {
+		let newImgPath = '';
+		
+		if(imgSize !== ''){
+			newImgPath = imgPath.split('/');
+			newImgPath = newImgPath[newImgPath.length-1];
+			newImgPath = newImgPath.split('.');
+			newImgPath = '/images/resized/' + newImgPath[0] + '-' + imgSize + '.'+ newImgPath[1];
+		} else {
+			newImgPath = imgPath;
+		}
+
+		let css = (cssClass !== '') ? 'class="'+ cssClass +'"' : '';
+		let imgTag = '<img srcset="'+ newImgPath +'" '+ css +' alt="'+ alt +'" />';
+
+		return imgTag
+	});
+
+
+
+
 	// add RSS feed
 	config.addPlugin(pluginRss);
 

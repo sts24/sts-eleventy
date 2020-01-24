@@ -22,7 +22,7 @@
 			{% for item in showcase %}
 				<section class="listing-item">
 					<div class="listing-image">
-						<img srcset="{{ item.image }}?nf_resize=fit&w=800 2x, {{ item.image }}?nf_resize=fit&w=400 1x" class="attachment-large size-large" alt="" />
+						{% image item.image, 'large', 'attachment-large size-large', item.title %}
 					</div>
 					<div class="listing-content">
 						<h2>{{ item.title | safe }}</h2>

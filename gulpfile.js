@@ -76,20 +76,20 @@ function resizeImages(cb){
 					'*.jpg': [
 						{
 							width: 200,
-							rename: { suffix: '-200' }
+							rename: { suffix: '-small' }
 						},
 						{
 							width: 400,
-							rename: { suffix: '-400' }
+							rename: { suffix: '-medium' }
 						},
 						{
 							width: 800,
-							rename: { suffix: '-800' }
+							rename: { suffix: '-large' }
 						}
 					]
 				},
 				{
-					quality: 85
+					quality: 90
 				}
 			)
 		)
