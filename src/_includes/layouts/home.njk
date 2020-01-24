@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="col-s-4 aligncenter">
-		<img srcset="{{ settings.profileImage }}?nf_resize=fit&w=200&h=200 1x, {{ settings.profileImage }}?nf_resize=fit&w=400&h=400 2x" class="profile-image" />
+		{% image settings.profileImage, 'medium', 'profile-image', 'Profile image of Scott' %}
 	</div>
 {% endsectionHeader %}
 
