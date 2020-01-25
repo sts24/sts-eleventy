@@ -4,9 +4,9 @@ module.exports = function (config) {
 
 	// custom collections
 
-	config.addCollection("featuredPortfolios", function (collection) {
+	config.addCollection("orderedPortfolios", function (collection) {
 		return collection.getFilteredByTag('portfolio').sort(function (a, b) {
-			return b.data.homeFeatured
+			return b.data.order - a.data.order;
 		});
 	});
 

@@ -11,7 +11,7 @@
 
 		{{ content | safe }}
 
-		{% for item in collections.featuredPortfolios %}
+		{% for item in collections.orderedPortfolios | reverse %}
 			<section class="listing-item">
 				<div class="listing-image">
 					<a href="{{ item.url }}">

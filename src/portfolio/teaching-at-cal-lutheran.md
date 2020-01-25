@@ -1,6 +1,6 @@
 ---
 title: Teaching at Cal Lutheran
-date: '2019-08-09'
+order: 4
 tools:
   - Adobe Creative Cloud
 image: /images/uploads/computer-lab.jpg
