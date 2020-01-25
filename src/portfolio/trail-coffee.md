@@ -5,7 +5,7 @@ tools:
   - WordPress
   - Sass
   - Visual Design
-image: /images/uploads/trailcoffee.jpg
+image: /images/uploads/trail-coffee-2.jpg
 homeFeatured: true
 excerpt: A journal of hiking photography
 ---
