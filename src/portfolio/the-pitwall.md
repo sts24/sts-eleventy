@@ -1,6 +1,6 @@
 ---
 title: The Pitwall
-order: 2
+order: 3
 tools:
   - Netlify
   - Node

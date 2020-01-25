@@ -1,6 +1,6 @@
 ---
 title: Teaching at Cal Lutheran
-order: 4
+order: 5
 tools:
   - Adobe Creative Cloud
 image: /images/uploads/computer-lab.jpg
