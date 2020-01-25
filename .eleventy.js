@@ -1,6 +1,4 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
-
 
 module.exports = function (config) {
 
@@ -85,20 +83,20 @@ module.exports = function (config) {
 
 
 
-	config.addShortcode("image", function (imgPath,imgSize,cssClass,alt) {
+	config.addShortcode("image", function (imgPath, imgSize, cssClass, alt) {
 		let newImgPath = '';
-		
-		if(imgSize !== ''){
+
+		if (imgSize !== '') {
 			newImgPath = imgPath.split('/');
-			newImgPath = newImgPath[newImgPath.length-1];
+			newImgPath = newImgPath[newImgPath.length - 1];
 			newImgPath = newImgPath.split('.');
-			newImgPath = '/images/resized/' + newImgPath[0] + '-' + imgSize + '.'+ newImgPath[1];
+			newImgPath = '/images/resized/' + newImgPath[0] + '-' + imgSize + '.' + newImgPath[1];
 		} else {
 			newImgPath = imgPath;
 		}
 
-		let css = (cssClass !== '') ? 'class="'+ cssClass +'"' : '';
-		let imgTag = '<img srcset="'+ newImgPath +'" '+ css +' alt="'+ alt +'" />';
+		let css = (cssClass !== '') ? 'class="' + cssClass + '"' : '';
+		let imgTag = '<img srcset="' + newImgPath + '" ' + css + ' alt="' + alt + '" />';
 
 		return imgTag
 	});

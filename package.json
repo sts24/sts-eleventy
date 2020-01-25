@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "production": "gulp && eleventy",
-    "start": "gulp watch & eleventy --serve"
+    "start": "gulp watch & eleventy --serve --quiet",
+    "start:verbose": "gulp watch & eleventy --serve"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,6 @@
     "gulp-responsive": "^3.0.1"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "debug": "^4.1.1",
     "gulp": "^4.0.2",
