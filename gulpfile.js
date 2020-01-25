@@ -2,12 +2,10 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var svgSprite = require('gulp-svg-sprite');
 var autoprefixer = require('gulp-autoprefixer');
-var responsive = require('gulp-responsive');
 
 // files
-const svgFiles = ['./src/svg-icons/general/*.svg', './src/svg-icons/home/*.svg'];
-const sassFiles = './src/sass/*.scss';
-const images = ['./src/images/uploads/*.jpg'];
+let svgFiles = ['./src/svg-icons/general/*.svg', './src/svg-icons/home/*.svg'];
+let sassFiles = './src/sass/*.scss';
 
 
 // SASS
@@ -23,8 +21,8 @@ function sassCompile(cb) {
 			cascade: false
 		}))
 		.pipe(gulp.dest('./build/css/'));
-		
-	
+
+
 }
 
 
@@ -65,47 +63,13 @@ function spriteCompile(cb) {
 }
 
 
-// resize images
-function resizeImages(cb){
-	cb();
-
-	gulp.src(images)
-		.pipe(
-			responsive(
-				{
-					'*.jpg': [
-						{
-							width: 200,
-							rename: { suffix: '-small' }
-						},
-						{
-							width: 400,
-							rename: { suffix: '-medium' }
-						},
-						{
-							width: 800,
-							rename: { suffix: '-large' }
-						}
-					]
-				},
-				{
-					quality: 90
-				}
-			)
-		)
-		.pipe(gulp.dest('./build/images/resized'));
-
-}
-
-
 
 // gulp tasks
-exports.default = gulp.series(sassCompile, spriteCompile, resizeImages);
+exports.default = gulp.series(sassCompile, spriteCompile);
 
-exports.build = gulp.series(sassCompile, spriteCompile, resizeImages);
+exports.build = gulp.series(sassCompile, spriteCompile);
 
 exports.watch = function () {
-	gulp.watch('./src/sass/**/*.scss', { ignoreInitial: false }, sassCompile);
-	gulp.watch(svgFiles, { ignoreInitial: false }, spriteCompile);
-	gulp.watch(images, { ignoreInitial: false }, resizeImages);
+	gulp.watch('./src/sass/**/*.scss', sassCompile);
+	gulp.watch(svgFiles, spriteCompile);
 }

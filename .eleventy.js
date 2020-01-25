@@ -2,8 +2,6 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (config) {
 
-	config.addPlugin(inclusiveLangPlugin);
-
 	// custom collections
 
 	config.addCollection("featuredPortfolios", function (collection) {
