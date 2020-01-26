@@ -58,6 +58,18 @@
 
 }
 
+
+.portfolio-thumbnail-full {
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 768px){
+        width: 50%;
+        height: auto;
+        margin: 0 0 3rem 3rem;
+    }
+}
+
 .wp-block-media-text {
     @extend .listing-item;
 }

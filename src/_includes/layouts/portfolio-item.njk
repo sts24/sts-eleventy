@@ -15,8 +15,13 @@
 				<li>{{ tag }}</li>
 			{% endfor %}
 		</ul>
-
+	</div>
+	<div class="col-s-12">
+	{% image image, 'large', 'align-right portfolio-thumbnail-full', 'Thumbnail image for ' + item.title %}
 		{{ content | safe }}
+	</div>
+
+	<div class="col-s-12">
 
 		{% if showcase %}
 			{% for item in showcase %}
