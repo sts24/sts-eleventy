@@ -1,5 +1,5 @@
 ---
-title: Design for Cal Lutheran
+title: UX Design for Cal Lutheran
 order: 0
 tools:
   - Javascript
