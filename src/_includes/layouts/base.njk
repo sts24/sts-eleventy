@@ -16,8 +16,6 @@
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for Scott Smith's Journal" href="/feed.xml" />
 
 	<link rel="stylesheet" type="text/css" href="/css/sts.css" />
-	
-  <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   {% block head %}
   {% endblock %}
@@ -39,17 +37,5 @@
   
   {% include "partials/global/site-footer.njk" %}
 
-
-  <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 </body>
 </html>
