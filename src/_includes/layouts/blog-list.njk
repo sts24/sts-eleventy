@@ -23,8 +23,8 @@
 	{% include "partials/global/pagination.njk" %}
 
 	{% for post in posts %}
-		<article class="col-s-12 margin-x-2 blog-post blog-post-listing-item">
-			{% blogTitle 'h2', '', post %}
+		<article class="col-s-12 margin-x-3 blog-post blog-post-listing-item">
+			{% blogTitle 'h2', 'blog-post-listing-title margin-bottom-3', post %}
 			{{ post.templateContent | safe }}
 		</article>
 	{% endfor %}

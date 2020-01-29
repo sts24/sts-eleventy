@@ -16,6 +16,14 @@
     }
 }
 
+.blog-post-listing-title {
+    font-size: rem(24);
+    
+    @media (min-width: 768px){
+        font-size: rem(36);
+    }
+}
+
 .blog-link-icon {
     line-height: 1em;
     vertical-align: baseline;
@@ -26,21 +34,10 @@
     }
 }
 
-.blog-post-listing-item {
-    &::after {
-        content: '';
-        display: block;
-        @include light-waves-bg;
-        height: 1em;
-        margin-top: 3em;
-
-        @media (prefers-color-scheme: dark) {
-            @include blue-waves-bg;
-        }
-    }
-}
 
 .blog-post {
+    background-color: white;
+
     h1 {
         color: $body-color;
     }

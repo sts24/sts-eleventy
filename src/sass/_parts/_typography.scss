@@ -61,7 +61,7 @@ h1 {
 }
 
 h2 {
-    font-size: rem(28);
+    font-size: rem(24);
     font-weight: normal;
     font-family: var(--primary-font);
     line-height: 1em;
@@ -74,7 +74,7 @@ h2 {
     }
 
     @media (min-width: 768px){
-        font-size: rem(36);
+        font-size: rem(28);
     }
 }
 
