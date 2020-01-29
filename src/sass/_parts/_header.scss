@@ -1,7 +1,8 @@
 .site-header {
     color: white;
     border-top: 1rem solid var(--color2);
-    @include chevron-pattern;
+    background-color: var(--color1);
+    //@include chevron-pattern;
 }
 
 
@@ -12,5 +13,5 @@
 
 .page-title {
     color: white;
-    background-color: var(--color1-dark);
+    background-color: var(--color1);
 }

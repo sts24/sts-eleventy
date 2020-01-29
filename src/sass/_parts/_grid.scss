@@ -7,3 +7,12 @@
         grid-template-columns: 2fr 1fr;
     }
 }
+
+
+main.row {
+    margin: 0 auto auto auto;
+
+    body.page-home & {
+        margin: auto;
+    }
+}

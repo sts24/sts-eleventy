@@ -4,15 +4,13 @@
 
 {% block content %}
 
-<main>
-	<section class="row padding-x-3 home-section">
-		<div class="col-s-12 col-m-6 home-col-content">
-			{{ content | safe }}
-		</div>
-		<div class="col-s-4 home-col-image">
-			{% image settings.profileImage, 'medium', 'profile-image', 'Profile image of Scott' %}
-		</div>
-	</section>
+<main class="row padding-x-3 home-section">
+	<div class="col-s-12 col-m-6 home-col-content">
+		{{ content | safe }}
+	</div>
+	<div class="col-s-4 home-col-image">
+		{% image settings.profileImage, 'medium', 'profile-image', 'Profile image of Scott' %}
+	</div>
 </main>
 
 {% endblock %}
