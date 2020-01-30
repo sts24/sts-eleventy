@@ -16,13 +16,13 @@
             font-family: var(--primary-font);
             font-weight: normal;
             font-size: rem(24);
-            color: white;
+            color: var(--color3);
             padding: 0.5rem 1rem;
             line-height: 1em;
             text-align: center;
 
             &:hover {
-                background: var(--highlight);
+                background: var(--color4);
                 color: white;
                 text-decoration: none;
             }
@@ -55,7 +55,7 @@
             text-decoration: none;
 
             &:hover {
-                background-color: var(--highlight);
+                background-color: var(--color4);
                 color: white;
             }
 

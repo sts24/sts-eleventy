@@ -18,8 +18,7 @@
     margin: 0;
     display: flex;
     align-items: center;
-
-    @include blue-waves-bg;
+    background-color: var(--color4);
 
     img {
         width: 100%;
@@ -47,8 +46,7 @@
     }
 
     @media (prefers-color-scheme: dark){
-        background-color: var(--color1-dark);
-        
+        background-color: var(--midnight-blue); 
     }
 
     @media (min-width: 768px){
