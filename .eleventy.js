@@ -63,13 +63,14 @@ module.exports = function (config) {
 		let classes = (css !== '') ? ' class="' + css + '"' : '';
 		let html = '<' + heading + classes + '>';
 
+		html += '<a href="' + postURL + '">';
+		html += post.data.title;
+		
 		if (typeof post.data.url !== 'undefined') {
 			html += getIconCode('icon-link', 'icon-size-1 icon-inline blog-link-icon') + ' ';
 			postURL = post.data.url;
 		}
 
-		html += '<a href="' + postURL + '">';
-		html += post.data.title;
 		html += '</a></' + heading + '>';
 
 		return html
