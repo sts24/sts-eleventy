@@ -18,7 +18,7 @@
             font-size: rem(24);
             color: var(--color3);
             padding: 0.5rem 1rem;
-            line-height: 1em;
+            line-height: 1;
             text-align: center;
 
             &:hover {
@@ -50,7 +50,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             padding: 1rem;
-            line-height: 1em;
+            line-height: 1;
             margin: auto;
             text-decoration: none;
 

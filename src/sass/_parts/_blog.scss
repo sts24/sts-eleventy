@@ -6,7 +6,7 @@
         text-decoration: none;
         display: inline-block;
         border-radius: 3px;
-        line-height: 1em;
+        line-height: 1;
         padding: .25rem;
 
         &:hover {
@@ -46,7 +46,7 @@
 }
 
 .blog-link-icon {
-    line-height: 1em;
+    line-height: 1;
     vertical-align: baseline;
     color: var(--color1);
 }
