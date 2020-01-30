@@ -27,6 +27,10 @@
 		{
 			"title": "Node",
 			"icon": "icon-node"
+		},
+		{
+			"title": "React",
+			"icon": "icon-react"
 		}
 	]
 }
