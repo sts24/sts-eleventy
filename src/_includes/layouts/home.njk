@@ -7,6 +7,13 @@
 <main class="row padding-x-3 home-section">
 	<div class="col-s-12 col-m-6 home-col-content">
 		{{ content | safe }}
+
+		<h3 class="margin-top-2">What I Work On</h3>
+		<ul class="icon-grid">
+			{% for item in app_tags.items %}
+				<li aria-label="{{ item.title }}">{% icon item.icon, 'icon-size-3' %}</li>
+			{% endfor %}
+		</ul>
 	</div>
 	<div class="col-s-4 home-col-image">
 		{% image settings.profileImage, 'medium', 'profile-image', 'Profile image of Scott' %}
