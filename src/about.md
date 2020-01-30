@@ -1,20 +1,29 @@
 ---
 layout: layouts/page.njk
 title: About Scott
+useTagIcons: true
 ---
-{% image settings.profileImage, 'medium', 'alignright profile-image', 'Profile image of Scott' %}
+
 
 <p class="intro">I am a Front-End Web Developer with over a decade of experience building web sites.</p>
 
-I got my start like many others with a curiosity of how things work and a drive to build it myself. While the web has changed a lot over the past few decades and has grown in complexity, the same excitement is there for me. Building a web site and a larger design system is a lot like a small, self-contained world. How we familiarize a user with the site’s brand? How do these components all interact with each other? What happens to the web site under certain conditions? These are all important questions before even grabbing for a specific tool.
+<div class="row" style="margin: 0 -1rem">
+<div class="col-s-3 order-2">
+	{% image settings.profileImage, 'medium', 'profile-image', 'Profile image of Scott' %}
+	{% include partials/global/tag-icons.njk %}
+</div>
 
-To sum up how I think of my career: **I love making the web come to life.**
+<div class="col-s-9 order-1">
+I got my start like many others with a curiosity of how things work and a drive to build it myself. While the web has changed a lot over the past few decades and has grown in complexity, the same excitement is there for me. Building a web site and a larger design system is a lot like a small, self-contained world. How we familiarize a user with the site’s brand? How do these components all interact with each other? What happens to the web site under certain conditions? These are all important questions before even grabbing for a specific tool.
 
 My career has been focused on Higher Education marketing. I have built and maintained our front-end framework, implemented a major rebrand, assisted in marketing projects for driving enrollment, and offered web site support to our campus clients.
 
 To sum up how I think of my career: **I love making the web come to life.**
 
 Born and raised in Southern California, I live with my wife Meredith, our son Luke, and our elderly pug Darla. When I am not doing web development you find me hiking my state’s mountains, watching Formula 1 and IndyCar, or watching [a lot of YouTube](https://www.youtube.com/channel/UCbpMy0Fg74eXXkvxJrtEn3w).
+
+</div>
+</div>
 
 ## Have a Question?
 
