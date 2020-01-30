@@ -4,7 +4,7 @@ order: 4
 tools:
   - React
   - Mobx
-  - Node JS
+  - Node
   - JSON APIs
 image: /images/uploads/stratus.jpg
 excerpt: A web app for viewing weather data from the National Weather Service

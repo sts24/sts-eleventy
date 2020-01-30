@@ -6,6 +6,7 @@ tools:
   - OUCampus
   - PHP
   - Sass
+  - Gulp
   - UX Design
   - WordPress
 image: /images/uploads/clu-home.jpg

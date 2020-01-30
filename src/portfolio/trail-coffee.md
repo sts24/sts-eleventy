@@ -2,8 +2,9 @@
 title: Trail Coffee
 order: 1
 tools:
-  - WordPress
-  - Sass
+  - Node
+  - Eleventy
+  - Netlify
   - Visual Design
 image: /images/uploads/trail-coffee-2.jpg
 homeFeatured: true
