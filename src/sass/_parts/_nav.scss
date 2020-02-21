@@ -16,13 +16,13 @@
             font-family: var(--primary-font);
             font-weight: normal;
             font-size: rem(24);
-            color: white;
+            color: var(--color3);
             padding: 0.5rem 1rem;
-            line-height: 1em;
+            line-height: 1;
             text-align: center;
 
             &:hover {
-                background: var(--highlight);
+                background: var(--color4);
                 color: white;
                 text-decoration: none;
             }
@@ -46,16 +46,16 @@
 
         > a {
             display: inline-block;
-            font-size: rem(14);
+            font-size: rem(13);
             text-transform: uppercase;
             letter-spacing: 1px;
             padding: 1rem;
-            line-height: 1em;
+            line-height: 1;
             margin: auto;
             text-decoration: none;
 
             &:hover {
-                background-color: var(--highlight);
+                background-color: var(--color4);
                 color: white;
             }
 

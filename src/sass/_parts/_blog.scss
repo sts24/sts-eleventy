@@ -6,7 +6,7 @@
         text-decoration: none;
         display: inline-block;
         border-radius: 3px;
-        line-height: 1em;
+        line-height: 1;
         padding: .25rem;
 
         &:hover {
@@ -18,6 +18,27 @@
 
 .blog-post-listing-title {
     font-size: rem(24);
+    background-color: var(--color4);
+    color: var(--color1);
+
+    margin: 0 -1rem 1rem -1rem;
+    
+    display: flex;
+    align-items: center;
+
+    > a {
+        color: white;
+        display: block;
+        padding: 1rem;
+        
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &:hover {
+        background-color: var(--color2);
+    }
     
     @media (min-width: 768px){
         font-size: rem(36);
@@ -25,21 +46,19 @@
 }
 
 .blog-link-icon {
-    line-height: 1em;
+    line-height: 1;
     vertical-align: baseline;
     color: var(--color1);
-
-    @media (prefers-color-scheme: dark){
-        color: white;
-    }
 }
+
+
 
 
 .blog-post {
     background-color: white;
 
     h1 {
-        color: $body-color;
+        color: var(--color4);
     }
 
     blockquote {
@@ -59,7 +78,7 @@
         &:before {
             display: block;
             content: '';
-            @include blue-waves-bg;
+            background-color: var(--color2);
             position: absolute;
             top: 0;
             left: 0;
@@ -69,7 +88,11 @@
     }
 
     @media (prefers-color-scheme: dark){
-        h1 { color: white; }   
+        color: var(--body-color); 
+
+        h2, h3, h4 {
+            color: var(--midnight-blue);
+        }
     }
 }
 

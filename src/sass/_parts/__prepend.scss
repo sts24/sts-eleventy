@@ -1,15 +1,23 @@
 :root {
 
-    // colors
-    --color1: #102046;
-    --color1-dark: #0B1732;
-    --color1-light: #1E3D85;
+    // color types
+    --color1: var(--deep-blue);
+    --color1-light: var(--midnight-blue);
+    --color2: var(--salmon);
+    --color3: var(--gold);
+    --color4: var(--teal);
+    --highlight: var(--lightblue);
 
-    --color2: #D14900;
-    --color2-dark: #c55316;
+    // colors
 
     --lightblue: #1a9fe6;
-    --highlight: var(--lightblue);
+    --navy-blue: #102046;
+    --deep-blue: #162131;
+    --midnight-blue: #1E3D85;
+    --orange: #D14900;
+    --gold: #ecbd62;
+    --salmon: #d95953;
+    --teal: #578c95;
 
     --lightgray: #ebebeb;
     --midgray: #b1b1b1;
@@ -19,7 +27,7 @@
     --body-color: var(--darkgray);
     --body-bg: var(--lightgray);
 
-    --link-color: var(--color2-dark);
+    --link-color: var(--color2);
 
     
     // fonts

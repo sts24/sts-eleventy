@@ -13,28 +13,16 @@ a {
     font-size: rem(16);
     font-weight: bold;
     font-family: var(--secondary-font);
-    text-shadow: 0 1px 1px rgba(black,0.5);
-    background-color: var(--color2);
-    color: white;
+    background-color: var(--color3);
+    color: var(--color1);
     line-height: normal;
     padding: .5rem 1rem;
     text-transform: uppercase;
     display: inline-block;
     position: relative;
 
-    &::after {
-        display: block;
-        content: '';
-        position: absolute;
-        left: 0.5rem;
-        right: 0.5rem;
-        bottom: -0.25rem;
-        height: 0.25rem;
-        @include blue-waves-bg;
-    }
-
     &:hover {
-        background-color: var(--highlight);
+        background-color: var(--color2);
         text-decoration: none;
     }
 }
@@ -49,7 +37,7 @@ h1 {
     font-family: var(--primary-font);
     font-weight: normal;
     font-size: rem(36);
-    line-height: 1em;
+    line-height: 1;
     margin: 0;
     color: white;
 
@@ -64,7 +52,7 @@ h2 {
     font-size: rem(24);
     font-weight: normal;
     font-family: var(--primary-font);
-    line-height: 1em;
+    line-height: 1;
     color: var(--color1);
 
     a { font-weight: normal; }
@@ -97,11 +85,12 @@ p {
 }
 
 .intro {
-    font-size: rem(16);
+    font-size: rem(21);
+    font-weight: bold;
+    color: var(--color4);
 
     @media (min-width: 768px){
-        font-size: rem(21);
-        line-height: 1.6em;
+        font-size: rem(24);
         margin-bottom: 2rem;
     }
 }

@@ -1,24 +1,39 @@
 ---
 layout: layouts/page.njk
 title: About Scott
-date: '2019-08-08'
+useTagIcons: true
 ---
-{% image settings.profileImage, 'medium', 'alignright profile-image', 'Profile image of Scott' %}
+
 
 <p class="intro">I am a Front-End Web Developer with over a decade of experience building web sites.</p>
 
+<div class="row" style="margin: 0 -1rem">
+<div class="col-s-12 col-m-3 order-2">
+	{% image settings.profileImage, 'medium', 'profile-image', 'Profile image of Scott' %}
+	{% include partials/global/tag-icons.njk %}
+</div>
+
+<div class="col-s-12 col-m-9 order-1">
+
+Currently, I am a web developer for [California Lutheran University](https://www.callutheran.edu). I have built and maintained our front-end framework, implemented a major rebrand, assisted in marketing projects for driving enrollment, and offered web site support to our campus clients.
+
 I got my start like many others with a curiosity of how things work and a drive to build it myself. While the web has changed a lot over the past few decades and has grown in complexity, the same excitement is there for me. Building a web site and a larger design system is a lot like a small, self-contained world. How we familiarize a user with the site’s brand? How do these components all interact with each other? What happens to the web site under certain conditions? These are all important questions before even grabbing for a specific tool.
 
-My career has been focused on Higher Education marketing. I have built and maintained our front-end framework, implemented a major rebrand, assisted in marketing projects for driving enrollment, and offered web site support to our campus clients.
+To sum up how I think of my career: **I love making the web come to life.**
 
-Born and raised in Southern California, I am happily married to my lovely wife Meredith. When I am not doing web development you find me hiking my state’s mountains, watching Formula 1 and IndyCar, or dreaming up a trip to the National Parks.
+Born and raised in Southern California, I live with my wife Meredith, our son Luke, and our elderly pug Darla. When I am not doing web development you find me hiking my state’s mountains, watching Formula 1 and IndyCar, or watching [a lot of YouTube](https://www.youtube.com/channel/UCbpMy0Fg74eXXkvxJrtEn3w).
 
 ## Have a Question?
 
-Get in touch at <mailto:hello@smithscott.net>
+Get in touch at [scott@smithscott.net](mailto:scott@smithscott.net)
+
+</div>
+</div>
+
+
 
 - - -
 
 ### How This Site Was Made
 
-This is the twelfth version of my portfolio site at smithscott.net. The previous version was built with Node and Gulp, but I was feeling a constrained with the layout and how I was wanting to better the story of my work and projects. I decided to move back to WordPress, as this would give me better management over the site’s content and possible future expansion. I used Microsoft VSCode (although I do have a soft spot for Panic’s Coda, which is the most Mac-like code editor by far) and processed SASS and javascript files with CodeKit. The theme files are then deployed to the live WordPress site with git. Speak of git, the source of this site’s theme can be viewed on GitHub.
+This portfolio site has evolved in many different forms since college. Previous versions were written in PHP, custom Node JS scripts, and WordPress. This current version is built with [Eleventy](https://www.11ty.dev), [Gulp](https://gulpjs.com), and hosted with [Netlify](https://www.netlify.com). Dark blue and orange are my favorite colors, so the visual design started with that combination in mind. You may view the [source code for this site at GitHub](https://github.com/sts24/sts-eleventy).

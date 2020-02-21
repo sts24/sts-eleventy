@@ -4,7 +4,7 @@ order: 4
 tools:
   - React
   - Mobx
-  - Node JS
+  - Node
   - JSON APIs
 image: /images/uploads/stratus.jpg
 excerpt: A web app for viewing weather data from the National Weather Service
@@ -13,5 +13,5 @@ Stratus is a simple web app viewing data from the United States' National Weathe
 
 This app was written in React and uses Mobx for state management. Upon loading, Stratus will ask your browser to provide location services. This will then pass the latitude and longitude to the NWS API and return with all the information I would need to display current, hourly, and extended forecasts.
 
-- [View on GitHub](https://github.com/sts24/stratus)
+- [View on GitHub](https://github.com/sts24/stratus-react)
 - [Visit the Stratus Web App](https://stratusapp.netlify.com/)

@@ -24,8 +24,12 @@
 
 	{% for post in posts %}
 		<article class="col-s-12 margin-x-3 blog-post blog-post-listing-item">
-			{% blogTitle 'h2', 'blog-post-listing-title margin-bottom-3', post %}
+			{% blogTitle 'h2', 'blog-post-listing-title', post %}
 			{{ post.templateContent | safe }}
+
+			{% if post.data.url !== undefined %}
+				<p><a href="{{ post.data.url }}" class="btn">Read This Link</a></p>
+			{% endif %}
 		</article>
 	{% endfor %}
 
