@@ -3,7 +3,7 @@ title: Stratus
 order: 4
 tools:
   - React
-  - Mobx
+  - React Hooks
   - Node
   - JSON APIs
 image: /images/uploads/stratus.jpg
