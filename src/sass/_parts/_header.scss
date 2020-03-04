@@ -17,4 +17,12 @@
 .page-title {
     color: white;
     background-color: var(--color1);
+
+    @media (prefers-color-scheme: dark){
+        background-color: var(--color4);
+
+        a {
+            color: var(--color3);
+        }
+    }
 }

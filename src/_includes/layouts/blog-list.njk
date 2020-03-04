@@ -23,13 +23,16 @@
 	{% include "partials/global/pagination.njk" %}
 
 	{% for post in posts %}
-		<article class="col-s-12 margin-x-3 blog-post blog-post-listing-item">
-			{% blogTitle 'h2', 'blog-post-listing-title', post %}
-			{{ post.templateContent | safe }}
+		<article class="col-s-12 margin-x-3 padding-2 blog-post blog-post-listing-item">
+			{% blogTitle 'h2', 'blog-post-listing-title margin-top-0', post %}
+			
+			<div class="blog-post-content">
+				{{ post.templateContent | safe }}
 
-			{% if post.data.url !== undefined %}
-				<p><a href="{{ post.data.url }}" class="btn">Read This Link</a></p>
-			{% endif %}
+				{% if post.data.url !== undefined %}
+					<p><a href="{{ post.data.url }}" class="btn">Read This Link</a></p>
+				{% endif %}
+			</div>
 		</article>
 	{% endfor %}
 

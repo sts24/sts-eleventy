@@ -6,10 +6,14 @@ a {
     &:hover {
         text-decoration: underline;
     }
+
+    @media (prefers-color-scheme: dark){
+        color: var(--color3);   
+    }
 }
 
 
-.btn {
+a.btn {
     font-size: rem(16);
     font-weight: bold;
     font-family: var(--secondary-font);
@@ -54,6 +58,7 @@ h2 {
     font-family: var(--primary-font);
     line-height: 1;
     color: var(--color1);
+    margin: 3rem 0 1rem 0;
 
     a { font-weight: normal; }
 
@@ -71,6 +76,7 @@ h3 {
     font-weight: normal;
     font-size: rem(21);
     color: var(--color1);
+    margin: 3rem 0 1rem 0;
 
     a { font-weight: normal; }
 
@@ -87,11 +93,15 @@ p {
 .intro {
     font-size: rem(21);
     font-weight: bold;
-    color: var(--color4);
+    color: var(--color1);
 
     @media (min-width: 768px){
         font-size: rem(24);
         margin-bottom: 2rem;
+    }
+
+    @media (prefers-color-scheme: dark){
+        color: white;   
     }
 }
 
