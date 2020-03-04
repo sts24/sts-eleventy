@@ -89,7 +89,8 @@ function resizeImages(cb) {
 					]
 				},
 				{
-					quality: 90
+					quality: 90,
+					silent: true
 				}
 			)
 		)
