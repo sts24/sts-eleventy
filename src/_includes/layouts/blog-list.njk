@@ -24,7 +24,10 @@
 
 	{% for post in posts %}
 		<article class="col-s-12 margin-x-3 padding-2 blog-post blog-post-listing-item">
-			{% blogTitle 'h2', 'blog-post-listing-title margin-top-0', post %}
+			<header class="margin-bottom-2">
+				{% blogTitle 'h2', 'blog-post-listing-title margin-top-0 margin-bottom-1', post %}
+				<time class="blog-post-time">Posted {% timestamp page.date.toUTCString() %}</time>
+			</header>
 			
 			<div class="blog-post-content">
 				{{ post.templateContent | safe }}
