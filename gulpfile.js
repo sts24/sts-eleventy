@@ -85,6 +85,9 @@ function resizeImages(cb) {
 						{
 							width: 800,
 							rename: { suffix: '-large' }
+						},
+						{
+							rename: { suffix: '-full' }
 						}
 					]
 				},
