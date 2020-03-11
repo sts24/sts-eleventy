@@ -38,7 +38,7 @@ module.exports = function (config) {
 		}
 
 		return `
-			<header class="page-title padding-x-2 ${cssClass}">
+			<header class="page-title padding-top-5 padding-bottom-2 ${cssClass}">
 				<div class="row">
 					${htmlSlot}
 				</div>
@@ -83,19 +83,23 @@ module.exports = function (config) {
 
 
 	config.addShortcode("image", function (imgPath, imgSize, cssClass, alt) {
-		let newImgPath = '';
 
-		if (imgSize !== '') {
-			newImgPath = imgPath.split('/');
-			newImgPath = newImgPath[newImgPath.length - 1];
-			newImgPath = newImgPath.split('.');
-			newImgPath = '/images/resized/' + newImgPath[0] + '-' + imgSize + '.' + newImgPath[1];
-		} else {
-			newImgPath = imgPath;
-		}
+		const sizes = {
+			'small': 200,
+			'medium': 400,
+			'large': 800
+		};
+
+		let allImgSizePaths = '';
+		let newImgPath = imgPath.split('/');
+		let fileName = newImgPath[newImgPath.length-1].split('.');
+
+		for(let size in sizes){
+			allImgSizePaths += '/images/resized/' + fileName[0] + '-' + size + '.' + fileName[1] + ' ' + sizes[size] + 'w, ';
+		};
 
 		let css = (cssClass !== '') ? 'class="' + cssClass + '"' : '';
-		let imgTag = '<img srcset="' + newImgPath + '" ' + css + ' alt="' + alt + '" />';
+		let imgTag = '<img srcset="' + allImgSizePaths + '" ' + css + ' alt="' + alt + '" />';
 
 		return imgTag
 	});
