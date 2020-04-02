@@ -1,6 +1,7 @@
 ---
 label: Journal Post
 hide_body: false
+display_field: title
 fields:
 - type: text
   name: title
@@ -8,6 +9,7 @@ fields:
 - type: datetime
   name: date
   label: date
+  default: now
 - type: text
   name: url
   label: url
