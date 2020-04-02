@@ -8,8 +8,9 @@ sections:
   path: src/journal
   label: Journal
   create: documents
-  match: "**/*.md"
-  new_doc_ext: ".md"
+  match: "**/*"
+  exclude: "*.json"
+  new_doc_ext: md
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
