@@ -5,6 +5,12 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: src/potfolio
+  label: Portfolio
+  create: documents
+  match: "**/*"
+  exclude: "*.json"
+- type: directory
   path: src/journal
   label: Journal
   create: documents
