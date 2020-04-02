@@ -1,6 +1,6 @@
 ---
 label: Journal Post
-hide_body: false
+hide_body: true
 display_field: title
 fields:
 - type: text
@@ -10,6 +10,9 @@ fields:
   name: date
   label: date
   default: now
+  config:
+    export_format: YYYY-MM-DD
+    date_format: YYYY-MM-DD
 - type: text
   name: url
   label: url
