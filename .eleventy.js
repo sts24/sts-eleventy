@@ -1,3 +1,4 @@
+const fs = require('fs');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (config) {
@@ -95,8 +96,20 @@ module.exports = function (config) {
 		let fileName = newImgPath[newImgPath.length-1].split('.');
 
 		for(let size in sizes){
-			allImgSizePaths += '/images/resized/' + fileName[0] + '-' + size + '.' + fileName[1] + ' ' + sizes[size] + 'w, ';
-		};
+			let resizedPath = '/images/resized/' + fileName[0] + '-' + size + '.' + fileName[1];
+
+			try {
+				if(fs.existsSync('./build'+resizedPath)){
+					console.log(resizedPath);
+					allImgSizePaths +=  resizedPath +' '+ sizes[size] + 'w, ';
+				} else {
+					console.log('no '+resizedPath);
+				}
+			} catch(err) {
+				console.log((err));
+			}
+
+		}
 
 		let css = (cssClass !== '') ? 'class="' + cssClass + '"' : '';
 		let imgTag = '<img srcset="' + allImgSizePaths + '" ' + css + ' alt="' + alt + '" />';
