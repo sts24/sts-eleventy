@@ -17,7 +17,11 @@
 		</ul>
 	</div>
 	<div class="col-s-12">
-	{% image image, 'large', 'align-right portfolio-thumbnail-full', 'Thumbnail image for ' + item.title %}
+
+		{% for img in image %}
+			{% image img.src, 'large', 'align-right portfolio-thumbnail-full', img.alt | safe %}
+		{% endfor %}
+
 		{{ content | safe }}
 	</div>
 

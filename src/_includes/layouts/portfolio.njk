@@ -12,14 +12,9 @@
 		{{ content | safe }}
 
 		{% for item in collections.orderedPortfolios | reverse %}
-			<section class="listing-item">
-				<div class="listing-image">
-					<a href="{{ item.url }}">
-						{% image item.data.image, 'large', '', 'Thumbnail image for ' + item.data.title | safe %}
-					</a>
-				</div>
+			<section class="listing-item">	
 				<div class="listing-content">
-					<h2><a href="{{ item.url }}">{{ item.data.title | safe }}</a></h2>
+					<h2>{{ item.data.title | safe }}</h2>
 
 					{{ item.data.excerpt }}
 
@@ -30,9 +25,14 @@
 							{% endfor %}
 						</ul>
 						
-						<a href="{{ item.url }}" class="btn">View More</a>
+						<a href="{{ item.url }}" class="btn">View Case Study</a>
 					</div>
 				</div>
+				<aside class="listing-image">
+					{% for img in item.data.image %}
+						{% image img.src, 'large', 'img-'+loop.index, img.alt | safe %}
+					{% endfor %}
+				</aside>
 			</section>
 		{% endfor %}
 	</div>
