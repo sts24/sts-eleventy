@@ -3,8 +3,9 @@ title: Teaching at Cal Lutheran
 order: 5
 tools:
   - Adobe Creative Cloud
-image: /images/uploads/computer-lab.jpg
-homeFeatured: false
+image:
+  - src: /images/uploads/computer-lab.jpg
+    alt: Classroom with iMacs
 excerpt: My experience in teaching a college course on design and the Adobe Creative Cloud.
 ---
 ## 2012 – 2018

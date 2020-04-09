@@ -9,8 +9,11 @@ tools:
   - Gulp
   - UX Design
   - WordPress
-image: /images/uploads/clu-home.jpg
-homeFeatured: true
+image: 
+  - src: /images/uploads/cal-lutheran-home-desktop.jpg
+    alt: Cal Lutheran Homepage in Desktop size
+  - src: /images/uploads/cal-lutheran-home-mobile.jpg
+    alt: Cal Lutheran Homepage in Mobile size
 excerpt: My work in Higher Education. Projects ranged from front-end development, UX, marketing design, and client support.
 showcase:
   - description: >-

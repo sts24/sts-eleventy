@@ -5,7 +5,9 @@ tools:
  - Wordpress
  - PHP
  - REST API
-image: /images/uploads/peppergrove.jpg
+image: 
+  - src: /images/uploads/peppergrove.jpg
+    alt: Grove of peppertrees
 excerpt: A Headless Wordpress Theme
 ---
 For the past few years in the web development world, there has been this growing trend of a headless content management system. Traditionally a CMS would provide the database, a content management backend, as well as the templating code. WordPress falls in this category as an all encompassing system. A few versions back, the REST API was added to the core release. This allows a query to be made over HTTP and returned with neatly formatted JSON. Now, developers can use this JSON with any kind of templating system or static site generator that they choose. It makes it really easy to develop a React or Vue driven front-end with your data managed by a familiar system like WordPress.

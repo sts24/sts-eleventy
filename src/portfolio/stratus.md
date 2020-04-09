@@ -6,7 +6,9 @@ tools:
 - React Hooks
 - Node
 - JSON APIs
-image: "/images/uploads/stratus.jpg"
+image: 
+	- src: /images/uploads/stratus-desktop.jpg
+		alt: Stratus app screenshot
 excerpt: A web app for viewing weather data from the National Weather Service
 
 ---

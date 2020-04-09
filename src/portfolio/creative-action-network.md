@@ -3,7 +3,9 @@ title: Creative Action Network
 order: 4
 tools:
   - Visual Design
-image: /images/uploads/see-america-cropped.jpg
+image: 
+  - src: /images/uploads/see-america-cropped.jpg
+    alt: Illustration of Channel Islands National Park
 homeFeatured: true
 excerpt: My contribution to Creative Action Network's See America campaign.
 ---

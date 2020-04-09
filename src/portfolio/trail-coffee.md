@@ -6,8 +6,11 @@ tools:
   - Eleventy
   - Netlify
   - Visual Design
-image: /images/uploads/trail-coffee-2.jpg
-homeFeatured: true
+image: 
+  - src: /images/uploads/trail-coffee-desktop.jpg
+    alt: Trail Coffee screenshot in desktop
+  - src: /images/uploads/trail-coffee-mobile.jpg
+    alt: Trail Coffee screenshot in mobile
 excerpt: A journal of hiking photography
 ---
 Trail Coffee was a side project I created to share my hiking photography. The original version of the site was launched in 2015 using a besopke WordPress theme I developed to get exactly what I needed out of the site. At the time, this theme used several backend functions to help with customizing each post. For example, each region was defined by a category and given a custom accent color. The site also used several plugins such as Jetpack and WP-GPX-Maps to display map location and GPS data from the hikes.

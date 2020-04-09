@@ -9,10 +9,12 @@ tools:
 - React
 - Javascript
 - NPM
-image: "/images/uploads/pitwall-graphic.jpg"
-homeFeatured: true
+image: 
+- src: /images/uploads/pitwall-desktop-2.jpg
+  alt: Pitwall app in desktop
+- src: /images/uploads/pitwall-mobile-2.jpg
+  alt: Pitwall app in mobile
 excerpt: A project written in Vue to explore the historical records of Formula 1 racing.
-
 ---
 ## Explore historical records of past Formula 1 championships.</h2>
 
