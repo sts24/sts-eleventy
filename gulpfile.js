@@ -13,8 +13,7 @@ const images = ['./src/images/uploads/*.jpg'];
 // SASS
 
 function sassCompile(cb) {
-	cb();
-
+	
 	gulp.src(sassFiles)
 		.pipe(sass({
 			outputStyle: 'compressed'
@@ -24,14 +23,13 @@ function sassCompile(cb) {
 		}))
 		.pipe(gulp.dest('./build/css/'));
 
-
+	cb();
 }
 
 
 // make svg sprite
 
 function spriteCompile(cb) {
-	cb();
 
 	svgFiles.forEach(function (srcLoc) {
 		let srcName = srcLoc.split('/')[3];
@@ -62,12 +60,13 @@ function spriteCompile(cb) {
 
 	});
 
+	cb();
+
 }
 
 
 // resize images
 function resizeImages(cb) {
-	cb();
 
 	gulp.src(images)
 		.pipe(
@@ -93,11 +92,15 @@ function resizeImages(cb) {
 				},
 				{
 					quality: 90,
-					silent: true
+					silent: true,
+					errorOnEnlargement: false,
+					skipOnEnlargement: true
 				}
 			)
 		)
 		.pipe(gulp.dest('./build/images/resized'));
+
+		cb();
 
 }
 
@@ -110,6 +113,10 @@ exports.build = gulp.series(sassCompile, spriteCompile, resizeImages);
 
 exports.watch = function () {
 	gulp.watch('./src/sass/**/*.scss', { ignoreInitial: false }, sassCompile);
-	gulp.watch(svgFiles, { ignoreInitial: false }, spriteCompile);
-	gulp.watch(images, { ignoreInitial: false }, resizeImages);
+	gulp.watch(svgFiles, { ignoreInitial: false }, spriteCompile).on('error', function(path, stats){
+		console.log(path, stats);
+	});
+	gulp.watch(images, { ignoreInitial: false }, resizeImages).on('error', function(path, stats){
+		console.log(path, stats);
+	});
 }
