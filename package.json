@@ -6,7 +6,8 @@
   "scripts": {
     "production": "gulp && eleventy",
     "start": "gulp watch & eleventy --serve --quiet",
-    "start:verbose": "gulp watch & eleventy --serve"
+    "start:verbose": "gulp watch & eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
   },
   "keywords": [],
   "author": "",
