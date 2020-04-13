@@ -112,7 +112,7 @@ module.exports = function (config) {
 		}
 
 		let css = (cssClass !== '') ? 'class="' + cssClass + '"' : '';
-		let imgTag = '<img srcset="' + allImgSizePaths + '" ' + css + ' alt="' + alt + '" />';
+		let imgTag = '<img srcset="' + allImgSizePaths + '" ' + css + ' alt="' + alt + '" loading="lazy" />';
 
 		return imgTag
 	});
