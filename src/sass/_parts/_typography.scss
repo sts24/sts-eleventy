@@ -31,11 +31,6 @@ a.btn {
     }
 }
 
-.wp-block-button {
-    a { @extend .btn; }
-}
-
-
 
 h1 {
     font-family: var(--primary-font);
