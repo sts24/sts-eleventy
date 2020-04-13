@@ -18,11 +18,8 @@
 	</div>
 	<div class="col-s-12">
 
-		{% for img in image %}
-			{% image img.src, 'large', 'align-right portfolio-thumbnail-full', img.alt | safe %}
-		{% endfor %}
-
 		{{ content | safe }}
+
 	</div>
 
 	<div class="col-s-12">
@@ -30,9 +27,6 @@
 		{% if showcase %}
 			{% for item in showcase %}
 				<section class="listing-item">
-					<div class="listing-image">
-						{% image item.image, 'large', 'attachment-large size-large', item.title %}
-					</div>
 					<div class="listing-content">
 						<h2>{{ item.title | safe }}</h2>
 
@@ -41,6 +35,9 @@
 						{% if item.url %}
 							<a href="{{ item.url }}" class="btn">View This Site</a>
 						{% endif %}
+					</div>
+					<div class="listing-image">
+						{% image item.image, 'large', '', item.title %}
 					</div>
 				</section>
 			{% endfor %}
