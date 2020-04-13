@@ -22,7 +22,7 @@
 .listing-image {
     padding: $base_size;
     margin: 0;
-    min-height: 50vh;
+    min-height: 500px;
     position: relative;
     display: grid;
 
@@ -59,6 +59,7 @@
     @media (min-width: 768px){
         grid-column: 5 / 9;
         height: 100%;
+        min-height: 50vh;
     }
 
 }
