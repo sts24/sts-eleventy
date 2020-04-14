@@ -23,6 +23,8 @@ To sum up how I think of my career: **I love making the web come to life.**
 
 Born and raised in Southern California, I live with my wife Meredith, our son Luke, and our elderly pug Darla. When I am not doing web development you find me hiking my state’s mountains, watching Formula 1 and IndyCar, or watching [a lot of YouTube](https://www.youtube.com/channel/UCbpMy0Fg74eXXkvxJrtEn3w).
 
+[Here's what I'm doing now](/now)
+
 ## Have a Question?
 
 Get in touch at [scott@smithscott.net](mailto:scott@smithscott.net)
