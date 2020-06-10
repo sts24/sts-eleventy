@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   {% if pageType == 'home' %}
-		<title>Scott Smith - Web Developer</title>
+		<title>{{ settings.siteName }} - Web Developer</title>
   {% else %}
-    <title>{{ title | safe }} - Scott Smith</title>
+    <title>{{ title | safe }} - {{ settings.siteName }}</title>
 	{% endif %}
+
+  <meta name="description" content="{{ settings.description }}">
 
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="apple-touch-icon" href="/images/site-icon.png">
