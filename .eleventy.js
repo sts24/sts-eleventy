@@ -100,10 +100,10 @@ module.exports = function (config) {
 
 			try {
 				if(fs.existsSync('./build'+resizedPath)){
-					console.log(resizedPath);
+					//console.log(resizedPath);
 					allImgSizePaths +=  resizedPath +' '+ sizes[size] + 'w, ';
 				} else {
-					console.log('no '+resizedPath);
+					//console.log('no '+resizedPath);
 				}
 			} catch(err) {
 				console.log((err));

@@ -1,12 +1,13 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var svgSprite = require('gulp-svg-sprite');
-var autoprefixer = require('gulp-autoprefixer');
-var responsive = require('gulp-responsive');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const svgSprite = require('gulp-svg-sprite');
+const autoprefixer = require('gulp-autoprefixer');
+const responsive = require('gulp-responsive');
+const cp = require("child_process");
 
 // files
 const svgFiles = ['./src/svg-icons/general/*.svg', './src/svg-icons/home/*.svg'];
-const sassFiles = './src/sass/*.scss';
+const sassFiles = './src/sass/**/*.scss';
 const images = ['./src/images/uploads/*.jpg'];
 
 
@@ -21,7 +22,7 @@ function sassCompile(cb) {
 		.pipe(autoprefixer({
 			cascade: false
 		}))
-		.pipe(gulp.dest('./build/css/'));
+		.pipe(gulp.dest('./src/css/'));
 
 	cb();
 }
@@ -105,18 +106,22 @@ function resizeImages(cb) {
 }
 
 
+// Eleventy
+function eleventyRun() {
+	return cp.spawn("eleventy", ["--serve", "--quiet"], {
+		stdio: "inherit", shell: true
+	});
+}
+
+
 
 // gulp tasks
 exports.default = gulp.series(sassCompile, spriteCompile, resizeImages);
 
-exports.build = gulp.series(sassCompile, spriteCompile, resizeImages);
-
 exports.watch = function () {
-	gulp.watch('./src/sass/**/*.scss', { ignoreInitial: false }, sassCompile);
-	gulp.watch(svgFiles, { ignoreInitial: false }, spriteCompile).on('error', function(path, stats){
-		console.log(path, stats);
-	});
-	gulp.watch(images, { ignoreInitial: false }, resizeImages).on('error', function(path, stats){
-		console.log(path, stats);
-	});
+	gulp.watch(sassFiles, { ignoreInitial: false }, sassCompile);
+	gulp.watch(svgFiles, { ignoreInitial: false }, spriteCompile);
+	gulp.watch(images, { ignoreInitial: false }, resizeImages);
+
+	eleventyRun();
 }
