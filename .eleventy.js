@@ -66,7 +66,7 @@ module.exports = function (config) {
 
 		html += '<a href="' + postURL + '">';
 		html += post.data.title;
-		
+
 		if (typeof post.data.url !== 'undefined') {
 			html += getIconCode('icon-link', 'icon-size-1 icon-inline blog-link-icon') + ' ';
 			postURL = post.data.url;
@@ -93,19 +93,19 @@ module.exports = function (config) {
 
 		let allImgSizePaths = '';
 		let newImgPath = imgPath.split('/');
-		let fileName = newImgPath[newImgPath.length-1].split('.');
+		let fileName = newImgPath[newImgPath.length - 1].split('.');
 
-		for(let size in sizes){
+		for (let size in sizes) {
 			let resizedPath = '/images/resized/' + fileName[0] + '-' + size + '.' + fileName[1];
 
 			try {
-				if(fs.existsSync('./build'+resizedPath)){
+				if (fs.existsSync('./build' + resizedPath)) {
 					//console.log(resizedPath);
-					allImgSizePaths +=  resizedPath +' '+ sizes[size] + 'w, ';
+					allImgSizePaths += resizedPath + ' ' + sizes[size] + 'w, ';
 				} else {
 					//console.log('no '+resizedPath);
 				}
-			} catch(err) {
+			} catch (err) {
 				console.log((err));
 			}
 
@@ -141,7 +141,8 @@ module.exports = function (config) {
 			"woff",
 			"html",
 			"yml",
-			"svg"
+			"svg",
+			"css"
 		]
 	};
 };
