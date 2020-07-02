@@ -15,11 +15,13 @@
             display: block;
             font-family: var(--primary-font);
             font-weight: normal;
-            font-size: rem(24);
+            font-size: rem(18);
             color: var(--color3);
             padding: 0.5rem 1rem;
             line-height: 1;
             text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
 
             &:hover {
                 background: var(--seablue);
