@@ -16,7 +16,7 @@ module.exports = function (config) {
 
 	function getIconCode(iconName, cssClass) {
 		return `
-		<svg class="svg-icon ${cssClass}" shape-rendering="geometricPrecision" role="presentation">
+		<svg class="svg-icon ${cssClass}" shape-rendering="geometricPrecision" role="presentation" aria-label="icon">
 			<use xlink: href="#${iconName}"></use>
     	</svg>`;
 	}

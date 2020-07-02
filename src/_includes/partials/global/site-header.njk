@@ -6,7 +6,7 @@
 		</a>
 
 		{% if navigation.items %}
-		<nav id="site-nav">
+		<nav id="site-nav" aria-label="Site Navigation">
 			<ul class="site-nav-list" id="site-nav-list">
 				{% for item in navigation.items %}
 					<li><a href="{{ item.url }}">{{ item.text }}</a></li>
