@@ -2,20 +2,19 @@
 
     // color types
     --color1: var(--deep-blue);
-    --color1-light: var(--midnight-blue);
-    --color2: var(--salmon);
-    --color3: var(--gold);
+    --color2: var(--orange);
+    --color3: var(--bright-gold);
     --color4: var(--olive);
     --highlight: var(--lightblue);
 
     // colors
 
+    --seablue: #116D9C;
     --lightblue: #1a9fe6;
-    --navy-blue: #102046;
-    --deep-blue: #162131;
-    --midnight-blue: #1E3D85;
-    --orange: #D14900;
+    --deep-blue: #0d2c5a;
+    --orange: #FA5900;
     --gold: #ecbd62;
+    --bright-gold: #fcbe41;
     --salmon: #d95953;
     --teal: #578c95;
     --olive: #454b43;
@@ -33,12 +32,9 @@
     
     // fonts
     --primary-font: "Lora", serif;
-    --secondary-font: "Open Sans", sans-serif;
+    --secondary-font: "Lato", sans-serif;
     --body-font: var(--secondary-font);
 
-    @media (prefers-color-scheme: dark){
-        --link-color: var(--highlight);  
-    }
 }
 
 $navy: #102046;
@@ -64,7 +60,7 @@ $gray: #2d2d2d;
 // fonts
 
 $primary-font: "Lora", serif;
-$secondary-font: "Open Sans", sans-serif;
+$secondary-font: "Lato", sans-serif;
 $body-font: $secondary-font;
 
 
@@ -83,7 +79,7 @@ $body-font: $secondary-font;
 // styles
 
 @mixin blue-waves-bg {
-	background-color: var(--color1-light);
+	background-color: var(--color1);
     background-image: url('../images/waves.svg');
     background-size: 100px auto;
 }

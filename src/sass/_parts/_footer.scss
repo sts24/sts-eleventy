@@ -19,13 +19,7 @@
             color: var(--color3);
         }
 
-        @media (prefers-color-scheme: dark){
-            a { color: var(--color3); }   
-        }
     }
 
-    @media (prefers-color-scheme: dark){
-        background-color: var(--color4);
-    }
 }
 

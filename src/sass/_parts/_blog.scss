@@ -1,3 +1,6 @@
+.blog-page-content {
+    --link-color: var(--seablue);
+}
 
 .blog-nav {
     margin-top: 1rem;
@@ -31,9 +34,6 @@
         font-size: rem(36);
     }
 
-    @media (prefers-color-scheme: dark){
-        a { color: var(--color4); }
-    }
 }
 
 .blog-link-icon {
@@ -47,10 +47,6 @@
 
     h1 {
         color: var(--color4);
-    }
-
-    @media (prefers-color-scheme: dark){
-     background-color: var(--lightgray);   
     }
 }
 
@@ -87,15 +83,6 @@
         }
     }
 
-    @media (prefers-color-scheme: dark){
-        color: var(--body-color); 
-
-        h2, h3, h4 {
-            color: var(--color1);
-        }
-
-        a:not(.btn) { color: var(--midnight-blue); }
-    }
 }
 
 
@@ -103,9 +90,5 @@
     .svg-icon {
         margin: 0 1ch;
         fill: var(--color1);
-
-        @media (prefers-color-scheme: dark){
-            fill: white;
-        }
     }
 }

@@ -2,10 +2,6 @@
     color: white;
     border-top: 1rem solid var(--color2);
     background-color: var(--color1);
-
-    @media (prefers-color-scheme: dark){
-        background-color: var(--color4);
-    }
 }
 
 
@@ -18,11 +14,5 @@
     color: white;
     background-color: var(--color1);
 
-    @media (prefers-color-scheme: dark){
-        background-color: var(--color4);
-
-        a {
-            color: var(--color3);
-        }
-    }
+    --link-color: var(--bright-gold);
 }

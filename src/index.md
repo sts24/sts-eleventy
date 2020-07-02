@@ -4,7 +4,6 @@ title: Scott Smith
 pageType: home
 ---
 # Scott Smith
-## Web Developer
 
 My name is Scott Smith. I am a Southern Californian web developer working in higher education that specializes in front-end development and user experience design.
 

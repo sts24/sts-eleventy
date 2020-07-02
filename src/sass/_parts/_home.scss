@@ -22,22 +22,9 @@
         margin: 0 0 0.5rem 0;
     }
 
-    h2 {
-        color: var(--color1-light);
-        font-size: rem(24);
-        margin: 0 0 2rem 0;
-        padding: 0 0 1rem 0;
-        border-bottom: 1rem solid var(--color2);
-    }
 
     @media (min-width: 768px){
         h1 { font-size: rem(48); }
-        h2 { font-size: rem(36);}
-    }
-
-    @media (prefers-color-scheme: dark){
-        h1 { color: white; }
-        h2 { color: var(--lightblue); }
     }
 }
 
