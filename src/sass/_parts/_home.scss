@@ -8,34 +8,14 @@
 }
 
 .home-section {
-    @media (min-width: 768px){
-        justify-content: center;
-    }
-}
 
-.home-col-content {
-    order: 2;
+    text-align: center;
 
     h1 {
         color: var(--color1);
-        font-size: rem(40);
-        margin: 0 0 0.5rem 0;
     }
 
-
-    @media (min-width: 768px){
-        h1 { font-size: rem(48); }
+    h2 {
+        margin-top: 6rem;
     }
-}
-
-.home-col-image {
-    order: 1;
-
-    @media (min-width: 768px){
-        width: auto;
-    }
-}
-
-.home-icons {
-    order: 3;
 }
