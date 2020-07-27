@@ -35,12 +35,18 @@
     {% endif %}
   </div>
 
-  {% include "partials/global/site-header.njk" %}
-  
-  {% block content %}
-  {% endblock content %}
-  
-  {% include "partials/global/site-footer.njk" %}
+  <div id="site">
+
+    {% include "partials/global/site-header.njk" %}
+    
+    {% block content %}
+    {% endblock content %}
+    
+    {% include "partials/global/site-footer.njk" %}
+
+  </div>
+
+  <script src="/js/doorway.js"></script>
 
 </body>
 </html>

@@ -142,7 +142,8 @@ module.exports = function (config) {
 			"html",
 			"yml",
 			"svg",
-			"css"
+			"css",
+			"js"
 		]
 	};
 };
