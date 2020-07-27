@@ -1,38 +1,59 @@
-document.querySelectorAll('a').forEach(function(link){
-	
-	link.addEventListener('click', function(e){
-		e.preventDefault();
+const navigateTo = function(linkPath){
 
-		console.log(e);
+	fetch(linkPath)
+		.then(function(response){
+			return response.text();
+		})
+		.then(function(data){
 
-		var linkPath = e.target.pathname;
+			var pageArea = document.querySelector('#site');
+
+			var newDoc = new DOMParser().parseFromString(data, "text/html");
+
+			var newTitle = newDoc.title;
+			var newPageBody = newDoc.querySelector('#site');
+
+			pageArea.innerHTML = newPageBody.innerHTML;
+			document.title = newTitle;
+
+			return true
+		})
+		.then(function(){
+			setupLinks();
+
+			return true
+		})
+		.catch(function(error){
+			console.log(error);
+		});
+
+}
+
+
+const setupLinks = function(){
+
+	document.querySelectorAll('a').forEach(function(link){
 		
+		link.addEventListener('click', function(e){
+			e.preventDefault();
 
-		fetch(linkPath)
-			.then(function(response){
-				return response.text();
-			})
-			.then(function(data){
+			var linkPath = e.target.pathname;
+			
+			navigateTo(linkPath);
 
-				var pageArea = document.querySelector('#site');
+			window.history.pushState({
+				page: linkPath,
+			}, '', linkPath);
 
-				var newDoc = new DOMParser().parseFromString(data, "text/html");
+		});
 
-				var newURL = newDoc.URL;
-				var newTitle = newDoc.title;
-				var newPageBody = newDoc.querySelector('#site');
-
-				
-				window.history.pushState({
-					page: newURL,
-					title: newTitle
-				}, newTitle, linkPath);
-
-				pageArea.innerHTML = newPageBody.innerHTML;
-				document.title = newTitle;
-			});
-
-		
 	});
 
+}
+
+setupLinks();
+
+
+window.addEventListener('popstate', function(e){
+	navigateTo(e.state.page);
 });
