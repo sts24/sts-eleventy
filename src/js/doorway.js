@@ -1,59 +1,89 @@
-const navigateTo = function(linkPath){
+const navigateTo = function (linkPath) {
 
 	fetch(linkPath)
-		.then(function(response){
+		.then(function (response) {
+			// return raw data, format to text
 			return response.text();
 		})
-		.then(function(data){
+		.then(function (data) {
+			// prepare page for animating out current page
+			document.querySelector('#site').classList.add('page-animate-out');
+			return data
+		})
+		.then(function (data) {
+			// insert new data when animation ends
 
-			var pageArea = document.querySelector('#site');
+			return new Promise(function (resolve, reject) {
 
-			var newDoc = new DOMParser().parseFromString(data, "text/html");
+				var pageArea = document.querySelector('#site');
 
-			var newTitle = newDoc.title;
-			var newPageBody = newDoc.querySelector('#site');
+				pageArea.addEventListener('transitionend', function () {
 
-			pageArea.innerHTML = newPageBody.innerHTML;
-			document.title = newTitle;
+					document.querySelectorAll('a').forEach(function (link) {
+						link.removeEventListener('click', linkHandler, true);
+					});
+
+					pageArea.classList.remove('page-animate-out');
+
+					var newDoc = new DOMParser().parseFromString(data, "text/html");
+
+					// get data from new page
+					var newTitle = newDoc.title;
+					var newPageBody = newDoc.querySelector('#site');
+
+					// insert new page data into container
+					pageArea.innerHTML = newPageBody.innerHTML;
+					document.title = newTitle;
+
+					resolve(true);
+				});
+
+			});
+
+			// 
+
+			// return true
+		})
+		.then(function (data) {
+			// animate in new page
+
+			document.querySelector('#site').classList.add('page-animate-in');
+			document.querySelector('#site').addEventListener('transitionend', function (e) {
+				this.classList.remove('page-animate-in');
+				setupLinks();
+			});
 
 			return true
 		})
-		.then(function(){
-			setupLinks();
+		.catch(function (error) {
 
-			return true
-		})
-		.catch(function(error){
-			console.log(error);
 		});
 
 }
 
 
-const setupLinks = function(){
+function linkHandler(e) {
+	e.preventDefault();
 
-	document.querySelectorAll('a').forEach(function(link){
-		
-		link.addEventListener('click', function(e){
-			e.preventDefault();
+	var linkPath = e.target.attributes.href.value;
+	console.log(linkPath);
+	navigateTo(linkPath);
 
-			var linkPath = e.target.pathname;
-			
-			navigateTo(linkPath);
+	window.history.pushState({
+		page: linkPath,
+	}, '', linkPath);
+}
 
-			window.history.pushState({
-				page: linkPath,
-			}, '', linkPath);
 
-		});
-
+function setupLinks() {
+	document.querySelectorAll('a').forEach(function (link) {
+		link.addEventListener('click', linkHandler);
 	});
-
 }
 
 setupLinks();
 
 
-window.addEventListener('popstate', function(e){
+window.addEventListener('popstate', function (e) {
 	navigateTo(e.state.page);
 });
