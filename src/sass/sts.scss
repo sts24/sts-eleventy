@@ -20,6 +20,19 @@ body {
 }
 
 
+#site {
+    transition: 300ms linear all;
+}
+
+.page-animate-in {
+    opacity: 1;
+}
+
+.page-animate-out {
+    opacity: 0;
+}
+
+
 @import '_parts/grid';
 @import '_parts/colors';
 @import '_parts/typography';
