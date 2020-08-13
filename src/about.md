@@ -1,5 +1,5 @@
 ---
-layout: layouts/page.njk
+layout: page.njk
 title: About Scott
 useTagIcons: true
 ---
@@ -10,7 +10,7 @@ useTagIcons: true
 <div class="row" style="margin: 0 -1rem">
 <div class="col-s-12 col-m-3 order-2">
 	{% image settings.profileImage, 'medium', 'profile-image', 'Profile image of Scott' %}
-	{% include partials/global/tag-icons.njk %}
+	{% include partials/tag-icons.njk %}
 </div>
 
 <div class="col-s-12 col-m-9 order-1">

@@ -100,10 +100,7 @@ module.exports = function (config) {
 
 			try {
 				if (fs.existsSync('./build' + resizedPath)) {
-					//console.log(resizedPath);
 					allImgSizePaths += resizedPath + ' ' + sizes[size] + 'w, ';
-				} else {
-					//console.log('no '+resizedPath);
 				}
 			} catch (err) {
 				console.log((err));
@@ -124,6 +121,10 @@ module.exports = function (config) {
 	config.addPlugin(pluginRss);
 
 
+	// pass through certain files
+	config.addPassthroughCopy("src/fonts");
+	config.addPassthroughCopy("src/js");
+
 	// options
 
 	return {
@@ -131,19 +132,11 @@ module.exports = function (config) {
 			input: "src",
 			output: "build"
 		},
-		passthroughFileCopy: true,
-		layout: 'layouts/page.njk',
+		layout: 'page.njk',
 		templateFormats: [
 			"md",
-			"jpg",
-			"gif",
-			"png",
-			"woff",
-			"html",
-			"yml",
-			"svg",
-			"css",
-			"js"
+			"njk",
+			"html"
 		]
 	};
 };

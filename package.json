@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "production": "gulp && eleventy",
-    "start": "gulp watch",
-    "start:verbose": "gulp watch & eleventy --serve",
-    "debug": "DEBUG=Eleventy* eleventy"
+    "start": "gulp watch & eleventy --serve --quiet",
+    "gulp:css": "gulp css",
+    "gulp:images": "gulp images",
+    "gulp:svg": "gulp svg",
+    "build": "gulp && eleventy --quiet",
+    "debug": "DEBUG=Eleventy* eleventy",
+    "clean": "rm -rf build"
   },
   "keywords": [],
   "author": "",
@@ -20,11 +23,7 @@
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "debug": "^4.1.1",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
     "gulp-sass": "^4.1.0",
     "gulp-svg-sprite": "^1.5.0"
-  },
-  "browserslist": [
-    "last 2 versions"
-  ]
+  }
 }

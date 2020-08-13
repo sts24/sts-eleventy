@@ -1,4 +1,4 @@
-{% extends 'layouts/base.njk' %}
+{% extends 'base.njk' %}
 
 {% block content %}
 
@@ -20,7 +20,7 @@
 
 <main class="row padding-bottom-3 blog-page-content">
 
-	{% include "partials/global/pagination.njk" %}
+	{% include "partials/pagination.njk" %}
 
 	{% for post in posts %}
 		<article class="col-s-12 margin-x-3 padding-2 blog-post blog-post-listing-item">
@@ -39,7 +39,7 @@
 		</article>
 	{% endfor %}
 
-	{% include "partials/global/pagination.njk" %}
+	{% include "partials/pagination.njk" %}
 
 </main>
 

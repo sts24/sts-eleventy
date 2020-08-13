@@ -1,14 +1,12 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const svgSprite = require('gulp-svg-sprite');
-const autoprefixer = require('gulp-autoprefixer');
 const responsive = require('gulp-responsive');
-const cp = require("child_process");
 
 // files
-const svgFiles = ['./src/svg-icons/general/*.svg', './src/svg-icons/home/*.svg'];
+const svgFiles = './src/svg-icons/*.svg';
 const sassFiles = './src/sass/**/*.scss';
-const images = ['./src/images/uploads/*.jpg'];
+const images = './src/images/uploads/*.jpg';
 
 
 // SASS
@@ -19,10 +17,7 @@ function sassCompile(cb) {
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}).on('error', sass.logError))
-		.pipe(autoprefixer({
-			cascade: false
-		}))
-		.pipe(gulp.dest('./src/css/'));
+		.pipe(gulp.dest('./build/css/'));
 
 	cb();
 }
@@ -32,34 +27,27 @@ function sassCompile(cb) {
 
 function spriteCompile(cb) {
 
-	svgFiles.forEach(function (srcLoc) {
-		let srcName = srcLoc.split('/')[3];
-
-		let stream = gulp.src(srcLoc)
-			.pipe(svgSprite({
-				shape: {
-					id: {
-						generator: "icon-%s"
-					}
-				},
-				svg: {
-					xmlDeclaration: false
-				},
-				mode: {
-					symbol: {
-						dest: '.',
-						inline: true,
-						prefix: 'icon-%s',
-						bust: false,
-						sprite: 'icon-sprite-' + srcName + '.svg'
-					}
+	gulp.src(svgFiles)
+		.pipe(svgSprite({
+			shape: {
+				id: {
+					generator: "icon-%s"
 				}
-			}))
-			.pipe(gulp.dest('./src/_includes/assets'));
-
-		return stream
-
-	});
+			},
+			svg: {
+				xmlDeclaration: false
+			},
+			mode: {
+				symbol: {
+					dest: '.',
+					inline: true,
+					prefix: 'icon-%s',
+					bust: false,
+					sprite: 'icon-sprite.svg'
+				}
+			}
+		}))
+		.pipe(gulp.dest('./src/_includes/partials'));
 
 	cb();
 
@@ -106,22 +94,15 @@ function resizeImages(cb) {
 }
 
 
-// Eleventy
-function eleventyRun() {
-	return cp.spawn("eleventy", ["--serve", "--quiet"], {
-		stdio: "inherit", shell: true
-	});
-}
-
-
-
 // gulp tasks
 exports.default = gulp.series(sassCompile, spriteCompile, resizeImages);
+
+exports.svg = spriteCompile;
+exports.css = sassCompile;
+exports.images = resizeImages;
 
 exports.watch = function () {
 	gulp.watch(sassFiles, { ignoreInitial: false }, sassCompile);
 	gulp.watch(svgFiles, { ignoreInitial: false }, spriteCompile);
 	gulp.watch(images, { ignoreInitial: false }, resizeImages);
-
-	eleventyRun();
 }

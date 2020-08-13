@@ -1,7 +1,7 @@
 ---
 title: Now
 date: 2020-04-14
-layout: layouts/page.njk
+layout: page.njk
 ---
 *Last updated on {% timestamp date %}*
 

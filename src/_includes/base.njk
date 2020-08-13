@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   {% if pageType == 'home' %}
 		<title>{{ settings.siteName }} - Web Developer</title>
@@ -28,21 +27,17 @@
 </head>
 <body {% if pageType == 'home' %}class="page-home"{% endif %}>
   <div class="hide" role="none">
-    {% include "assets/icon-sprite-general.svg" %}
-
-    {% if useTagIcons == true %}
-      {% include "assets/icon-sprite-home.svg" %}
-    {% endif %}
+    {% include "./partials/icon-sprite.svg" %}
   </div>
 
   <div id="site">
 
-    {% include "partials/global/site-header.njk" %}
+    {% include "partials/site-header.njk" %}
     
     {% block content %}
     {% endblock content %}
     
-    {% include "partials/global/site-footer.njk" %}
+    {% include "partials/site-footer.njk" %}
 
   </div>
 

@@ -1,6 +1,6 @@
 ---
 permalink: feed.xml
-layout: layouts/feed.njk
+layout: feed.njk
 metadata:
   title: Scott Smith
   url: https://www.smithscott.net

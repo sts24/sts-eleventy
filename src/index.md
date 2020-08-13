@@ -1,5 +1,5 @@
 ---
-layout: layouts/home.njk
+layout: home.njk
 title: Scott Smith
 pageType: home
 ---
