@@ -8,8 +8,8 @@ sections:
   path: src
   label: Content
   create: all
-  match: "**/*.md"
-  new_doc_ext: ".md"
+  match: "*.md"
+  new_doc_ext: md
 - type: directory
   path: src/portfolio
   label: Portfolio
