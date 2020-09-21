@@ -1,21 +1,21 @@
-.page-home {
-    @media (min-width: 768px){
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100vh;       
-    }
-}
 
-.home-section {
 
+.home-intro {
+    background-color: var(--color1);
+    color: white;
     text-align: center;
 
-    h1 {
-        color: var(--color1);
+    .home-title {
+        h1 {
+            color: white;
+        }
     }
 
-    h2 {
-        margin-top: 6rem;
+    .home-content {
+        background-color: var(--sand);
+
+
     }
+
+
 }

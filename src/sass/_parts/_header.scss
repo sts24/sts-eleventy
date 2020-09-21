@@ -1,15 +1,42 @@
-.site-header {
-    color: white;
-    border-top: 1rem solid var(--color2);
-    background-color: var(--color1);
+#site {
+    display: flex;
+    min-height: 100vh;
+    border: 1rem var(--color1) solid;
 
-    position: sticky;
-    top: 0;
+    @media (prefers-color-scheme: dark){
+        border-color: var(--color2);   
+    }
+}
+
+.site-header {
+    height: 100%;
+
+    background-color: var(--color1);
+    
+    background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,h_1200/v1598841342/sts/forest-day.jpg');
+    background-size: cover;
+    background-position: center center;
+
+    @media (prefers-color-scheme: dark){
+        background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,h_1200/v1598841342/sts/forest-night.jpg');
+    }
+
+    
 }
 
 
+
+
 .site-title {
-    display: block;
+    color: var(--seablue);
+    margin: 3rem 0 3rem 0;
+    font-family: Parkly;
+    font-weight: normal;
+    font-size: rem(72);
+
+    @media (prefers-color-scheme: dark){
+        color: var(--sand);   
+    }
 }
 
 

@@ -1,0 +1,11 @@
+<nav class="block-list-nav" aria-label="Portfolio Navigation">
+	<ul class="block-list">
+		{% for item in collections.orderedPortfolios | reverse %}
+			<li>
+				<a href="{{ item.url }}">
+					<span class="block-list-title">{{ item.title | safe }}</span>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</nav>

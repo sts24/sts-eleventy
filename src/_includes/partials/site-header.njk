@@ -1,18 +1,9 @@
-<header class="site-header">
-	<div class="row row-spaced row-vertical-center row-no-wrap padding-x-1 site-masthead">
+<header class="col-s-3 site-header">
 
-		<a href="/" class="col-auto site-title" title="Scott" aria-label="Scott Smith">
-			{% icon 'icon-s-mark','icon-size-2' %}
-		</a>
+	{# <div class="decorative-header-image" role="none"></div> #}
 
-		{% if navigation.items %}
-		<nav id="site-nav" aria-label="Site Navigation">
-			<ul class="site-nav-list" id="site-nav-list">
-				{% for item in navigation.items %}
-					<li><a href="{{ item.url }}/">{{ item.text }}</a></li>
-				{% endfor %}
-			</ul>
-		</nav>
-		{% endif %}
-	</div>
+	<h1 class="site-title">{{ settings.siteName }}</h1>
+
+	{% include "partials/site-nav.njk"  %}
+
 </header>

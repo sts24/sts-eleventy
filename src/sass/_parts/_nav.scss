@@ -1,11 +1,11 @@
 .site-nav-list {
     display: flex;
+    flex-direction: column;
     flex: 0 1 auto;
     list-style: none;
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
-    justify-content: flex-start;
 
     >li {
         padding: 0;
@@ -15,18 +15,20 @@
             display: block;
             font-family: var(--primary-font);
             font-weight: normal;
-            font-size: rem(18);
-            color: var(--color3);
-            padding: 0.5rem 1rem;
+            font-size: rem(30);
+            color: var(--color2);
+            padding: 0.5rem 0;
             line-height: 1;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: bold;
 
             &:hover {
-                background: var(--seablue);
-                color: white;
+                color: var(--color1);
                 text-decoration: none;
+            }
+
+            @media (prefers-color-scheme: dark){
+                &:hover {
+                    color: var(--bright-gold);
+                }
             }
         }
     }

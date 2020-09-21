@@ -1,13 +1,21 @@
 {% extends 'base.njk' %}
 
-{% set pageType = 'home' %}
-
 {% block content %}
 
-<main class="row padding-x-3 row-center home-section">
-	<div class="col-s-12 col-m-8">
-		{{ content | safe }}
+	<div class="row row-expanded row-stretch">
+
+		{% include "partials/site-header.njk" %}
+
+		<main class="col-s-9 site-content">
+
+			<p class="intro">{{ intro }}</p>
+			{{ content | safe }}
+
+		</main>
+
+
 	</div>
-</main>
+
+
 
 {% endblock %}
