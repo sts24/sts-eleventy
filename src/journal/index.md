@@ -1,6 +1,6 @@
 ---
 title: Journal
-layout: blog-list.njk
+layout: journal-index.njk
 tags: ['index']
 pagination:
   data: collections.posts

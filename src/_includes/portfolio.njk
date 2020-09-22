@@ -2,41 +2,33 @@
 
 {% block content %}
 
-{% sectionHeader 'Portfolio','page-header' %}
-{% endsectionHeader %}
+<h1 class="page-title">{{ title | safe }}</h1>
 
+{{ content | safe }}
 
-<main class="row padding-x-3">
-	<div class="col-s-12">
+{% for item in collections.orderedPortfolios | reverse %}
+	<section class="listing-item">	
+		<div class="listing-content">
+			<h2><a href="{{ item.url }}">{{ item.data.title | safe }}</a></h2>
 
-		{{ content | safe }}
+			{{ item.data.excerpt }}
 
-		{% for item in collections.orderedPortfolios | reverse %}
-			<section class="listing-item">	
-				<div class="listing-content">
-					<h2>{{ item.data.title | safe }}</h2>
-
-					{{ item.data.excerpt }}
-
-					<div class="row row-spaced row-top margin-x-1">
-						<ul class="list-inline tag-list margin-bottom-3">
-							{% for tag in item.data.tools %}
-								<li>{{ tag }}</li>
-							{% endfor %}
-						</ul>
-						
-						<a href="{{ item.url }}" class="btn">View Case Study</a>
-					</div>
-				</div>
-				<aside class="listing-image">
-					{% for img in item.data.image %}
-						{% image img.src, 'large', 'img-'+loop.index, img.alt | safe %}
+			<div class="row row-spaced row-top margin-x-1">
+				<ul class="list-inline tag-list margin-bottom-3">
+					{% for tag in item.data.tools %}
+						<li>{{ tag }}</li>
 					{% endfor %}
-				</aside>
-			</section>
-		{% endfor %}
-	</div>
-</main>
-
+				</ul>
+				
+				<a href="{{ item.url }}" class="btn">View Case Study</a>
+			</div>
+		</div>
+		<aside class="listing-image">
+			{% for img in item.data.image %}
+				{% image img.src, 'large', 'img-'+loop.index, img.alt | safe %}
+			{% endfor %}
+		</aside>
+	</section>
+{% endfor %}
 
 {% endblock %}

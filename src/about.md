@@ -8,12 +8,12 @@ useTagIcons: true
 <p class="intro">I am a Front-End Web Developer with over a decade of experience building web sites.</p>
 
 <div class="row" style="margin: 0 -1rem">
-<div class="col-s-12 col-m-3 order-2">
+<div class="col-s-12 col-m-4 order-2">
 	{% image settings.profileImage, 'medium', 'profile-image', 'Profile image of Scott' %}
 	{% include partials/tag-icons.njk %}
 </div>
 
-<div class="col-s-12 col-m-9 order-1">
+<div class="col-s-12 col-m-8 order-1">
 
 Currently, I am a web developer for [California Lutheran University](https://www.callutheran.edu). I have built and maintained our front-end framework, implemented a major rebrand, assisted in marketing projects for driving enrollment, and offered web site support to our campus clients.
 

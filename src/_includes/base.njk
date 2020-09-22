@@ -30,18 +30,18 @@
     {% include "./partials/icon-sprite.svg" %}
   </div>
 
-  <div id="site">
+  <div id="site" class="row row-expanded row-stretch">
 
-    {# {% include "partials/site-header.njk" %} #}
+    {% include "partials/site-header.njk" %}
     
-    {% block content %}
-    {% endblock content %}
+    <main class="col-s-6 site-content">
+      {% block content %}
+      {% endblock content %}
+    </main>
     
-    {# {% include "partials/site-footer.njk" %} #}
+    <div class="site-border" role="none"></div>
 
   </div>
-
-  {# <script src="/js/doorway.js"></script> #}
 
 </body>
 </html>

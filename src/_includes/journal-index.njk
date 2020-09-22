@@ -2,7 +2,8 @@
 
 {% block content %}
 
-{% sectionHeader 'Journal','blog-header' %}
+	<h1 class="page-title">{{ title | safe }}</h1>
+
 	<nav class="blog-nav">
 		<ul class="horizontal-list">
 			<li>
@@ -16,9 +17,6 @@
 			</li>
 		</ul>
 	</nav>
-{% endsectionHeader %}
-
-<main class="row padding-bottom-3 blog-page-content">
 
 	{% include "partials/pagination.njk" %}
 
@@ -41,6 +39,5 @@
 
 	{% include "partials/pagination.njk" %}
 
-</main>
 
 {% endblock %}

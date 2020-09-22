@@ -2,20 +2,7 @@
 
 {% block content %}
 
-	<div class="row row-expanded row-stretch">
-
-		{% include "partials/site-header.njk" %}
-
-		<main class="col-s-9 site-content">
-
-			<p class="intro">{{ intro }}</p>
-			{{ content | safe }}
-
-		</main>
-
-
-	</div>
-
-
+	<p class="intro">{{ intro }}</p>
+	{{ content | safe }}
 
 {% endblock %}

@@ -46,3 +46,17 @@ body {
 @import '_parts/home';
 @import '_parts/blog';
 @import '_parts/footer';
+
+
+.site-border {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    border: 1rem var(--color1) solid;
+    pointer-events: none;
+    z-index: 1000;
+
+    @media (prefers-color-scheme: dark){
+        border-color: var(--color2);   
+    }
+}

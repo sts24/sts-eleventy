@@ -2,48 +2,33 @@
 
 {% block content %}
 
-{% sectionHeader title,'page-header' %}
-{% endsectionHeader %}
+<h1 class="page-title">{{ title | safe }}</h1>
 
+<ul class="list-inline tag-list">
+	{% for tag in tools %}
+		<li>{{ tag }}</li>
+	{% endfor %}
+</ul>
 
+{{ content | safe }}
 
+{% if showcase %}
+	{% for item in showcase %}
+		<section class="listing-item">
+			<div class="listing-content">
+				<h2>{{ item.title | safe }}</h2>
 
-<main class="row padding-x-3 page-content">
-	<div class="col-s-12">
-		<ul class="list-inline tag-list">
-			{% for tag in tools %}
-				<li>{{ tag }}</li>
-			{% endfor %}
-		</ul>
-	</div>
-	<div class="col-s-12">
+				<p>{{ item.description | safe }}</p>
 
-		{{ content | safe }}
-
-	</div>
-
-	<div class="col-s-12">
-
-		{% if showcase %}
-			{% for item in showcase %}
-				<section class="listing-item">
-					<div class="listing-content">
-						<h2>{{ item.title | safe }}</h2>
-
-						<p>{{ item.description | safe }}</p>
-
-						{% if item.url %}
-							<a href="{{ item.url }}" class="btn">View This Site</a>
-						{% endif %}
-					</div>
-					<div class="listing-image">
-						{% image item.image, 'large', '', item.title %}
-					</div>
-				</section>
-			{% endfor %}
-		{% endif %}
-	</div>
-</main>
-
-
+				{% if item.url %}
+					<a href="{{ item.url }}" class="btn">View This Site</a>
+				{% endif %}
+			</div>
+			<div class="listing-image">
+				{% image item.image, 'large', '', item.title %}
+			</div>
+		</section>
+	{% endfor %}
+{% endif %}
+	
 {% endblock %}

@@ -2,13 +2,9 @@
 
 {% block content %}
 
-{% sectionHeader title,'page-header' %}
-{% endsectionHeader %}
+	<h1 class="page-title">{{ title | safe }}</h1>
 
-<main class="row padding-x-3 page-content">
-	<div class="col-s-12">
-		{{ content | safe }}
-	</div>
-</main>
+	{{ content | safe }}
+
 
 {% endblock %}
