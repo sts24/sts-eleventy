@@ -83,7 +83,10 @@ module.exports = function (config) {
 
 
 
-	config.addShortcode("image", function (imgPath, imgSize, cssClass, alt) {
+
+	// images
+
+	function getImagePaths(imgPath, returnStyle = 'srcset'){
 
 		const sizes = {
 			'small': 200,
@@ -92,6 +95,7 @@ module.exports = function (config) {
 		};
 
 		let allImgSizePaths = '';
+		let imgURLs = {};
 		let newImgPath = imgPath.split('/');
 		let fileName = newImgPath[newImgPath.length - 1].split('.');
 
@@ -100,6 +104,7 @@ module.exports = function (config) {
 
 			try {
 				if (fs.existsSync('./build' + resizedPath)) {
+					imgURLs[size] = resizedPath;
 					allImgSizePaths += resizedPath + ' ' + sizes[size] + 'w, ';
 				}
 			} catch (err) {
@@ -108,10 +113,32 @@ module.exports = function (config) {
 
 		}
 
+
+		if(returnStyle == 'object'){
+			return imgURLs;
+		}
+
+		if(returnStyle == 'srcset'){
+			return allImgSizePaths;
+		}
+
+	}
+
+	config.addShortcode("image", function (imgPath, imgSize, cssClass, alt) {
+
+		const allImgSizePaths = getImagePaths(imgPath, 'srcset');
+
 		let css = (cssClass !== '') ? 'class="' + cssClass + '"' : '';
 		let imgTag = '<img srcset="' + allImgSizePaths + '" ' + css + ' alt="' + alt + '" loading="lazy" />';
 
 		return imgTag
+	});
+
+	config.addShortcode("imageURL", function (imgPath, imgSize) {
+
+		const allImgSizePaths = getImagePaths(imgPath, 'object');
+
+		return allImgSizePaths[imgSize];
 	});
 
 
