@@ -1,94 +1,44 @@
-.blog-page-content {
-    --link-color: var(--seablue);
+.blog-post-listing-item {
+	border-bottom: 1rem solid rgba(black,0.1);
+
+	@media (prefers-color-scheme: dark){
+		border-color: var(--seablue);
+	}
 }
 
-.blog-nav {
-    margin-top: 1rem;
-
-    a {
-        text-decoration: none;
-        display: inline-block;
-        border-radius: 3px;
-        line-height: 1;
-        padding: .25rem;
-
-        &:hover {
-            background-color: var(--color2);
-            color: white;
-        }
-    }
-}
 
 .blog-post-listing-title {
-    font-size: rem(24);
-
-    display: flex;
-    align-items: center;
-
-    > a { 
-        display: block; 
-        color: var(--color1);
-    }
-
-    @media (min-width: 768px){
-        font-size: rem(36);
-    }
-
-}
-
-.blog-link-icon {
-    line-height: 1;
-    vertical-align: baseline;
-    color: var(--color1);
-}
-
-.blog-post {
-    background-color: white;
-
-    h1 {
-        color: var(--color4);
-    }
+	a:hover {
+		text-decoration: none;
+		color: var(--lightblue);
+	}
 }
 
 .blog-post-time {
-    font-weight: bold;
-    color: var(--midgray);
+	font-size: rem(13);
+	color: var(--midgray);
 }
 
+
 .blog-post-content {
-    
-    blockquote {
-        margin: 2rem 0;
-        padding: 1rem 1rem 1rem 4rem;
-        position: relative;
-        background-color: rgba(black,0.1);
+	blockquote {
+		background-color: white;
+		margin: 2rem 0;
+		padding: 1rem;
+		border-left: 0.5rem solid var(--color2);
+		font-style: italic;
 
-        p {
-            font-size: rem(18);
-        }
-        
-        p:last-of-type {
-            margin-bottom: 0;
-        }
-
-        &:before {
-            display: block;
-            content: '';
-            background-color: var(--color2);
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 1rem;
-        }
-    }
-
+		@media (prefers-color-scheme: dark){
+			background-color: var(--seablue);	
+		}
+	}
 }
 
 
 .pagination {
-    .svg-icon {
-        margin: 0 1ch;
-        fill: var(--color1);
-    }
+	.svg-icon {
+		fill: var(--color2);
+		margin-right: 0.5ch;
+		vertical-align: middle;
+	}
 }

@@ -1,10 +1,18 @@
 .site-content {
     --link-color: var(--seablue);
-    //max-width: 80ch;
 
+    padding: 2rem 1rem 2rem 2rem;
+
+    @media (min-width: 768px){
+        padding: 5rem;
+    }
 
     @media (min-width: 1024px){
         padding: 5rem;
+    }
+
+    @media (prefers-color-scheme: dark){
+        --link-color: var(--bright-gold);
     }
 }
 
@@ -44,9 +52,13 @@
     }
 
     &:hover {
-       
         &::after { opacity: 1; }
-        
+    }
+
+    @media (prefers-color-scheme: dark){
+        &::after {
+            background-color: var(--seablue);
+        }  
     }
 }
 

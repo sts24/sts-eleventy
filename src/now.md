@@ -13,6 +13,5 @@ layout: page.njk
 ## Personal
 - Like everyone, sheltering in place.
 - Raising my baby son, changing diapers.
-- Watching mostly YouTube lately
-- Making sure I have time to Rest
 - Dreaming of traveling again
+- Looking forward to Mandalorian Season 2! 

@@ -1,26 +1,51 @@
 #site {
     display: flex;
-    // min-height: 100vh;
-    // border: 1rem var(--color1) solid;
+    
+    flex-direction: column;
 
-    // @media (prefers-color-scheme: dark){
-    //     border-color: var(--color2);   
-    // }
+    @media (min-width: 768px){
+        flex-direction: row;
+    }
 }
 
 .site-header {
-    height: 100vh;
-    padding: 2rem;
-
+    padding: 2rem 2rem 0 2rem;
     background-color: var(--color1);
-    
-    background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,h_1200/v1598841342/sts/forest-day.jpg');
     background-size: cover;
     background-position: center center;
+    
+
+    // default bg
+    background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,co_rgb:000000,e_brightness:-33,w_1200/v1598841342/sts/forest-day.jpg');
+
+
 
     @media (prefers-color-scheme: dark){
-        background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,h_1200/v1598841342/sts/forest-night.jpg');
+        background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,w_1200/v1598841342/sts/forest-night.jpg');
     }
+    
+
+    @media (min-width: 768px){
+        height: 100vh;
+        padding: 2rem;
+        position: sticky;
+        top: 0;
+
+        background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,h_1200/v1598841342/sts/forest-day.jpg');
+    }
+
+    
+
+
+    @media (min-width: 1200px){
+
+        @media (prefers-color-scheme: dark){
+            background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,h_1200/v1598841342/sts/forest-night.jpg');
+        }
+    
+    }
+
+    
 
     
 }
@@ -29,21 +54,35 @@
 
 
 .site-title {
-    color: var(--seablue);
-    margin: 3rem 0 3rem 0;
+    color: var(--sand);
+    margin: 0;
     font-family: Parkly;
     font-weight: normal;
-    font-size: rem(72);
+    font-size: rem(64);
+
+    @media (min-width: 768px){
+        margin: 3rem 0 3rem 0;
+        color: var(--color1);
+    }
+
+    @media (min-width: 1600px){
+        font-size: rem(72);
+    }
 
     @media (prefers-color-scheme: dark){
         color: var(--sand);   
     }
+
+
+
+    
 }
 
 
 .page-title {
     border-bottom: 1rem solid var(--color2);
-    color: var(--color1);
+    color: var(--heading-color);
     font-weight: normal;
     margin: 0 0 3rem 0;
+    padding-bottom: 1rem;
 }

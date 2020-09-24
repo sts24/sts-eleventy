@@ -29,12 +29,19 @@
     --body-bg: var(--sand);
 
     --link-color: var(--color2);
+    --heading-color: var(--color1);
 
     
     // fonts
     --primary-font: "Parkly", sans-serif;
     --secondary-font: "Open Sans", sans-serif;
     --body-font: var(--secondary-font);
+
+    @media (prefers-color-scheme: dark){
+        --body-bg: var(--color1);
+        --body-color: var(--sand);
+        --heading-color: var(--sand);
+    }
 
 }
 

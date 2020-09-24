@@ -60,4 +60,11 @@
 		color: white;
 	}
 
+	@media (prefers-color-scheme: dark){
+		> li {
+			background-color: var(--seablue);
+			
+		}	
+	}
+
 }

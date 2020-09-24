@@ -1,6 +1,6 @@
 .site-nav-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex: 0 1 auto;
     list-style: none;
     padding: 0;
@@ -10,13 +10,14 @@
     >li {
         padding: 0;
         margin: 0;
+        flex: 0 0 50%;
 
         >a {
             display: block;
             font-family: var(--primary-font);
             font-weight: normal;
             font-size: rem(30);
-            color: var(--color2);
+            color: var(--bright-gold);
             padding: 0.5rem 0;
             line-height: 1;
 
@@ -32,25 +33,34 @@
             }
         }
     }
+
+    @media (min-width: 768px){
+        flex-direction: column;
+
+        > li {
+            flex: 1 1 auto;
+        }
+    }
 }
 
 
 .special-links {
     list-style: none;
     padding: 0;
-    margin: 0 -1rem;
+    margin: 1rem 0 0 -0.5rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 
     > li {
         padding: 0;
         margin: 0;
-        flex: 1 1 50%;
+        flex: 0 0 auto;
         text-align: center;
 
         > a {
             display: inline-block;
-            font-size: rem(13);
+            font-size: rem(11);
             text-transform: uppercase;
             letter-spacing: 1px;
             padding: 1rem;
@@ -64,7 +74,7 @@
             }
 
             svg {
-                margin: 0 auto 0.5rem auto;
+                margin: 0;
                 fill: white;
             }
 
@@ -73,7 +83,7 @@
 
     @media (min-width: 768px){
         > li {
-            flex: 1 1 auto;
+            flex: 0 0 auto;
         }
     }
 }
