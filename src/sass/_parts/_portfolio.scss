@@ -16,7 +16,7 @@
         min-height: 30rem;
     }
 
-    @media (prefers-color-scheme: dark){
+    body.dark-mode & {
         background-color: var(--sand);
     }
 }
@@ -88,7 +88,7 @@
         }
     }
 
-    @media (prefers-color-scheme: dark){
+    body.dark-mode & {
         --link-color: var(--seablue);
         color: var(--darkgray);   
 

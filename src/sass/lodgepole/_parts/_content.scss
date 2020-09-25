@@ -60,7 +60,7 @@
 		color: white;
 	}
 
-	@media (prefers-color-scheme: dark){
+	body.dark-mode & {
 		> li {
 			background-color: var(--seablue);
 			

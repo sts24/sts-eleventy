@@ -1,7 +1,7 @@
 .blog-post-listing-item {
 	border-bottom: 1rem solid rgba(black,0.1);
 
-	@media (prefers-color-scheme: dark){
+	body.dark-mode & {
 		border-color: var(--seablue);
 	}
 }
@@ -28,7 +28,7 @@
 		border-left: 0.5rem solid var(--color2);
 		font-style: italic;
 
-		@media (prefers-color-scheme: dark){
+		body.dark-mode & {
 			background-color: var(--seablue);	
 		}
 	}

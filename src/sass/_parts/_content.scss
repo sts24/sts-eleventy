@@ -11,7 +11,7 @@
         padding: 5rem;
     }
 
-    @media (prefers-color-scheme: dark){
+    body.dark-mode & {
         --link-color: var(--bright-gold);
     }
 }
@@ -55,7 +55,7 @@
         &::after { opacity: 1; }
     }
 
-    @media (prefers-color-scheme: dark){
+    body.dark-mode & {
         &::after {
             background-color: var(--seablue);
         }  
