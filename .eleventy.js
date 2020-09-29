@@ -60,7 +60,7 @@ module.exports = function (config) {
 
 	config.addShortcode("blogTitle", function (heading, css = '', post) {
 
-		let postURL = post.url;
+		let postURL = (typeof post.data.url !== 'undefined') ? post.data.url : post.url;
 		let classes = (css !== '') ? ' class="' + css + '"' : '';
 		let html = '<' + heading + classes + '>';
 
@@ -69,7 +69,6 @@ module.exports = function (config) {
 
 		if (typeof post.data.url !== 'undefined') {
 			html += getIconCode('icon-link', 'icon-size-1 icon-inline blog-link-icon') + ' ';
-			postURL = post.data.url;
 		}
 
 		html += '</a></' + heading + '>';
