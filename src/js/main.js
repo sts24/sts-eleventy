@@ -14,13 +14,10 @@ class ThemeSwitch extends HTMLElement {
 		// insert HTML
 		this.innerHTML = `
 			<div class="theme-switch">
-
-				<button class="theme-switch-button" id="theme-switch-button" data-theme="">
-					<svg class="svg-icon icon-size-1 icon-inline" shape-rendering="geometricPrecision" role="presentation" aria-label="icon">
+				<button class="theme-switch-button" id="theme-switch-button" aria-label="Theme Switcher" role="presentation" aria-hidden="true">
+					<svg class="svg-icon icon-inline" shape-rendering="geometricPrecision" role="presentation" aria-label="icon" aria-hidden="true">
 						<use xlink: href="#${this.themeIcon}"></use>
 					</svg>
-
-					<div class="theme-switch-label">Theme</div>
 				</button>
 			</div>
 		`;
