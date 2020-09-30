@@ -37,7 +37,7 @@
     --secondary-font: "Open Sans", sans-serif;
     --body-font: var(--secondary-font);
 
-    body.dark-mode {
+    [data-theme="dark-mode"] {
         --body-bg: var(--color1);
         --body-color: var(--sand);
         --heading-color: var(--sand);

@@ -60,7 +60,7 @@
 		color: white;
 	}
 
-	body.dark-mode & {
+	[data-theme="dark-mode"] & {
 		> li {
 			background-color: var(--seablue);
 			

@@ -16,7 +16,7 @@
         min-height: 30rem;
     }
 
-    body.dark-mode & {
+    [data-theme="dark-mode"] & {
         background-color: var(--sand);
     }
 }
@@ -88,7 +88,7 @@
         }
     }
 
-    body.dark-mode & {
+    [data-theme="dark-mode"] & {
         --link-color: var(--seablue);
         color: var(--darkgray);   
 

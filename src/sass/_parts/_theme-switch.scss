@@ -1,0 +1,24 @@
+.theme-switch {
+	display: inline-block;
+}
+
+.theme-switch-button {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+
+	.svg-icon {
+		fill: var(--color2);
+	}
+}
+
+.theme-switch-label {
+	font-weight: bold;
+	font-size: 1rem;
+	color: white;
+	display: inline-block;
+
+	[data-theme="dark-mode"] & {
+		color: var(--bright-gold);
+	}
+}

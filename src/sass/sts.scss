@@ -47,6 +47,8 @@ body {
 @import '_parts/blog';
 @import '_parts/footer';
 
+@import '_parts/theme-switch';
+
 
 .site-border {
     position: fixed;
@@ -56,7 +58,7 @@ body {
     pointer-events: none;
     z-index: 1000;
 
-    body.dark-mode & {
+    [data-theme="dark-mode"] & {
         border-color: var(--color2);   
     }
 }
