@@ -1,47 +1,61 @@
 class ThemeSwitch extends HTMLElement {
+
 	constructor() {
 		super();
+
+		this.modeType = window.localStorage.getItem('mode') ? window.localStorage.getItem('mode') : '';
+		this.themeIcon = (this.modeType == 'light-mode') ? 'icon-moon' : 'icon-sun';
 	}
 
 	connectedCallback() {
 
+		var $this = this;
+
 		// insert HTML
 		this.innerHTML = `
 			<div class="theme-switch">
-				<label for="darkmode-switch">Toggle Theme</label>
-				<input type="checkbox" name="darkmode" id="darkmode-switch" value="dark-mode" />
+
+				<button class="theme-switch-button" id="theme-switch-button" data-theme="">
+					<svg class="svg-icon icon-size-1 icon-inline" shape-rendering="geometricPrecision" role="presentation" aria-label="icon">
+						<use xlink: href="#${this.themeIcon}"></use>
+					</svg>
+
+					<div class="theme-switch-label">Theme</div>
+				</button>
 			</div>
 		`;
 
-		// try to get mode saved in browser localStorage
-		let modeType = window.localStorage.getItem('mode') ? window.localStorage.getItem('mode') : 'light-mode';
 
 		// check mode on page load
-		if(window.matchMedia('(prefers-color-scheme: dark)').matches == true) {
-			console.log('is dark mode');
+		if(window.matchMedia('(prefers-color-scheme: dark)').matches == true && this.modeType == '') {
+			console.log('dark mode on load');
 			setMode('dark-mode');
-			this.querySelector('#darkmode-switch').checked = true;
 		} else {
-			setMode(modeType);
+			console.log(this.modeType + ' on load');
+			setMode(this.modeType);
 		}
 
+
 		// set mode on OS change
-		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-			console.log(e);
-			const newColorScheme = e.matches ? "dark-mode" : "light-mode";
-			setMode(newColorScheme);
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e){
+			const updatedMode = e.matches ? "dark-mode" : "light-mode";
+			console.log(updatedMode + ' on OS change');
+			setMode(updatedMode);
 		});
 
 		// watch for change on input
-		this.querySelector('#darkmode-switch').addEventListener('change', function(e){
-			setMode(this.value);
+		this.querySelector('#theme-switch-button').addEventListener('click', function(e){
+			if($this.modeType == 'light-mode'){
+				setMode('dark-mode');
+				$this.modeType = 'dark-mode';
+				console.log('dark mode on button');
+			} else if($this.modeType == 'dark-mode'){
+				setMode('light-mode');
+				$this.modeType = 'light-mode';
+				console.log('light mode on button');
+			}
 		});
-
-
 	}
-
-	
-
 
 }
 
@@ -50,7 +64,7 @@ customElements.define('theme-switch', ThemeSwitch);
 
 
 function setMode(modeType) {
-	console.log(modeType);
-	document.body.classList.toggle(modeType);
+	document.body.setAttribute('data-theme', modeType);
 	window.localStorage.setItem('mode', modeType);
+	console.log(modeType + ' on setMode func');
 }
