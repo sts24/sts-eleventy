@@ -16,32 +16,42 @@
     position: relative;
     
 
-    // default bg
+    // default bg at mobile size
     background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,co_rgb:000000,e_brightness:-33,w_1200/v1598841342/sts/forest-day.jpg');
 
 
-
+    // default dark bg at mobile size
     [data-theme="dark-mode"] & {
-        background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,w_1200/v1598841342/sts/forest-night.jpg');
+        background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,w_1200/v1598841342/sts/forest-night-2.jpg');
     }
     
-
+    
+    
     @media (min-width: 768px){
         height: 100vh;
         padding: 2rem;
         position: sticky;
         top: 0;
-
-        background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,h_1200/v1598841342/sts/forest-day.jpg');
+        
+        // medium size day image
+        background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_crop,g_center,h_970,w_475/v1598841342/sts/forest-day.jpg');
+        
+        // medium size night image
+        [data-theme="dark-mode"] & {
+            background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_crop,g_center,h_970,w_475/v1598841342/sts/forest-night-2.jpg');
+        }
     }
 
     
 
-
+    
     @media (min-width: 1200px){
+        // large size day image
+        background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_crop,g_center,h_1940,w_950/v1598841342/sts/forest-day.jpg');
 
+        // large size night image
         [data-theme="dark-mode"] & {
-            background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_scale,h_1200/v1598841342/sts/forest-night.jpg');
+            background-image: url('https://res.cloudinary.com/stsmith/image/upload/c_crop,g_center,h_1940,w_950/v1598841342/sts/forest-night-2.jpg');
         }
     
     }
