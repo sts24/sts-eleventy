@@ -31,6 +31,10 @@
 		{
 			"title": "React",
 			"icon": "icon-react"
+		},
+		{
+			"title": "Eleventy",
+			"icon": "icon-eleventy"
 		}
 	]
 }
