@@ -25,10 +25,8 @@ class ThemeSwitch extends HTMLElement {
 
 		// check mode on page load
 		if(window.matchMedia('(prefers-color-scheme: dark)').matches == true && this.modeType == '') {
-			console.log('dark mode on load');
 			setMode('dark-mode');
 		} else {
-			console.log(this.modeType + ' on load');
 			setMode(this.modeType);
 		}
 
@@ -36,7 +34,6 @@ class ThemeSwitch extends HTMLElement {
 		// set mode on OS change
 		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e){
 			const updatedMode = e.matches ? "dark-mode" : "light-mode";
-			console.log(updatedMode + ' on OS change');
 			setMode(updatedMode);
 		});
 
@@ -45,11 +42,9 @@ class ThemeSwitch extends HTMLElement {
 			if($this.modeType == 'light-mode'){
 				setMode('dark-mode');
 				$this.modeType = 'dark-mode';
-				console.log('dark mode on button');
 			} else if($this.modeType == 'dark-mode'){
 				setMode('light-mode');
 				$this.modeType = 'light-mode';
-				console.log('light mode on button');
 			}
 		});
 	}
@@ -61,7 +56,9 @@ customElements.define('theme-switch', ThemeSwitch);
 
 
 function setMode(modeType) {
+	var modeIcon = (modeType == 'light-mode') ? 'icon-moon' : 'icon-sun';
+
 	document.body.setAttribute('data-theme', modeType);
+	document.querySelector('#theme-switch-button > svg > use').setAttribute('href','#'+modeIcon);
 	window.localStorage.setItem('mode', modeType);
-	console.log(modeType + ' on setMode func');
 }
