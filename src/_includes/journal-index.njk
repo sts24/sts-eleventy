@@ -24,9 +24,9 @@
 		<article class="margin-x-5 padding-bottom-5 blog-post blog-post-listing-item">
 			<header class="margin-bottom-2">
 				{% blogTitle 'h2', 'blog-post-listing-title margin-top-0 margin-bottom-1', post %}
-				<time class="blog-post-time">Posted {% timestamp page.date.toUTCString() %}</time>
+				<time class="blog-post-time">Posted {% timestamp post.data.date %}</time>
 			</header>
-			
+
 			<div class="blog-post-content">
 				{{ post.templateContent | safe }}
 

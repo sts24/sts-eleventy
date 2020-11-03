@@ -21,16 +21,16 @@
 
 
 
-<main class="row padding-x-3 blog-post padding-y-2">
+<section class="row blog-post">
 	<header class="col-s-12 blog-post-meta margin-bottom-3">
         <h1 class="margin-top-0 margin-bottom-1">{{ title | safe }}</h1>
-        <time class="blog-post-time">Posted {% timestamp page.date.toUTCString() %}</time>
+        <time class="blog-post-time">Posted {% timestamp date %}</time>
     </header>
 
     <article class="col-s-12 blog-post-content">
         {{ content | safe }}
     </article>
-</main>
+</section>
 
 
 {% endblock %}
