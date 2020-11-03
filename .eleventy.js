@@ -3,6 +3,10 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (config) {
 
+	config.addShortcode("log", function (data) {
+		console.log(data);
+	});
+
 	// custom collections
 
 	config.addCollection("orderedPortfolios", function (collection) {
