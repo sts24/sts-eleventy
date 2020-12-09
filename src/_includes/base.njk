@@ -31,11 +31,17 @@
     {% include "./partials/icon-sprite.svg" %}
   </div>
 
+  <div class="skip-links">
+    <ul>
+      <li><a href="#main-content">Skip to content</a></li>
+    </ul>
+  </div>
+
   <div id="site" class="row row-expanded row-stretch">
 
     {% include "partials/site-header.njk" %}
     
-    <main class="col-m-8 col-xl-6 site-content">
+    <main class="col-m-8 col-xl-6 site-content" id="main-content">
       {% block content %}
       {% endblock content %}
     </main>

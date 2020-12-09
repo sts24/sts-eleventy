@@ -31,6 +31,8 @@
     --link-color: var(--color2);
     --heading-color: var(--color1);
 
+    --focus-ring: var(--orange);
+
     
     // fonts
     --primary-font: "Parkly", sans-serif;
@@ -41,6 +43,8 @@
         --body-bg: var(--color1);
         --body-color: var(--sand);
         --heading-color: var(--sand);
+
+        --focus-ring: var(--bright-gold);
     }
 
 }
