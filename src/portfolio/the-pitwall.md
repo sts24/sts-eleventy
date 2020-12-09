@@ -4,6 +4,7 @@ order: "3"
 tools:
 - Netlify
 - Node
+- Eleventy
 - Vue
 - Nuxt
 - React
@@ -14,7 +15,7 @@ image:
   alt: Pitwall app in desktop
 - src: /images/uploads/pitwall-mobile-2.jpg
   alt: Pitwall app in mobile
-excerpt: A project written in Vue to explore the historical records of Formula 1 racing.
+excerpt: A project created explore the historical records of Formula 1 racing.
 ---
 ## Explore historical records of past Formula 1 championships.</h2>
 
