@@ -1,155 +1,27 @@
-const fs = require('fs');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const shortcodes = require('./utilities/shortcodes.js');
+const images = require('./utilities/images.js');
+const collections = require('./utilities/collections.js');
 
 module.exports = function (config) {
 
-	config.addShortcode("log", function (data) {
-		console.log(data);
-	});
-
 	// custom collections
-
-	config.addCollection("orderedPortfolios", function (collection) {
-		return collection.getFilteredByTag('portfolio').sort(function (a, b) {
-			return b.data.order - a.data.order;
-		});
-	});
-
+	config.addCollection("orderedPortfolios", collections.orderedPortfolios);
 
 	// shortcodes
-
-	function getIconCode(iconName, cssClass) {
-		return `
-		<svg class="svg-icon ${cssClass}" shape-rendering="geometricPrecision" role="presentation" aria-label="icon">
-			<use xlink: href="#${iconName}"></use>
-    	</svg>`;
-	}
-
-	config.addShortcode("icon", function (iconName, cssClass) {
-		return getIconCode(iconName, cssClass);
-	});
-
-	config.addPairedShortcode("sectionHeader", function (data, sectionTitle = '', cssClass = '') {
-		let htmlSlot = '';
-
-		if (sectionTitle !== '') {
-			htmlSlot = `
-			<div class="col-s-12">
-				<div class="section-heading">${sectionTitle}</div>
-				${data}
-			</div>`;
-		} else {
-			htmlSlot = `${data}`;
-		}
-
-		return `
-			<header class="page-title padding-top-5 padding-bottom-2 ${cssClass}">
-				<div class="row">
-					${htmlSlot}
-				</div>
-			</header>
-		`;
-	});
-
-	config.addShortcode("timestamp", function (UTC) {
-		let newDate = new Date(UTC);
-
-		return newDate.toLocaleDateString('en-US', {
-			timeZone: 'UTC',
-			month: 'long',
-			day: 'numeric',
-			year: 'numeric'
-		});
-	});
-
-	config.addShortcode("blogTitle", function (heading, css = '', post) {
-
-		let postURL = (typeof post.data.url !== 'undefined') ? post.data.url : post.url;
-		let classes = (css !== '') ? ' class="' + css + '"' : '';
-		let html = '<' + heading + classes + '>';
-
-		html += '<a href="' + postURL + '">';
-		html += post.data.title;
-
-		if (typeof post.data.url !== 'undefined') {
-			html += getIconCode('icon-link', 'icon-size-1 icon-inline blog-link-icon') + ' ';
-		}
-
-		html += '</a></' + heading + '>';
-
-		return html
-	});
-
-	config.addShortcode("cleanString", function (string) {
-		return string.replace(/<\/?[^>]+(>|$)/g, "");
-	});
-
-
-
-
+	config.addShortcode("log", shortcodes.log);
+	config.addShortcode("icon", shortcodes.icon);
+	config.addPairedShortcode("sectionHeader", shortcodes.sectionHeader);
+	config.addShortcode("timestamp", shortcodes.timestamp);
+	config.addShortcode("blogTitle", shortcodes.blogTitle);
+	config.addShortcode("cleanString", shortcodes.cleanString);
+	
 	// images
-
-	function getImagePaths(imgPath, returnStyle = 'srcset'){
-
-		const sizes = {
-			'small': 200,
-			'medium': 400,
-			'large': 800
-		};
-
-		let allImgSizePaths = '';
-		let imgURLs = {};
-		let newImgPath = imgPath.split('/');
-		let fileName = newImgPath[newImgPath.length - 1].split('.');
-
-		for (let size in sizes) {
-			let resizedPath = '/images/resized/' + fileName[0] + '-' + size + '.' + fileName[1];
-
-			try {
-				if (fs.existsSync('./build' + resizedPath)) {
-					imgURLs[size] = resizedPath;
-					allImgSizePaths += resizedPath + ' ' + sizes[size] + 'w, ';
-				}
-			} catch (err) {
-				console.log((err));
-			}
-
-		}
-
-
-		if(returnStyle == 'object'){
-			return imgURLs;
-		}
-
-		if(returnStyle == 'srcset'){
-			return allImgSizePaths;
-		}
-
-	}
-
-	config.addShortcode("image", function (imgPath, imgSize, cssClass, alt) {
-
-		const allImgSizePaths = getImagePaths(imgPath, 'srcset');
-
-		let css = (cssClass !== '') ? 'class="' + cssClass + '"' : '';
-		let imgTag = '<img srcset="' + allImgSizePaths + '" ' + css + ' alt="' + alt + '" loading="lazy" />';
-
-		return imgTag
-	});
-
-	config.addShortcode("imageURL", function (imgPath, imgSize) {
-
-		const allImgSizePaths = getImagePaths(imgPath, 'object');
-
-		return allImgSizePaths[imgSize];
-	});
-
-
-
+	config.addShortcode("image", images.image);
+	config.addShortcode("imageURL", images.imageURL);
 
 	// add RSS feed
 	config.addPlugin(pluginRss);
-
 
 	// pass through certain files
 	config.addPassthroughCopy("src/fonts");
