@@ -11,6 +11,8 @@ sections:
   match: "*.md"
   exclude: "*.json, feed.md"
   new_doc_ext: md
+  templates:
+  - page
 - type: directory
   path: src/journal
   label: Journal
@@ -18,6 +20,8 @@ sections:
   match: "**/*.md"
   exclude: "*.json"
   new_doc_ext: md
+  templates:
+  - journal-post
 - type: directory
   path: src/portfolio
   label: Portfolio
