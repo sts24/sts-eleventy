@@ -9,22 +9,22 @@ sections:
   label: Pages
   create: documents
   match: "*.md"
-  exclude: "*.json"
-  new_doc_ext: ".md"
+  exclude: "*.json, feed.md"
+  new_doc_ext: md
 - type: directory
   path: src/journal
   label: Journal
   create: documents
   match: "**/*.md"
   exclude: "*.json"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: directory
   path: src/portfolio
   label: Portfolio
   create: documents
   match: "**/*.md"
   exclude: "*.json"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
