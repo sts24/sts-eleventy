@@ -29,6 +29,14 @@ sections:
   match: "**/*.md"
   exclude: "*.json"
   new_doc_ext: md
+- type: heading
+  label: Settings
+- type: directory
+  path: src/_data
+  label: Settings
+  create: none
+  match: "**/*.json"
+  new_doc_ext: ''
 upload_dir: src/images/uploads
 public_path: "/images/uploads"
 front_matter_path: ''
