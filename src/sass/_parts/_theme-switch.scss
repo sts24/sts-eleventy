@@ -2,10 +2,9 @@
 	display: inline-block;
 	position: absolute;
 	bottom: 1rem;
-	right: 1rem;
+	right: 2rem;
 
 	@media (min-width: 768px){
-		
 		bottom: 2rem;
 		left: 2rem;
 		right: none;
