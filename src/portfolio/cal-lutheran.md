@@ -10,9 +10,9 @@ tools:
   - UX Design
   - WordPress
 image: 
-  - src: /images/uploads/cal-lutheran-home-desktop.jpg
+  - src: "/v1614988656/sts/cal-lutheran-home-desktop.jpg"
     alt: Cal Lutheran Homepage in Desktop size
-  - src: /images/uploads/cal-lutheran-home-mobile.jpg
+  - src: "/v1614988656/sts/cal-lutheran-home-mobile.jpg"
     alt: Cal Lutheran Homepage in Mobile size
 excerpt: My work in Higher Education. Projects ranged from front-end development, UX, marketing design, and client support.
 showcase:
@@ -27,7 +27,7 @@ showcase:
       needed to promote a major event such as homecoming or to announce a new
       initiative such as the sciences campaign.
     title: CalLutheran.edu
-    image: /images/uploads/clu-home.jpg
+    image: "/v1614988656/sts/clu-home.jpg"
     url: 'https://www.callutheran.edu/'
   - description: >-
       This page was created to better communicate the complexities of
@@ -39,14 +39,14 @@ showcase:
       standardized and moved into our global framework to be used on any other
       page.
     title: Financial Aid Affordability
-    image: /images/uploads/financial-aid.jpg
+    image: "/v1614988656/sts/financial-aid.jpg"
     url: 'https://www.callutheran.edu/financial-aid/affordability/'
   - description: >-
       This was a new site we spun up to help drive the campaign to build a new
       science facility on the Cal Lutheran campus. Borrowing many ideas from the
       main site, I built the HTML and CSS for the Science site.
     title: Science at Cal Lutheran
-    image: /images/uploads/science.jpg
+    image: "/v1614988656/sts/science.jpg"
     url: 'https://science.callutheran.edu'
   - description: >-
       Pacific Lutheran Theological Seminary is the theological graduate school
@@ -54,7 +54,7 @@ showcase:
       site was an opportunity to retune our templates specifically for their
       needs.
     title: Pacific Lutheran Theological Seminary
-    image: /images/uploads/plts.jpg
+    image: "/v1614988656/sts/plts.jpg"
     url: 'https://plts.edu'
 ---
 ## 2010 – Present

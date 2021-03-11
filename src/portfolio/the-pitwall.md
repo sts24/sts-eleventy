@@ -11,9 +11,9 @@ tools:
 - Javascript
 - NPM
 image: 
-- src: /images/uploads/pitwall-desktop-2.jpg
+- src: "/v1614988656/sts/pitwall-desktop-2.jpg"
   alt: Pitwall app in desktop
-- src: /images/uploads/pitwall-mobile-2.jpg
+- src: "/v1614988656/sts/pitwall-mobile-2.jpg"
   alt: Pitwall app in mobile
 excerpt: A project created explore the historical records of Formula 1 racing.
 ---

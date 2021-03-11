@@ -7,13 +7,13 @@ tools:
  - Node
  - JSON APIs
 image: 
-	- src: /images/uploads/stratus-desktop.jpg
+	- src: "/v1614988656/sts/stratus-desktop.jpg"
 		alt: Stratus app screenshot
 excerpt: A web app for viewing weather data from the National Weather Service
 showcase:
   - description: >-
       Stratus uses a three-column interface on the desktop view to present current, hourly, and extended forecast.
-    image: /images/uploads/stratus-desktop.jpg
+    image: "/v1614988656/sts/stratus-desktop.jpg"
 ---
 Stratus is a simple web app viewing data from the United States' National Weather Service. I found that the forecast data from the NWS was usually the best for the area I live in, but was never satisfied with the real website provided by the government agency. Seeing that they provide a pretty robost API, I took up the opportunity to build my own interface to this data.
 

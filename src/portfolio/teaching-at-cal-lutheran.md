@@ -4,7 +4,7 @@ order: 5
 tools:
   - Adobe Creative Cloud
 image:
-  - src: /images/uploads/computer-lab.jpg
+  - src: "/v1614988656/sts/computer-lab.jpg"
     alt: Classroom with iMacs
 excerpt: My experience in teaching a college course on design and the Adobe Creative Cloud.
 ---
@@ -14,4 +14,4 @@ For several years, I taught undergraduate students in the Multimedia and Art dep
 
 Being out of college for a while now, this was a great opportunity to better understand what the experience of younger people is currently in college and how they approach technology.
 
-{% image '/images/uploads/computer-lab.jpg', '', 'align-full', 'Classroom with iMacs' %}
+{% cloudinaryImage "/v1614988656/sts/computer-lab.jpg", '', 'Classroom with iMacs', 'align-full' %}

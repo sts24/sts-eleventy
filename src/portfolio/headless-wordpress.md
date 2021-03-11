@@ -6,7 +6,7 @@ tools:
  - PHP
  - REST API
 image: 
-  - src: /images/uploads/peppergrove.jpg
+  - src: "/v1614988656/sts/peppergrove.jpg"
     alt: Grove of peppertrees
 excerpt: A Headless Wordpress Theme
 ---

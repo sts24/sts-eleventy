@@ -9,9 +9,10 @@ useTagIcons: true
 
 <div class="row" style="margin: 0 -1rem">
 <div class="col-s-12 col-m-4 order-2">
-	{% image settings.profileImage, 'medium', 'profile-image', 'Profile image of Scott' %}
+	{% cloudinaryImage settings.profileImage, 'c_scale,w_400', 'Profile image of Scott', 'profile-image' %}
 	{% include partials/tag-icons.njk %}
 </div>
+
 
 <div class="col-s-12 col-m-8 order-1">
 

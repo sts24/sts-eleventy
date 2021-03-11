@@ -7,9 +7,9 @@ tools:
   - Netlify
   - Visual Design
 image: 
-  - src: /images/uploads/trail-coffee-desktop.jpg
+  - src: "/v1614988656/sts/trail-coffee-desktop.jpg"
     alt: Trail Coffee screenshot in desktop
-  - src: /images/uploads/trail-coffee-mobile.jpg
+  - src: "/v1614988656/sts/trail-coffee-mobile.jpg"
     alt: Trail Coffee screenshot in mobile
 excerpt: A journal of hiking photography
 ---

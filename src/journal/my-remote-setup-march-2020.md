@@ -4,7 +4,7 @@ date: 2020-03-09
 ---
 A lot of remote web people like to show off their neat and tidy desks that look like no one actually sits there and works for 8 hours a day. Let's have some real talk: no desk is ever that clean except for a photo shoot. Here is what an actual in use remote web developer's desk looks like, annotations below:
 
-{% image "/images/uploads/desk.jpg", "full", "align-full", "Scott's Desk in March 2020" %}
+{% cloudinaryImage "/v1614988656/sts/desk.jpg", "", "Scott's Desk in March 2020", 'align-full' %}
 
 1. Work-provided 2019 13" MacBook Pro
 2. 27" LG HDR 4k Display. Best monitor for the value besides a full on iMac.

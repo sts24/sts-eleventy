@@ -1,26 +1,8 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
 const svgSprite = require('gulp-svg-sprite');
-const responsive = require('gulp-responsive');
 
 // files
 const svgFiles = './src/svg-icons/*.svg';
-const sassFiles = './src/sass/**/*.scss';
-const images = './src/images/uploads/*.jpg';
-
-
-// SASS
-
-function sassCompile(cb) {
-	
-	gulp.src(sassFiles)
-		.pipe(sass({
-			outputStyle: 'compressed'
-		}).on('error', sass.logError))
-		.pipe(gulp.dest('./build/css/'));
-
-	cb();
-}
 
 
 // make svg sprite
@@ -54,55 +36,12 @@ function spriteCompile(cb) {
 }
 
 
-// resize images
-function resizeImages(cb) {
-
-	gulp.src(images)
-		.pipe(
-			responsive(
-				{
-					'*.jpg': [
-						{
-							width: 200,
-							rename: { suffix: '-small' }
-						},
-						{
-							width: 400,
-							rename: { suffix: '-medium' }
-						},
-						{
-							width: 800,
-							rename: { suffix: '-large' }
-						},
-						{
-							rename: { suffix: '-full' }
-						}
-					]
-				},
-				{
-					quality: 90,
-					silent: true,
-					errorOnEnlargement: false,
-					skipOnEnlargement: true
-				}
-			)
-		)
-		.pipe(gulp.dest('./build/images/resized'));
-
-		cb();
-
-}
-
 
 // gulp tasks
-exports.default = gulp.series(sassCompile, spriteCompile, resizeImages);
+exports.default = gulp.series(spriteCompile);
 
 exports.svg = spriteCompile;
-exports.css = sassCompile;
-exports.images = resizeImages;
 
 exports.watch = function () {
-	gulp.watch(sassFiles, { ignoreInitial: false }, sassCompile);
 	gulp.watch(svgFiles, { ignoreInitial: false }, spriteCompile);
-	gulp.watch(images, { ignoreInitial: false }, resizeImages);
 }

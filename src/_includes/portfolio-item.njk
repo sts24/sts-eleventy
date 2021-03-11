@@ -25,7 +25,7 @@
 				{% endif %}
 			</div>
 			<div class="listing-image">
-				{% image item.image, 'large', '', item.title %}
+				{% cloudinaryImage item.image, 'c_scale,w_800', item.title %}
 			</div>
 		</section>
 	{% endfor %}

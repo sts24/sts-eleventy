@@ -25,7 +25,7 @@
 		</div>
 		<aside class="listing-image">
 			{% for img in item.data.image %}
-				{% image img.src, 'large', 'img-'+loop.index, img.alt | safe %}
+				{% cloudinaryImage img.src, 'c_scale,w_800', img.alt, 'img-'+loop.index %}
 			{% endfor %}
 		</aside>
 	</section>
