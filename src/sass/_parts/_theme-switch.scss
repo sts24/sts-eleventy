@@ -1,3 +1,45 @@
+.theme-switch-menu {
+	position: absolute;
+	right: 3rem;
+	bottom: 0;
+	min-width: 200px;
+	background: var(--color1);
+	color: var(--sand);
+	border-radius: 3px;
+	font-weight: bold;
+	font-size: 1rem;
+	line-height: 1em;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		> li {
+			padding: 0.5rem;
+			margin: 0 0 0.5rem 0;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	[data-theme="dark-mode"] & {
+		background: var(--color2);
+		color: var(--color1);
+	}
+
+	@media (min-width: 768px){
+		bottom: 0;
+		left: 4rem;
+	}
+
+	&[aria-hidden="true"]{
+		display: none;
+	}
+}
+
 .theme-switch {
 	display: inline-block;
 	position: absolute;

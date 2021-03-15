@@ -1,7 +1,25 @@
-<div class="theme-switch" x-data="themeSwitch()" x-init="init">
-	<button class="theme-switch-button" id="theme-switch-button" aria-label="Theme Switcher" role="presentation" aria-hidden="true" @click="changeOnClick">
+<div class="theme-switch" x-data="themeSwitch()" x-init="init" @click.away="hideMenu = true">
+
+	<button class="theme-switch-button" id="theme-switch-button" aria-label="Theme Switcher" role="presentation" @click="hideMenu = false">
 		<svg class="svg-icon icon-inline" shape-rendering="geometricPrecision" role="presentation" aria-label="icon" aria-hidden="true">
 			<use xlink: :href="iconStyle"></use>
 		</svg>
 	</button>
+
+	<div class="theme-switch-menu" :aria-hidden="hideMenu" id="theme-switch-menu" aria-controlledby="theme-switch-button" role="menu">
+		<ul>
+			<li>
+				<input type="radio" id="dark-mode" x-model="theme" value="dark-mode" @click="saveTheme($event)" />
+				<label for="dark-mode">Dark Mode</label>
+			</li>
+			<li>
+				<input type="radio" id="light-mode" x-model="theme" value="light-mode" @click="saveTheme($event)" />
+				<label for="light-mode">Light Mode</label>
+			</li>
+			<li>
+				<input type="radio" id="browser-mode" x-model="theme" value="browser-mode" @click="resetTheme" />
+				<label for="browser-mode">Use Browser Setting</label>
+			</li>
+		</ul>
+	</div>
 </div>
