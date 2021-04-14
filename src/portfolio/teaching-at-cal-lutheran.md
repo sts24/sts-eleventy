@@ -1,14 +1,16 @@
 ---
 title: Teaching at Cal Lutheran
-order: 5
+order: "5"
 tools:
-  - Adobe Creative Cloud
+- Adobe Creative Cloud
 image:
-  - src: "/v1614988656/sts/computer-lab.jpg"
-    alt: Classroom with iMacs
-excerpt: My experience in teaching a college course on design and the Adobe Creative Cloud.
+- src: "/v1614988656/sts/computer-lab.jpg"
+  alt: Classroom with iMacs
+excerpt: My experience in teaching a college course on design and the Adobe Creative
+  Cloud.
+
 ---
-## 2012 – 2018
+## From 2012 to 2018
 
 For several years, I taught undergraduate students in the Multimedia and Art departments at Cal Lutheran. My students were instructed in the basics of graphic design, typography, web design, animation, and video production. This was an entry level class that was popular with all types of students including those there for their major requirement.
 
