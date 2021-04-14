@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
+admin_path: ''
 webhook_url: 
 sections:
 - type: directory
@@ -36,7 +36,7 @@ sections:
   label: Settings
   create: none
   match: "**/*.json"
-  new_doc_ext: ''
+  new_doc_ext: app
 upload_dir: src/images/uploads
 public_path: "/images/uploads"
 front_matter_path: ''
