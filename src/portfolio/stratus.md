@@ -7,8 +7,8 @@ tools:
  - Node
  - JSON APIs
 image: 
-	- src: "/v1614988656/sts/stratus-desktop.jpg"
-		alt: Stratus app screenshot
+  - src: "/v1614988656/sts/stratus-desktop.jpg"
+    alt: Stratus app screenshot
 excerpt: A web app for viewing weather data from the National Weather Service
 showcase:
   - description: >-
