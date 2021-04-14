@@ -10,22 +10,21 @@ tools:
 - React
 - Javascript
 - NPM
-image: 
+image:
 - src: "/v1614988656/sts/pitwall-desktop-2.jpg"
   alt: Pitwall app in desktop
 - src: "/v1614988656/sts/pitwall-mobile-2.jpg"
   alt: Pitwall app in mobile
 excerpt: A project created explore the historical records of Formula 1 racing.
+
 ---
-## Explore historical records of past Formula 1 championships.</h2>
+## Explore historical records of past Formula 1 championships.
 
-This project was written originally with Vue, but it has also been ported to React. It uses Axios to call up the [ErgastAPI](https://ergast.com/mrd/) for historical Formula 1 data. The Ergast API has data going back to the first World Championship in 1950.
+I have been a life-long fan of Formula 1 auto racing and built this web app to better understand many different modern Javascript based frameworks. It was originally built in Vue, but has also been ported to Nuxt, React, and Eleventy while keeping the same functionality.
 
-I am a big Formula 1 fan (yes, I am also an American, which nobody knows about F1 here) and I wanted to make up a personal project to learn more about Vue and making a reactive single page app. While the functionality is fully established, I plan on added some polish to UI over time.
+Pitwall uses data from the [Ergast API](https://ergast.com/mrd/). This uses the historical data of race results and championship standings going back to the formation of F1 in 1950. 
 
-Originally, this project started out as a way to learn about the new world of javascript frameworks. I first wrote this app in Vue using Vue CLI. Then it was ported to React so I could compare how the process would compare with the same app with a different approach. I do like working in Vue, so I rewrote it with the Vue framework Nuxt. This allows me to easily use the same Vue components as before with the advantage of creating a static generated version of the app for better performance.
-
-Most recently, I have ported it to Eleventy. Since this site doesn't actually need a lot more than a small amount of JS to toggle buttons and the year selector, having it run as a static site made a lot of sense. This is auto updated every Sunday afternoon (Pacific Time) to grab the latest data from that Sunday's race.
+Most recently, I have ported it to Eleventy. While I do love working in Vue, this site doesn't actually need than a small amount of Javascript to run the front-end functionality. Having it run as a static site made a lot of sense. IFTTT is used to automatically generate the site every Sunday afternoon in Pacific Time to grab the latest data from that day's race.
 
 ### GitHub
 
