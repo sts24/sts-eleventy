@@ -1,14 +1,15 @@
 ---
 title: Peppergrove
-order: 2
+order: "2"
 tools:
- - Wordpress
- - PHP
- - REST API
-image: 
-  - src: "/v1614988656/sts/peppergrove.jpg"
-    alt: Grove of peppertrees
+- Wordpress
+- PHP
+- REST API
+image:
+- src: "/v1614988656/sts/peppergrove.jpg"
+  alt: Grove of peppertrees
 excerpt: A Headless Wordpress Theme
+
 ---
 For the past few years in the web development world, there has been this growing trend of a headless content management system. Traditionally a CMS would provide the database, a content management backend, as well as the templating code. WordPress falls in this category as an all encompassing system. A few versions back, the REST API was added to the core release. This allows a query to be made over HTTP and returned with neatly formatted JSON. Now, developers can use this JSON with any kind of templating system or static site generator that they choose. It makes it really easy to develop a React or Vue driven front-end with your data managed by a familiar system like WordPress.
 
@@ -24,6 +25,11 @@ This solution will work out great as more departments move over to this new syst
 
 ---
 
-<h4>WordPress Plugins Used</h4>
+#### WordPress Plugins Used
 
-<ul><li><a href="https://www.advancedcustomfields.com/">Advanced Custom Fields</a> - This is such a key piece of this system, and I am also happy that it stores the data in WP’s native custom fields. I don’t feel as locked down to ACF because of this.</li><li><a href="http://github.com/airesvsg/acf-to-rest-api">ACF to REST API</a> - This injects the ACF field data into the API response.</li><li><a href="https://wordpress.org/plugins/classic-editor/">Classic Editor</a> - Staying away from Gutenberg for now.</li><li><a href="https://github.com/WebDevStudios/custom-post-type-ui/">Custom Post Type UI</a> - Manages the custom post types and taxonomies. This could all be done in functions.php, but every site is going to be different and making child themes each time would be too much overhead.</li><li><a href="http://wordpress.org/plugins/really-simple-csv-importer/">Really Simple CSV Importer</a> - Used for importing data from the old database system. It’s really only needed for the initial setup for a site.</li></ul>
+* [Advanced Custom Fields](https://www.advancedcustomfields.com/) - This is such a key piece of this system, and I am also happy that it stores the data in WP’s native custom fields. I don’t feel as locked down to ACF because of this.
+* [ACF to REST API](http://github.com/airesvsg/acf-to-rest-api) - This injects the ACF field data into the API response.
+* [Classic Editor](https://wordpress.org/plugins/classic-editor/) - Most of the data does not need the Gutenberg Block Editor, so we are sticking to the Classic Editor for now.
+* [Custom Post Type UI](https://github.com/WebDevStudios/custom-post-type-ui/) - Manages the custom post types and taxonomies. This could all be done in functions.php, but every site is going to be different and making child themes each time would be too much overhead.
+* [Really Simple CSV Importer](http://wordpress.org/plugins/really-simple-csv-importer/) - Used for importing data from the old database system. It’s really only needed for the initial setup for a site.
+* [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/) - Provides a really flexible page caching system to speed things up.
