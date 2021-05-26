@@ -1,25 +1,25 @@
 ---
 title: macOS California
-order: "1"
+order: "5"
 tools:
-- Node
-- Eleventy
+- MapBox
 - Netlify
-- Visual Design
+- Markdown
+- GraphQL
+- Gridsome
+- Vue
 image:
-- src: "/v1614988656/sts/trail-coffee-desktop.jpg"
-  alt: Trail Coffee screenshot in desktop
-- src: "/v1614988656/sts/trail-coffee-mobile.jpg"
-  alt: Trail Coffee screenshot in mobile
-excerpt: A journal of hiking photography
+- src: "/v1622067764/sts/macos-california-large.png"
+  alt: macOS California logo
+- src: "/v1622067767/sts/macos-california-mobile.png"
+  alt: macOS California screenshot in mobile
+excerpt: A tour of the Golden State through the years of macOS
 
 ---
-Trail Coffee was a side project I created to share my hiking photography. The original version of the site was launched in 2015 using a bespoke WordPress theme I developed to get exactly what I needed out of the site. At the time, this theme used several backend functions to help with customizing each post. For example, each region was defined by a category and given a custom accent color. The site also used several plugins such as Jetpack and WP-GPX-Maps to display map location and GPS data from the hikes.
+macOS California is a little web app that uses Mapbox maps and Gridsome/Vue to showcase where the names of macOS releases are located in the state of California.
 
-In 2019, I moved this off WordPress to Eleventy. This Jamstack version is hosted on Netlify. Eleventy is a fantastic static-site generator written in Node JS and gives developers a great deal of flexibility with combining your template language of choice with data stored in Markdown files or any other data store you want to bring. 
+It's a simple site, but it gave me the opportunity to learn more about the Gridsome framework. This framework uses Vue for front-end templates with GraphQL as the data model. I was already a fan of working with Vue, so this was all a natural fit to up and running.
 
-Since it is built around the Jamstack philosophy, I also had to move the content management to the Forestry CMS. This works with Markdown files and Git for file management. The images are hosted by Cloudinary makes use of the many transform options to generate images at many different sizes where they are needed in the template.
+<a href="https://github.com/sts24/macos-california-gridsome">View on GitHub</a>
 
-<a href="https://github.com/sts24/trailcoffee/">View on GitHub</a>
-
-<a href="https://www.trailcoffee.net" class="btn">Read Trail Coffee</a>
+<a href="https://macoscalifornia.netlify.app/" class="btn">View This Site</a>
