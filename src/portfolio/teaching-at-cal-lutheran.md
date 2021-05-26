@@ -1,6 +1,6 @@
 ---
 title: Teaching at Cal Lutheran
-order: "5"
+order: "100"
 tools:
 - Adobe Creative Cloud
 image:
