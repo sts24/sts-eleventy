@@ -21,7 +21,7 @@
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1rem;
 
-    margin: 0;
+    margin: 0 0 2rem 0;
     padding: 0;
     list-style: none;
 
@@ -34,9 +34,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (min-width: 1200px){
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 .block-list-link {
@@ -44,6 +41,7 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-radius: 0.5rem;
     overflow: hidden;
 
@@ -84,6 +82,18 @@
     font-family: var(--primary-font);
     font-weight: normal;
     line-height: normal;
+}
+
+.block-list-excerpt {
+    display: block;
+    font-family: var(--body-font);
+    color: white;
+    font-size: rem(16);
+    text-shadow: 0 0 3px black;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
 }
 
 .blocks-gallery-item {

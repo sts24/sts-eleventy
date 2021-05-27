@@ -1,11 +1,13 @@
 <nav class="block-list-nav" aria-label="Portfolio Navigation">
 <ul class="block-list">
 {% for item in collections.orderedPortfolios | reverse %}
+{% if item.data.featured == true %}
 <li>
 <a href="{{ item.url }}" class="block-list-link" style="background-image: url({% cloudinaryImageURL item.data.image[0].src, 'c_scale,w_400', img.alt %})">
 <span class="block-list-title">{{ item.data.title | safe }}</span>
 </a>
 </li>
+{% endif %}
 {% endfor %}
 </ul>
 </nav>

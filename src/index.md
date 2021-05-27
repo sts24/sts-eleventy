@@ -10,3 +10,5 @@ As a web developer for California Lutheran University, he has helped in building
 
 ## Makes Stuff For The Web
 {% include "partials/portfolio-list.njk" %}
+
+<a href="/portfolio/" class="btn">View All Portfolio Projects</a>
