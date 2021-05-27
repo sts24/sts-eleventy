@@ -6,6 +6,7 @@ tools:
 - Eleventy
 - Netlify
 - Visual Design
+featured: true
 image:
 - src: "/v1614988656/sts/trail-coffee-desktop.jpg"
   alt: Trail Coffee screenshot in desktop

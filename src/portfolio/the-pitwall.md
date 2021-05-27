@@ -10,6 +10,7 @@ tools:
 - React
 - Javascript
 - NPM
+featured: false
 image:
 - src: "/v1614988656/sts/pitwall-desktop-2.jpg"
   alt: Pitwall app in desktop

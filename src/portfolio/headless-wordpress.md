@@ -5,6 +5,7 @@ tools:
 - Wordpress
 - PHP
 - REST API
+featured: true
 image:
 - src: "/v1614988656/sts/peppergrove.jpg"
   alt: Grove of peppertrees

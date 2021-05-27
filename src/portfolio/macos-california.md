@@ -8,6 +8,7 @@ tools:
 - GraphQL
 - Gridsome
 - Vue
+featured: false
 image:
 - src: "/v1622067764/sts/macos-california-large.png"
   alt: macOS California logo

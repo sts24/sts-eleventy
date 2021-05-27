@@ -3,6 +3,7 @@ title: Creative Action Network
 order: 4
 tools:
   - Visual Design
+featured: false
 image: 
   - src: "/v1614988656/sts/see-america-cropped.jpg"
     alt: Illustration of Channel Islands National Park

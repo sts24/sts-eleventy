@@ -9,6 +9,7 @@ tools:
 - Gulp
 - UX Design
 - WordPress
+featured: true
 image:
 - src: "/v1614988656/sts/cal-lutheran-home-desktop.jpg"
   alt: Cal Lutheran Homepage in Desktop size

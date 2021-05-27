@@ -6,6 +6,7 @@ tools:
 - React Hooks
 - Node
 - JSON APIs
+featured: false
 image:
 - src: "/v1614988656/sts/stratus-desktop.jpg"
   alt: Stratus app screenshot

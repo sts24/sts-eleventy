@@ -3,6 +3,7 @@ title: Teaching at Cal Lutheran
 order: "100"
 tools:
 - Adobe Creative Cloud
+featured: false
 image:
 - src: "/v1614988656/sts/computer-lab.jpg"
   alt: Classroom with iMacs
