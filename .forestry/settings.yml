@@ -37,10 +37,10 @@ sections:
   create: none
   match: "**/*.json"
   new_doc_ext: app
-upload_dir: src/images/uploads
-public_path: "/images/uploads"
+upload_dir: sts
+public_path: https://res.cloudinary.com/stsmith/image/upload
 front_matter_path: ''
-use_front_matter_path: false
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_output_directory: build
