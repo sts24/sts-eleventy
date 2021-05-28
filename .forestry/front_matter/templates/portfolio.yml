@@ -4,19 +4,21 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: text
   name: order
-  label: order
+  label: Order
 - type: list
   name: tools
-  label: tools
+  label: Tool Tags
+  config:
+    use_select: false
 - type: boolean
   name: featured
-  label: featured
+  label: Featured on Homepage
 - type: field_group_list
   name: image
-  label: image
+  label: Main Image
   fields:
   - type: file
     name: src
@@ -26,4 +28,4 @@ fields:
     label: alt
 - type: text
   name: excerpt
-  label: excerpt
+  label: Excerpt
