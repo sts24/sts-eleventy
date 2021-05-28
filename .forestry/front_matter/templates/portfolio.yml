@@ -1,0 +1,29 @@
+---
+label: Portfolio
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: order
+  label: order
+- type: list
+  name: tools
+  label: tools
+- type: boolean
+  name: featured
+  label: featured
+- type: field_group_list
+  name: image
+  label: image
+  fields:
+  - type: file
+    name: src
+    label: src
+  - type: text
+    name: alt
+    label: alt
+- type: text
+  name: excerpt
+  label: excerpt
