@@ -2,16 +2,15 @@
 title: Now
 date: 2020-04-14
 layout: page.njk
+
 ---
-*Last updated on {% timestamp date %}*
+_Last updated on {% timestamp date %}_
 
 ## Professional
-- Diving deep into WordPress' admin hooks. Experimenting if WP can be used as a place to store related data and returning it through the Rest API.
-- Playing around with the beta of Panic's new Nova editor, the replacement for Coda. Liking it a lot, but have got into a real groove in the past year or two with VS Code.
-- Experimenting with different ways core javascript driven widgets can be adapted to be more accessible.
+
+* Starting a new role after leaving my higher ed job of many years
 
 ## Personal
-- Like everyone, sheltering in place.
-- Raising my baby son, changing diapers.
-- Dreaming of traveling again
-- Looking forward to Mandalorian Season 2! 
+
+* Seeing the world reopen. It's a little bit of a shock to the system, but some normalcy is welcomed.
+* Watching my son understand more of what we tell him.
