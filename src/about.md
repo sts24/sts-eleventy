@@ -2,21 +2,20 @@
 layout: page.njk
 title: About Scott
 useTagIcons: true
+date: 2021-07-06
+
 ---
-
-
 <p class="intro">I am a Front-End Web Developer with over a decade of experience building web sites.</p>
 
 <div class="row" style="margin: 0 -1rem">
 <div class="col-s-12 col-m-4 order-2">
-	{% cloudinaryImage settings.profileImage, 'c_scale,w_400', 'Profile image of Scott', 'profile-image' %}
-	{% include partials/tag-icons.njk %}
+{% cloudinaryImage settings.profileImage, 'c_scale,w_400', 'Profile image of Scott', 'profile-image' %}
+{% include partials/tag-icons.njk %}
 </div>
-
 
 <div class="col-s-12 col-m-8 order-1">
 
-Currently, I am a web developer for [California Lutheran University](https://www.callutheran.edu). I have built and maintained our front-end framework, implemented a major rebrand, assisted in marketing projects for driving enrollment, and offered web site support to our campus clients.
+Currently, I am a web developer for SimpsonScarborough. Previously, I worked in-house at California Lutheran University. I have built and maintained front-end frameworks, implemented a major rebrand, assisted in marketing projects for driving enrollment, and offered web site support to clients.
 
 I got my start like many others with a curiosity of how things work and a drive to build it myself. While the web has changed a lot over the past few decades and has grown in complexity, the same excitement is there for me. Building a web site and a larger design system is a lot like a small, self-contained world. How we familiarize a user with the site’s brand? How do these components all interact with each other? What happens to the web site under certain conditions? These are all important questions before even grabbing for a specific tool.
 
@@ -33,9 +32,7 @@ Get in touch at [scott@smithscott.net](mailto:scott@smithscott.net)
 </div>
 </div>
 
-
-
-- - -
+***
 
 ### How This Site Was Made
 
