@@ -8,6 +8,8 @@ intro: Scott is a Front-End Developer who loves taking on the challenge of writi
 ## Works in Higher Education Marketing
 He has helped in building the front-end frameworks, provided support to campus clients, and a small stint teaching as well.
 
+<a href="/about/" class="btn">More About Scott</a>
+
 ## Makes Stuff For The Web
 {% include "partials/portfolio-list.njk" %}
 
