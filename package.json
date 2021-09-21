@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp watch & eleventy --serve --quiet",
-    "gulp:svg": "gulp svg",
-    "build": "gulp && eleventy --quiet",
+    "start": "eleventy --serve --quiet",
+    "build": "eleventy --quiet",
     "debug": "DEBUG=Eleventy* eleventy",
     "clean": "rm -rf build"
   },
@@ -17,9 +16,6 @@
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "debug": "^4.1.1",
-    "eleventy-plugin-cloudinary": "^0.0.1",
-    "eleventy-plugin-sass": "^1.2.0",
-    "gulp": "^4.0.2",
-    "gulp-svg-sprite": "^1.5.0"
+    "eleventy-plugin-cloudinary": "^0.0.1"
   }
 }

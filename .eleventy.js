@@ -1,16 +1,8 @@
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const shortcodes = require('./utilities/shortcodes.js');
 const collections = require('./utilities/collections.js');
-const pluginSass = require('eleventy-plugin-sass');
 
 module.exports = function (config) {
-
-	// sass compile
-	config.addPlugin(pluginSass, {
-		outputDir: './build/css',
-		remap: true,
-		sourceMaps: true
-	});
 
 	// custom collections
 	config.addCollection("orderedPortfolios", collections.orderedPortfolios);
@@ -22,7 +14,7 @@ module.exports = function (config) {
 	config.addShortcode("timestamp", shortcodes.timestamp);
 	config.addShortcode("blogTitle", shortcodes.blogTitle);
 	config.addShortcode("cleanString", shortcodes.cleanString);
-	
+
 	// images
 	config.cloudinaryCloudName = 'stsmith';
 	config.addShortcode('cloudinaryImage', function (path, transforms, alt, css) {
