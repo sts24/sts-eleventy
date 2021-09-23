@@ -6,16 +6,6 @@ const collections = require('./utilities/collections.js');
 
 module.exports = function (config) {
 
-	config.on("beforeBuild", () => {
-		// Compile Sass
-		let result = sass.renderSync({
-			file: "src/assets/scss/main.scss",
-			sourceMap: false,
-			outputStyle: "compressed",
-		});
-		console.log("SCSS compiled");
-	});
-
 	// custom collections
 	config.addCollection("orderedPortfolios", collections.orderedPortfolios);
 

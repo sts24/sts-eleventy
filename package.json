@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve --quiet",
-    "build": "eleventy --quiet",
+    "start": "npm run css:watch & eleventy --serve --quiet",
+    "build": "npm run css:build & eleventy --quiet",
     "debug": "DEBUG=Eleventy* eleventy",
     "clean": "rm -rf build",
     "css:build": "npx sass ./src/_assets/css/main.scss ./build/_assets/main.css",
