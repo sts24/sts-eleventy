@@ -1,7 +1,6 @@
 ---
 layout: page.njk
 title: About Scott
-useTagIcons: true
 date: 2021-07-06
 
 ---

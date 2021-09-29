@@ -1,9 +1,16 @@
-<header class="col-m-3 site-header">
+<header class="header">
+	<h1 class="header__siteTitle">{{ settings.siteName }}</h1>
 
-	<h1 class="site-title">{{ settings.siteName }}</h1>
+	<nav class="header__nav" aria-label="Site Navigation">
+		<ul class="header__navList">
+			<li><a href="/">Home</a></li>
+			<li><a href="/portfolio">Portfolio</a></li>
+			<li><a href="/journal">Journal</a></li>
+			<li><a href="/about">About</a></li>
+		</ul>
+	</nav>
 
-	{% include "partials/site-nav.njk"  %}
-
-	{% include "partials/social-media-list.njk" %}
+	{% include "svg/geo-left.svg" %}
+	{% include "svg/geo-right.svg" %}
 
 </header>

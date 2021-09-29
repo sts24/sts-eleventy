@@ -8,8 +8,8 @@
     "build": "npm run css:build & eleventy --quiet",
     "debug": "DEBUG=Eleventy* eleventy",
     "clean": "rm -rf build",
-    "css:build": "npx sass ./src/_assets/css/main.scss ./build/_assets/main.css",
-    "css:watch": "npx sass ./src/_assets/css/main.scss ./build/_assets/main.css -w"
+    "css:build": "npx sass ./src/_assets/css/main.scss ./build/_assets/css/main.css",
+    "css:watch": "npx sass ./src/_assets/css/main.scss ./build/_assets/css/main.css -w"
   },
   "keywords": [],
   "author": "",

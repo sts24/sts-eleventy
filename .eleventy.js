@@ -6,6 +6,9 @@ const collections = require('./utilities/collections.js');
 
 module.exports = function (config) {
 
+	// watch for asset files
+	config.addWatchTarget("./src/_assets/");
+
 	// custom collections
 	config.addCollection("orderedPortfolios", collections.orderedPortfolios);
 
@@ -32,7 +35,6 @@ module.exports = function (config) {
 
 	// pass through certain files
 	config.addPassthroughCopy("src/fonts");
-	config.addPassthroughCopy("src/js");
 	config.addPassthroughCopy("src/admin");
 
 	// options
