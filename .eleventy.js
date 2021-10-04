@@ -36,6 +36,7 @@ module.exports = function (config) {
 	// pass through certain files
 	config.addPassthroughCopy("src/fonts");
 	config.addPassthroughCopy("src/admin");
+	config.addPassthroughCopy("src/_assets/images");
 
 	// options
 
