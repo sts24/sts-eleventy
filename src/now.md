@@ -4,7 +4,7 @@ date: 2021-07-06
 layout: page.njk
 
 ---
-_Last updated on {% timestamp date %}_
+_Last updated on October 6, 2021_
 
 ## Professional
 
