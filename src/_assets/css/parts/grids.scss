@@ -1,0 +1,13 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2rem;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} { grid-column: 1 / #{$i + 1} }
+}
+
