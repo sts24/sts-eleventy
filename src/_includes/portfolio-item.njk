@@ -2,33 +2,29 @@
 
 {% block content %}
 
-<h1 class="page-title">{{ title | safe }}</h1>
+	<h1 class="page__title">{{ title | safe }}</h1>
 
-<ul class="list-inline tag-list">
-	{% for tag in tools %}
-		<li>{{ tag }}</li>
-	{% endfor %}
-</ul>
+	<div class="page__content">
+	{{ content | safe }}
+	</div>
 
-{{ content | safe }}
+	{% if showcase %}
+		{% for item in showcase %}
+			<section class="portfolio__showcase">
+				<div class="portfolio__showcaseContent">
+					<h2>{{ item.title | safe }}</h2>
 
-{% if showcase %}
-	{% for item in showcase %}
-		<section class="listing-item">
-			<div class="listing-content">
-				<h2>{{ item.title | safe }}</h2>
+					<p>{{ item.description | safe }}</p>
 
-				<p>{{ item.description | safe }}</p>
-
-				{% if item.url %}
-					<a href="{{ item.url }}" class="btn">View This Site</a>
-				{% endif %}
-			</div>
-			<div class="listing-image">
-				{% cloudinaryImage item.image, 'c_scale,w_800', item.title %}
-			</div>
-		</section>
-	{% endfor %}
-{% endif %}
+					{% if item.url %}
+						<a href="{{ item.url }}" class="btn">View This Site</a>
+					{% endif %}
+				</div>
+				<div class="portfolio__showcaseImage">
+					{% cloudinaryImage item.image, 'c_scale,w_800', item.title %}
+				</div>
+			</section>
+		{% endfor %}
+	{% endif %}
 	
 {% endblock %}

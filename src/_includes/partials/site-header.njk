@@ -1,21 +1,14 @@
 <header class="header">
-	<h1 class="header__siteTitle">{{ settings.siteName }}</h1>
+	<div class="container header__container">
+		<h1 class="header__siteTitle">{{ settings.siteName }}</h1>
 
-	<nav class="header__nav" aria-label="Site Navigation">
-		<ul class="header__navList">
-			<li><a href="/">Home</a></li>
-			<li><a href="/portfolio">Portfolio</a></li>
-			<li><a href="/journal">Journal</a></li>
-			<li><a href="/about">About</a></li>
-		</ul>
-	</nav>
-
-	<div class="header__accentImage">
-		<img src="/_assets/images/jt.jpg" class="header__accentImageImg" />
-		{% include "svg/geo-left.svg" %}
+		<nav class="header__nav" aria-label="Site Navigation">
+			<ul class="header__navList">
+				<li><a href="/">Home</a></li>
+				<li><a href="/portfolio">Portfolio</a></li>
+				<li><a href="/journal">Journal</a></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
 	</div>
-
-	
-	{% include "svg/geo-right.svg" %}
-
 </header>

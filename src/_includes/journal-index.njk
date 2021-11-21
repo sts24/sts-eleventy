@@ -2,9 +2,9 @@
 
 {% block content %}
 
-	<h1 class="page-title">{{ title | safe }}</h1>
+	<h1 class="page__title">{{ title | safe }}</h1>
 
-	<nav class="blog-nav">
+	<nav class="journal__nav">
 		<ul class="horizontal-list">
 			<li>
 				<a href="/journal">Latest Posts</a>
@@ -21,13 +21,14 @@
 
 
 	{% for post in posts %}
-		<article class="margin-x-5 padding-bottom-5 blog-post blog-post-listing-item">
-			<header class="margin-bottom-2">
-				{% blogTitle 'h2', 'blog-post-listing-title margin-top-0 margin-bottom-1', post %}
-				<time class="blog-post-time">Posted {% timestamp post.data.date %}</time>
+	{% log post %}
+		<article class="journal__post">
+			<header class="journal__postMeta">
+				<h2 class="journal__postTitle"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+				<time class="journal__postDate">Posted {% timestamp post.data.date %}</time>
 			</header>
 
-			<div class="blog-post-content">
+			<div class="journal__postContent">
 				{{ post.templateContent | safe }}
 
 				{% if post.data.url !== undefined %}

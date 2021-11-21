@@ -1,5 +1,16 @@
 :root {
-    --dark-blue: #1d587f;
-    --orange-mid: #E2974B;
-    --sandy: #D6BFAB;
+    --dark-green: #161d13;
+    --orange: #cf8719;
+    --black: #000000;
+    --white: #ffffff;
+
+    --page-bg: var(--dark-green);
+    --page-color: var(--white);
+    --link-color: var(--orange);
+
+
+    --page-width: 1280px;
+    --gutter-y: 1rem;
 }
+
+

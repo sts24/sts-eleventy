@@ -5,5 +5,17 @@
 
 
 body {
-    background-color: var(--sandy);
+    background-color: var(--page-bg);
+    color: var(--page-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+// grid system
+.container {
+    width: 100%;
+    max-width: var(--page-width);
+    margin: var(--gutter-y) auto;
 }

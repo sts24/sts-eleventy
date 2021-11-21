@@ -2,9 +2,11 @@
 
 {% block content %}
 
-	<h1 class="page-title">{{ title | safe }}</h1>
+	<h1 class="page__title">{{ title | safe }}</h1>
 
-	{{ content | safe }}
+	<div class="page__content">
+		{{ content | safe }}
+	</div>
 
 
 {% endblock %}

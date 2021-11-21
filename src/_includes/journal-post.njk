@@ -2,35 +2,15 @@
 
 {% block content %}
 
-{% sectionHeader 'Journal','blog-header' %}
-	<nav class="blog-nav">
-		<ul class="horizontal-list">
-			<li>
-				<a href="/journal">Latest Posts</a>
-			</li>
-			<li>
-				<a href="#rss">
-					{% icon 'icon-rss','icon-size-1 icon-inline' %}
-					RSS Feed
-				</a>
-			</li>
-		</ul>
-	</nav>
-{% endsectionHeader %}
+	<section class="journal__post">
+		<header class="journal__postMeta">
+			<h1 class="journal__postTitle">{{ title | safe }}</h1>
+			<time class="journal__postDate">Posted {% timestamp date %}</time>
+		</header>
 
-
-
-
-<section class="row blog-post">
-	<header class="col-s-12 blog-post-meta margin-bottom-3">
-        <h1 class="margin-top-0 margin-bottom-1">{{ title | safe }}</h1>
-        <time class="blog-post-time">Posted {% timestamp date %}</time>
-    </header>
-
-    <article class="col-s-12 blog-post-content">
-        {{ content | safe }}
-    </article>
-</section>
-
+		<div class="journal__postContent">
+			{{ content | safe }}
+		</div>
+	</section>
 
 {% endblock %}

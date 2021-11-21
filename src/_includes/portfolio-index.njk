@@ -1,0 +1,21 @@
+{% extends 'base.njk' %}
+
+{% block content %}
+
+	<h1 class="page__title">{{ title | safe }}</h1>
+
+	<div class="page__intro">
+		{{ content | safe }}
+	</div>
+
+	<div class="portfolio__wrapper">
+
+		{% for item in collections.orderedPortfolios | reverse %}
+			<section class="portfolio__item">	
+				<h2 class="portfolio__itemTitle"><a href="{{ item.url }}">{{ item.data.title | safe }}</a></h2>
+			</section>
+		{% endfor %}
+
+	</div>
+
+{% endblock %}
