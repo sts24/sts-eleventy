@@ -11,8 +11,12 @@
 	<div class="portfolio__wrapper">
 
 		{% for item in collections.orderedPortfolios | reverse %}
-			<section class="portfolio__item">	
-				<h2 class="portfolio__itemTitle"><a href="{{ item.url }}">{{ item.data.title | safe }}</a></h2>
+			<section class="portfolio__item">
+				<a href="{{ item.url }}" class="portfolio__itemLink">
+					<header class="portfolio__itemTitle">{{ item.data.title | safe }}</header>
+					{% cloudinaryImage item.data.thumbnail[0].src, 'c_fill,h_200,q_auto:good,w_800', item.data.thumbnail[0].alt, 'portfolio__itemThumbnail' %}
+					<div class="portfolio__itemOverlay"></div>
+				</a>
 			</section>
 		{% endfor %}
 
