@@ -10,7 +10,14 @@
 
 
     --page-width: 1280px;
-    --gutter-y: 1rem;
+    --gutter: 1rem;
+
+
+    --font-serif: Lora, serif;
+    --font-sans: OpenSans, sans-serif;
+
+    --body-font: var(--font-sans);
+    --heading-font: var(--font-serif);
 }
 
 

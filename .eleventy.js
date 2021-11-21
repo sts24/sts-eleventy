@@ -34,8 +34,7 @@ module.exports = function (config) {
 	config.addPlugin(pluginRss);
 
 	// pass through certain files
-	config.addPassthroughCopy("src/fonts");
-	config.addPassthroughCopy("src/admin");
+	config.addPassthroughCopy("src/_assets/fonts");
 	config.addPassthroughCopy("src/_assets/images");
 
 	// options

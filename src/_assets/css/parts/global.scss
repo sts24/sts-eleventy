@@ -7,6 +7,9 @@
 body {
     background-color: var(--page-bg);
     color: var(--page-color);
+    font-family: var(--body-font);
+    padding-left: calc(var(--gutter) * 2);
+    padding-right: calc(var(--gutter) * 2);
 }
 
 a {
@@ -17,5 +20,6 @@ a {
 .container {
     width: 100%;
     max-width: var(--page-width);
-    margin: var(--gutter-y) auto;
+    margin: var(--gutter) auto;
+
 }
