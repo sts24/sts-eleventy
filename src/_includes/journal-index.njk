@@ -4,30 +4,16 @@
 
 	<h1 class="page__title">{{ title | safe }}</h1>
 
-	<nav class="journal__nav">
-		<ul class="horizontal-list">
-			<li>
-				<a href="/journal">Latest Posts</a>
-			</li>
-			<li>
-				<a href="/feed.xml">
-					{% icon 'icon-rss','icon-size-1 icon-inline' %}
-					RSS Feed
-				</a>
-			</li>
-		</ul>
-	</nav>
-
-
+	{% include 'partials/journal-nav.njk' %}
 
 	{% for post in posts %}
-		<article class="journal__post page__content">
+		<article class="journal__post">
 			<header class="journal__postMeta">
 				<h2 class="journal__postTitle"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
 				<time class="journal__postDate">Posted {% timestamp post.data.date %}</time>
 			</header>
 
-			<div class="journal__postContent">
+			<div class="page__content journal__postContent page__contentContainer">
 				{{ post.templateContent | safe }}
 
 				{% if post.data.url !== undefined %}

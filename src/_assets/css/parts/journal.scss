@@ -1,0 +1,44 @@
+.journal__nav {
+    margin-bottom: calc(var(--gutter) * 6);
+    border-bottom: 2px solid var(--white);
+    padding-bottom: calc(var(--gutter) * 2);
+}
+
+.journal__navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.journal__post {
+    border-bottom: 2px solid var(--white);
+    margin-bottom: calc(var(--gutter) * 6);
+    padding-bottom: calc(var(--gutter) * 6);
+}
+
+.journal__postTitle {
+    font-size: 36px;
+    line-height: 1;
+    font-family: var(--heading-font);
+    margin: var(--gutter) auto;
+
+
+    a {
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+    }
+}
+
+.journal__postDate {
+    font-family: var(--heading-font);
+    margin: var(--gutter) 0 calc(var(--gutter) * 2) 0;
+    display: block;
+    font-style: italic;
+    font-size: 21px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: calc(var(--gutter) * 6) 0;
+}

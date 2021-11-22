@@ -32,6 +32,29 @@ a {
     }
 }
 
+.btn-icon {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--body-font);
+    text-decoration: none;
+
+    .icon {
+        margin-right: 1ch;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
 // grid system
 .container {
     width: 100%;
