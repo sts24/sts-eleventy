@@ -21,7 +21,7 @@
 
 
 	{% for post in posts %}
-		<article class="journal__post">
+		<article class="journal__post page__content">
 			<header class="journal__postMeta">
 				<h2 class="journal__postTitle"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
 				<time class="journal__postDate">Posted {% timestamp post.data.date %}</time>

@@ -16,6 +16,22 @@ a {
     color: var(--link-color);
 }
 
+.btn {
+    border: 2px solid var(--link-color);
+    padding: calc(var(--gutter) / 2) var(--gutter);
+    display: inline-block;
+    text-decoration: none;
+    transition: 100ms ease-in-out all;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--body-font);
+
+    &:hover {
+        background-color: var(--link-color);
+        color: var(--page-bg);
+    }
+}
+
 // grid system
 .container {
     width: 100%;

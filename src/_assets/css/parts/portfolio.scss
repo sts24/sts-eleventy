@@ -10,10 +10,6 @@
     }
 }
 
-.portfolio__item {
-
-}
-
     .portfolio__itemLink {
         display: grid;
         grid-template-columns: 100%;
@@ -25,7 +21,9 @@
         border: 4px solid var(--link-color);
 
         &:hover {
-
+            .portfolio__itemOverlay {
+                background-color: var(--orange);
+            }
         }
     }
 
@@ -38,6 +36,8 @@
         bottom: 0;
         left: 0;
         z-index: 2;
+        transition: 100ms ease-in-out all;
+
     }
 
     .portfolio__itemTitle {
@@ -62,4 +62,44 @@
         filter: grayscale(1);
         position: relative;
         z-index: 1;
+    }
+
+
+
+
+
+    .portfolio__detail {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: calc(var(--gutter) * 4);
+        margin: calc(var(--gutter) * 4) 0;
+
+        @media (min-width: 768px){
+            grid-template-columns: 1fr 40%;
+        }
+    }
+
+
+
+    .portfolio__showcase {
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        gap: calc(var(--gutter) * 4);
+        margin: calc(var(--gutter) * 4) 0;
+        padding-bottom: calc(var(--gutter) * 4);
+        border-bottom: 2px solid var(--white);
+
+        &:first-of-type {
+            border-top: 2px solid var(--white);
+            padding-top: calc(var(--gutter) * 4);
+            margin-top: calc(var(--gutter) * 6);
+        }
+    }
+
+    .portfolio__showcaseContent {
+        order: 2;
+    }
+
+    .portfolio__showcaseImage {
+        order: 1;
     }

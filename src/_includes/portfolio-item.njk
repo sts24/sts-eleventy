@@ -4,14 +4,19 @@
 
 	<h1 class="page__title">{{ title | safe }}</h1>
 
-	<div class="page__content">
-	{{ content | safe }}
+	<div class="portfolio__detail">
+		<div class="page__content">
+			{{ content | safe }}
+		</div>
+		<div class="portfolio__detailThumbnail">
+			{% cloudinaryImage thumbnail[0].src, 'c_scale,w_800', data.thumbnail[0].alt %}			
+		</div>
 	</div>
 
 	{% if showcase %}
 		{% for item in showcase %}
 			<section class="portfolio__showcase">
-				<div class="portfolio__showcaseContent">
+				<div class="portfolio__showcaseContent page__content">
 					<h2>{{ item.title | safe }}</h2>
 
 					<p>{{ item.description | safe }}</p>
