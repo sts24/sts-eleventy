@@ -5,5 +5,60 @@
 
 
 body {
-    background-color: var(--sandy);
+    background-color: var(--page-bg);
+    color: var(--page-color);
+    font-family: var(--body-font);
+    padding-left: calc(var(--gutter) * 2);
+    padding-right: calc(var(--gutter) * 2);
+}
+
+a {
+    color: var(--link-color);
+}
+
+.btn {
+    border: 2px solid var(--link-color);
+    padding: calc(var(--gutter) / 2) var(--gutter);
+    display: inline-block;
+    text-decoration: none;
+    transition: 100ms ease-in-out all;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--body-font);
+
+    &:hover {
+        background-color: var(--link-color);
+        color: var(--page-bg);
+    }
+}
+
+.btn-icon {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--body-font);
+    text-decoration: none;
+
+    .icon {
+        margin-right: 1ch;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+// grid system
+.container {
+    width: 100%;
+    max-width: var(--page-width);
+    margin: var(--gutter) auto;
+
 }

@@ -1,0 +1,105 @@
+.portfolio__wrapper {
+    margin-top: calc(var(--gutter) * 6);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--gutter) * 4);
+
+    @media (min-width: 768px){
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+    .portfolio__itemLink {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        border: 4px solid var(--link-color);
+
+        &:hover {
+            .portfolio__itemOverlay {
+                background-color: var(--orange);
+            }
+        }
+    }
+
+    .portfolio__itemOverlay {
+        background-color: var(--page-bg);
+        opacity: 0.9;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        transition: 100ms ease-in-out all;
+
+    }
+
+    .portfolio__itemTitle {
+        font-family: var(--heading-font);
+        color: white;
+        font-size: 36px;
+        font-style: italic;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        text-shadow: 0 0 3px black;
+        padding: var(--gutter);
+        text-align: center;
+        line-height: 1;
+        width: 100%;
+    }
+
+
+    .portfolio__itemThumbnail {
+        filter: grayscale(1);
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+
+
+    .portfolio__detail {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: calc(var(--gutter) * 4);
+        margin: calc(var(--gutter) * 4) 0;
+
+        @media (min-width: 768px){
+            grid-template-columns: 1fr 40%;
+        }
+    }
+
+
+
+    .portfolio__showcase {
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        gap: calc(var(--gutter) * 4);
+        margin: calc(var(--gutter) * 4) 0;
+        padding-bottom: calc(var(--gutter) * 4);
+        border-bottom: 2px solid var(--white);
+
+        &:first-of-type {
+            border-top: 2px solid var(--white);
+            padding-top: calc(var(--gutter) * 4);
+            margin-top: calc(var(--gutter) * 6);
+        }
+    }
+
+    .portfolio__showcaseContent {
+        order: 2;
+    }
+
+    .portfolio__showcaseImage {
+        order: 1;
+    }

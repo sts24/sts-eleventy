@@ -4,7 +4,7 @@ order: "100"
 tools:
 - Adobe Creative Cloud
 featured: false
-image:
+thumbnail:
 - src: "/v1614988656/sts/computer-lab.jpg"
   alt: Classroom with iMacs
 excerpt: My experience in teaching a college course on design and the Adobe Creative

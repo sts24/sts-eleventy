@@ -1,9 +1,9 @@
-<nav class="pagination row row-spaced margin-x-1">
+<nav class="pagination">
 	{% if pagination.nextPageHref %}
-	<a href="{{ pagination.nextPageHref }}">{% icon 'icon-arrow-left','icon-size-1 icon-inline' %}Older Posts</a>
+	<a href="{{ pagination.nextPageHref }}" class="pagination__btnOlder btn">Older Posts</a>
 	{% endif %}
 
 	{% if pagination.previousPageHref %}
-	<a href="{{ pagination.previousPageHref }}">Newer Posts{% icon 'icon-arrow-right','icon-size-1 icon-inline' %}</a>
+	<a href="{{ pagination.previousPageHref }}" class="pagination__btnNewer btn">Newer Posts</a>
 	{% endif %}
 </nav>

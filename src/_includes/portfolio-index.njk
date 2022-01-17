@@ -1,0 +1,25 @@
+{% extends 'base.njk' %}
+
+{% block content %}
+
+	<h1 class="page__title">{{ title | safe }}</h1>
+
+	<div class="page__intro">
+		{{ content | safe }}
+	</div>
+
+	<div class="portfolio__wrapper">
+
+		{% for item in collections.orderedPortfolios | reverse %}
+			<section class="portfolio__item">
+				<a href="{{ item.url }}" class="portfolio__itemLink">
+					<header class="portfolio__itemTitle">{{ item.data.title | safe }}</header>
+					{% cloudinaryImage item.data.thumbnail[0].src, 'c_fill,h_200,q_auto:good,w_800', item.data.thumbnail[0].alt, 'portfolio__itemThumbnail' %}
+					<div class="portfolio__itemOverlay"></div>
+				</a>
+			</section>
+		{% endfor %}
+
+	</div>
+
+{% endblock %}

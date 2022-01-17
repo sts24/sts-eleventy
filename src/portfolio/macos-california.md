@@ -9,11 +9,9 @@ tools:
 - Gridsome
 - Vue
 featured: true
-image:
+thumbnail:
 - src: "/v1622067764/sts/macos-california-large.png"
   alt: macOS California logo
-- src: "/v1622067767/sts/macos-california-mobile.png"
-  alt: macOS California screenshot in mobile
 excerpt: A tour of the Golden State through the years of macOS
 
 ---
