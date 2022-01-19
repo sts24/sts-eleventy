@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% if pageType == 'home' %}
-		<title>{{ settings.siteName }} - Web Developer</title>
-  {% else %}
-    <title>{{ title | safe }} - {{ settings.siteName }}</title>
-	{% endif %}
+  <title>{{ title | safe }} - {{ settings.siteName }}</title>
 
   <meta name="description" content="{{ settings.description }}">
 
@@ -16,22 +12,13 @@
   <link rel="apple-touch-icon" href="/images/site-icon.png">
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for Scott Smith's Journal" href="/feed.xml" />
 
-  <meta name="theme-color" content="#0d2c5a">
-
-  <link rel="prelaod" href="/fonts/OpenSans-Regular-webfont.woff" as="font" type="font/woff" />
-  <link rel="prelaod" href="/fonts/OpenSans-Bold-webfont.woff" as="font" type="font/woff" />
-  <link rel="prelaod" href="/fonts/Parkly-Regular.woff" as="font" type="font/woff" />
-
-	<link rel="stylesheet" type="text/css" href="/css/sts.css" />
+	<link rel="stylesheet" type="text/css" href="/_assets/css/main.css" />
 
   {% block head %}
   {% endblock %}
 
 </head>
-<body {% if pageType == 'home' %}class="page-home"{% endif %}>
-  <div class="hide" role="none">
-    {% include "./partials/icon-sprite.svg" %}
-  </div>
+<body>
 
   <div class="skip-links">
     <ul>
@@ -39,17 +26,15 @@
     </ul>
   </div>
 
-  <div id="site" class="row row-expanded row-stretch">
+  <div id="site">
 
     {% include "partials/site-header.njk" %}
     
-    <main class="col-m-8 col-xl-6 site-content" id="main-content">
+    <main class="container">
       {% block content %}
       {% endblock content %}
     </main>
     
-    <div class="site-border" role="none"></div>
-
   </div>
 
 

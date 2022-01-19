@@ -10,11 +10,9 @@ tools:
 - UX Design
 - WordPress
 featured: true
-image:
+thumbnail: 
 - src: "/v1614988656/sts/cal-lutheran-home-desktop.jpg"
   alt: Cal Lutheran Homepage in Desktop size
-- src: "/v1614988656/sts/cal-lutheran-home-mobile.jpg"
-  alt: Cal Lutheran Homepage in Mobile size
 excerpt: My work in Higher Education. Projects ranged from front-end development,
   UX, marketing design, and client support.
 showcase:

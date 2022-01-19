@@ -1,0 +1,23 @@
+:root {
+    --dark-green: #161d13;
+    --orange: #cf8719;
+    --black: #000000;
+    --white: #ffffff;
+
+    --page-bg: var(--dark-green);
+    --page-color: var(--white);
+    --link-color: var(--orange);
+
+
+    --page-width: 1280px;
+    --gutter: 1rem;
+
+
+    --font-serif: Lora, serif;
+    --font-sans: OpenSans, sans-serif;
+
+    --body-font: var(--font-sans);
+    --heading-font: var(--font-serif);
+}
+
+

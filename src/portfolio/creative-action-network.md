@@ -4,7 +4,7 @@ order: 4
 tools:
   - Visual Design
 featured: false
-image: 
+thumbnail: 
   - src: "/v1614988656/sts/see-america-cropped.jpg"
     alt: Illustration of Channel Islands National Park
 excerpt: My contribution to Creative Action Network's See America campaign.

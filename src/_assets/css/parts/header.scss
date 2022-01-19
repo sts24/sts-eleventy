@@ -1,0 +1,34 @@
+.header {
+    border-bottom: 2px solid var(--white);
+    padding-bottom: calc(var(--gutter) * 2);
+    margin-bottom: calc(var(--gutter) * 4);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .header__siteTitle {
+        font-family: var(--heading-font);
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+    .header__nav {
+
+    }
+
+    .header__navList {
+        display: flex;
+    }
+
+    .header__navListLink {
+        font-family: var(--heading-font);
+        font-size: 21px;
+        font-style: italic;
+        margin: 0 var(--gutter);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
